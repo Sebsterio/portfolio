@@ -1,0 +1,31 @@
+.section-header
+	position: absolute
+	top: 0
+	z-index: 999
+	font-family: $font-secondary
+	background: $bg-primary	
+
+	&--left
+		// transform: translateX(-5rem)
+		padding-right: 1.6rem
+
+	&__heading, &__subscript 
+		margin: 0
+		padding: 0
+		background: none
+	
+	&__heading
+		font-size: 180px
+		font-weight: bolder
+		text-transform: uppercase
+		color: $c-lowlight
+
+	&__subscript
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -15%)
+
+		color: $c-primary 
+		font-weight: normal
+		white-space: nowrap

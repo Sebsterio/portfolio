@@ -1,0 +1,87 @@
+/************************* Introduction *************************/
+@keyframes loop
+	0% 
+		background-position: 0 0
+	100% 
+		background-position: 0 -100px
+
+
+.introduction
+	position: relative
+	display: flex
+	width: 100%
+	height: 100vh
+	align-items: center
+	justify-content: center
+	
+	&__content
+		color: $c-primary
+		font-size: 16px
+		font-weight: 800
+		
+		&-el
+			display: block
+
+			&--bg-text
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				font-size: 40vw
+				font-weight: 900
+				opacity: .1
+				color: $bg-main
+				text-shadow: 3px 0 rgba(255,255,255,1), -3px 0 white
+				user-select: none
+			
+			&--name
+				transform: translateX(-30px)
+				opacity: 0
+				
+			&--description
+				transform: matrix( 1.01107311016097,0,0,1.01107311016097,0,0)
+				margin: 10px 0
+				color: $c-special
+				font-size: 16vw
+				text-align: center
+				text-transform: uppercase
+				text-shadow: 0 0 35px rgba(255,255,255,.2)
+
+				background-image: url('https://devonblog.com/wp-content/uploads/2017/09/codeblauw.jpg')
+				background-size: contain
+				background-clip: text
+				background-repeat: repeat
+				-webkit-background-clip: text
+				color: transparent
+				// animation: loop 2s linear infinite
+				
+			&--job
+				transform: translateX(30px)
+				text-align: right
+				opacity: 0
+	
+	&__arrow
+		position: absolute
+		bottom: 10%
+		left: 50%
+		transform: translate(-12px, 0px)
+		width: 24px
+		fill: $c-highlight
+		animation: scrollDown 1.6s infinite
+		
+	@media (min-width: 1440px)
+		
+		&::before
+			font-size: 576px
+			
+		&__content
+		
+			&-el
+			
+				&--description
+					font-size: 230px
+					
+	@media (max-height: 540px)
+		
+		&__arrow
+			animation: none
