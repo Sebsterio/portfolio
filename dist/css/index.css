@@ -1109,7 +1109,7 @@ input[type="button"]:focus {
   }
   /* line 85, src/sass/4-sections/_about.sass */
   .about__visual {
-    height: 420px;
+    height: 450px;
     padding-top: 9rem;
   }
 }
