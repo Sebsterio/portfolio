@@ -1,41 +1,67 @@
-//	Headings
+// ==================== Headings ====================
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
-	color: #222
 	font-weight: bold
 
+// Gigantic -----------------------------------------
+
 .gigantic
-	font-size: 110px
+	font-size: 100px
 	line-height: 1.09
 	letter-spacing: -2px
+
+	@media (min-width: $s-min)
+		font-size: 120px
+
+	@media (min-width: $l-min)
+		font-size: 180px
+
+// Huge, H1 -----------------------------------------
 
 .huge, h1
 	font-size: 68px
 	line-height: 1.05
 	letter-spacing: -1px
 
+// Large, H2 -----------------------------------------
+
 .large, h2
-	font-size: 42px
+	font-size: 26px
 	line-height: 1.14
+
+	@media (min-width: $s-min)
+		font-size: 32px
+
+	@media (min-width: $l-min)
+		font-size: 42px
+
+// Bigger, H3 -----------------------------------------
 
 .bigger, h3
 	font-size: 26px
 	line-height: 1.38
 
+// Big, H4 --------------------------------------------
+
 .big, h4
 	font-size: 22px
 	line-height: 1.38
+
+// Small ----------------------------------------------
 
 .small, small
 	font-size: 10px
 	line-height: 1.2
 
 
-// Basic Text Style
+// ==================== Basic Text ====================
 
 p
-	margin: 0 0 20px 0
+	margin: 0 0 1em 0
+
+	&:last-child
+		margin: 0
 
 em
 	font-style: italic
