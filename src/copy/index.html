@@ -25,6 +25,7 @@
 	</div>
 	<!-- END SECTION: Splashscreen -->
 
+
 	<!-- SECTION: Navigation -->
 	<div id="top" class="navigation">
 		<div class="navigation__wrapper wrapper--large">
@@ -47,6 +48,7 @@
 	</div>
 	<!-- END SECTION: Navigation -->
 
+
 	<!-- SECTION: Intro -->
 	<header class="header">
 		<div class="introduction">
@@ -68,28 +70,33 @@
 	</header>
 	<!-- END SECTION: Intro -->
 
+
 	<main role="main">
+
 		<!-- SECTION: About -->
 		<section class="about">
 			<div class="about__wrapper wrapper--small">
-				<header class="section-header section-header--left about__header">
-					<h1 class="section-header__heading gigantic">About</h1>
-					<h2 class="section-header__subscript">Hi, I'm Sebastian</h2>
+				<header class="title title--left about__header">
+					<div class="title__wrap">
+						<h1 class="title__heading gigantic">About</h1>
+						<h2 class="title__subscript">Hi, I'm Sebastian</h2>
+					</div>
 				</header>
 				<div class="about__content">
 					<div class="about__content-blurb blurb blurb--framed">
-						<h2 hidden class="blurb__heading">Nothing is<br>impossible</h2>
 						<p class="blurb__copy">
-							I'm a web developer based in London, UK.
+							I'm a freelance web developer and designer based in London, UK.
 						</p>
 						<p class="blurb__copy">
-							I build (and design) exceptional websites and web apps that provide smooth user experience, intuitive
-							interfaces and pixel-perfect layout.
+							I build high quality websites and web apps that provide smooth user experience, intuitive
+							interfaces, and pixel-perfect implementation.
 						</p>
 						<p class="blurb__copy">
 							I'm interested in the entire front-end spectrum and working on ambitious projects with positive people. My
-							current focus is on designing user interfaces with modern JS frameworks.
+							current focus is on building progressive web apps with modern JS frameworks.
 						</p>
+						<br>
+						<p>--(LIn)--(GH)--(@)--(Resume)</p>
 					</div>
 				</div>
 				<img class="about__visual" src="img/portrait.jpg" alt="Sebastian Rosloniec">
@@ -97,36 +104,107 @@
 		</section>
 		<!-- END SECTION: About -->
 
-		<!-- SECTION: App Design -->
-		<section class="app-design">
-			<div class="app-design__wrapper wrapper--large">
-				<div class="app-design__content blurb">
-					<h2 class="blurb__heading">Topaz App <br>Design</h2>
-					<p class="blurb__copy blurb__copy--tight">App design for Topaz, an awesome creative company from New York.</p>
-					<a class="transform-link" href="#0">Check it out</a>
-				</div>
-			</div>
-			<figure class="app-design__visual"></figure>
-		</section>
-		<!-- END SECTION: App Design -->
 
-		<!-- SECTION: Web Design -->
-		<section class="web-design">
-			<div class="web-design__wrapper wrapper--small">
-				<div class="web-design__content blurb">
-					<h2 class="blurb__heading">MGF Web <br>Design</h2>
-					<p class="blurb__copy blurb__copy--tight">Web design I made for MGF, an amazing architecture agency from
-						London.</p>
-					<a class="transform-link" href="#0">Check it out</a>
+		<!-- SECTION: Services -->
+		<section class="services">
+
+			<header class="title title--center services__header">
+				<div class="title__wrap">
+					<h1 class="title__heading gigantic gigantic--wide">Services</h1>
+					<h2 class="title__subscript">What I do</h2>
 				</div>
-			</div>
-			<figure class="web-design__visual"></figure>
+			</header>
+
+			<!-- ARTICLE: Development -->
+			<article class="services__article">
+				<div class="services__content blurb">
+					<h3 class="blurb__heading"><span>01.</span>Development</h3>
+					<dl class="blurb__table">
+						<dt><span>Performance</span></dt>
+						<dd>My apps are highly optimised to ensure fast load times and lag free interaction</dd>
+						<dt><span>Modularity & Scalability</span></dt>
+						<dd>I build each component as an independent module than can be freely reused, edited, or removed without
+							unintended side-effects</dd>
+						<dt><span>Mobile-First Approach</span></dt>
+						<dd>My projects place mobile-specific code first, to speed up the loading on slower mobile networks at a
+							negligible cost to desktop users</dd>
+						<dt><span>Browser Compatibility</span></dt>
+						<dd>My work uses feature detection to support older browsers while allowing modern ones to take full
+							advantage of the technology</dd>
+						<dt><span>Technical Minimalism</span></dt>
+						<dd>I prefer to avoid using bloated 3rd-party plugins whenever essential technologies are sufficiently
+							equipped to handle given needs</dd>
+					</dl>
+				</div>
+				<div class="services__tags blurb">
+					<h4 class="blurb__sub-heading">My tech stack</h4>
+					<ul class="blurb__tag-list">
+						<li>JavaScript</li>
+						<li>ES6</li>
+						<li>React</li>
+						<li>Redux</li>
+						<li>Thunk</li>
+						<li>Saga</li>
+						<li>jQuery</li>
+						<li>SCSS</li>
+						<li>Boostrap</li>
+						<li>Node</li>
+						<li>Firestore</li>
+					</ul>
+					<h4 class="blurb__sub-heading">Tools I use</h4>
+					<ul class="blurb__tag-list">
+						<li>NPM</li>
+						<li>Webpack</li>
+						<li>Gulp</li>
+						<li>ESLint</li>
+						<li>Git</li>
+						<li>Jest+Enzyme</li>
+					</ul>
+				</div>
+				<figure class="services__visual services__visual--A"></figure>
+			</article>
+
+			<!-- ARTICLE: Design -->
+			<article class="services__article">
+				<div class="services__content blurb">
+					<h3 class="blurb__heading"><span>02.</span> Design</h3>
+					<dl class="blurb__table">
+						<dt><span>Experience-Focused</span></dt>
+						<dd>I use a combination of graphics, motion, and interactivity to capture users' emotional attention
+							before segueing into the informational content</dd>
+						<dt><span>Responsive Design</span></dt>
+						<dd>My layouts adapt to their surroundings, which assures they will look great on any screen size and any
+							device</dd>
+						<dt><span>Usability vs Creativity</span></dt>
+						<dd>I strive to make my work stand out by providing an aesthetic experience without sacrificing the sense
+							of familiarity and convenience of use</dd>
+						<dt><span>Design with Personality</span></dt>
+						<dd>I seek to capture the individuality and uniqueness of a brand by adding a human touch to the visual
+							identity and aim to showcase a character that interests the persona of the target audience</dd>
+					</dl>
+				</div>
+				<div class="services__tags blurb">
+					<h4 class="blurb__sub-heading"> Tools I use </h4>
+					<ul class="blurb__tag-list">
+						<li>Adobe XD</li>
+						<li>Photoshop</li>
+						<li>Illustrator</li>
+						<li>CorelDRAW</li>
+						<li>Photo-Paint</li>
+						<li>GIMP</li>
+						<li>Gravit</li>
+					</ul>
+				</div>
+				<figure class="services__visual services__visual--B"></figure>
+			</article>
+
 		</section>
-		<!-- END SECTION: Web Design -->
+		<!-- END SECTION: Services -->
+
 
 		<!-- SECTION: Work -->
 		<section id="work" class="work">
-			<h2 class="work__heading title">Latest Projects</h2>
+			<h2 class="work__heading">Latest Projects</h2>
 			<div class="work__wrapper wrapper--large">
 				<ul class="work__list">
 					<li class="work__list-el work__list-el--is-active">
@@ -178,53 +256,10 @@
 		</section>
 		<!-- END SECTION: Work -->
 
-		<!-- SECTION: Blog -->
-		<section id="blog" class="blog">
-			<h2 class="blog__heading title">Blog Posts</h2>
-			<div class="blog__wrapper wrapper--large">
-				<article class="blog__post">
-					<div class="blog__post-thumbnail">
-						<img src="img/blog-post-1.jpg" alt="Man viewing work plans">
-					</div>
-					<div class="blog__post-excerpt">
-						<h3>Days in the office</h3>
-						<p>I love using UI Kits vs website templates because UI Kits give you an easier way to use elements compared
-							to templates.</p>
-						<a class="transform-link" href="#0">Read full article</a>
-					</div>
-				</article>
-				<article class="blog__post">
-					<div class="blog__post-thumbnail">
-						<img src="img/blog-post-2.jpg" alt="Man hanging pictures">
-					</div>
-					<div class="blog__post-excerpt">
-						<h3>Why I use CCO images</h3>
-						<p>CCO images are awesome because you don't have to credit the author, and you can use them anywhere,
-							anytime.</p>
-						<a class="transform-link" href="#0">Read full article</a>
-					</div>
-				</article>
-				<article class="blog__post">
-					<div class="blog__post-thumbnail">
-						<img src="img/blog-post-3.jpg" alt="Men working at a desk">
-					</div>
-					<div class="blog__post-excerpt">
-						<h3>Designing for IOT</h3>
-						<p>Internet of things is coming so quickly, we as designers will have to design UI and UX for more things in
-							the future.</p>
-						<a class="transform-link" href="#0">Read full article</a>
-					</div>
-				</article>
-			</div>
-			<div class="blog__view-more">
-				<a class="button blog__view-more--el" href="#0">View More</a>
-			</div>
-		</section>
-		<!-- END SECTION: Blog -->
 
 		<!-- SECTION: Contact -->
 		<section id="contact" class="contact">
-			<h2 class="contact__heading title">Contact Me</h2>
+			<h2 class="contact__heading">Contact Me</h2>
 			<div class="contact__wrapper wrapper--large">
 				<div class="contact__visual">
 					<img src="img/contact-visual.png" alt="James Martin's location">
@@ -242,6 +277,8 @@
 		<!-- END SECTION: Contact -->
 
 	</main>
+
+
 	<!-- SECTION: Footer -->
 	<footer class="footer">
 		<div class="footer__wrapper wrapper--large">

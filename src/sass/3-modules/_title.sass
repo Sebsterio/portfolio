@@ -1,7 +1,57 @@
 .title
-	margin: 0 0 45px 0
-	color: $c-primary
-	font-size: 58px
-	font-weight: 800
-	text-align: center
+	position: relative
+	font-family: $font-secondary
+	width: 100%
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+
+
+	@media (min-width: $m-min)
+
+		&--center
+			justify-content: center
+
+			.title__wrap // *A
+				padding-left: 1.6rem
+				padding-right: 1.6rem
+
+		&--left
+			justify-content: flex-start
+
+			.title__wrap // *A
+				padding-right: 1.6rem
+
+		&--right
+			justify-content: flex-end
+
+			.title__wrap // *A
+				padding-left: 1.6rem
+
+	&__wrap // *A
+		position: relative
+		display: inline-block
+		text-align: center
+		background: $bg-primary	
+
+	&__heading, &__subscript 
+		margin: 0
+		padding: 0
+		background: none
 	
+	&__heading
+		font-weight: bolder
+		text-transform: uppercase
+		color: $bg-main
+		text-shadow: 2px 0 0 rgba(255,255,255,.2), -2px 0 0 rgba(255,255,255,.2)//, 0 0 20px rgba(255,255,255,.06)
+
+	&__subscript
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -15%)
+		text-shadow: 2px 2px 0 $bg-main, -2px -2px 0 $bg-main
+
+		color: $c-primary 
+		font-weight: normal
+		white-space: nowrap

@@ -3,16 +3,94 @@
 	&--framed
 		padding: 15px 0
 		background-color: $bg-secondary
-
-	&__heading
-		margin: 0 0 15px 0
 		color: $c-primary
-		font-size: 58px
-		font-weight: 800
 		
-	&__copy
-		font-weight: 400
-		
-		&--tight
+
+	// Headings
+	&__heading
+		color: $c-primary
+		margin-bottom: 1em
+
+		span
+			font-family: monospace
+			color: $c-highlight
+
+	&__sub-heading
+		color: $c-primary
+		margin: 1em 0 .5em 0
+
+		&:first-child
+			margin-top: 0
+
+
+	// Table (dl)
+	&__table
+		display: grid
+		grid-gap: 1em
+
+		dt span
+			position: relative
+			// color: $c-secondary
+			color: $c-primary
+			text-shadow: -.1em .1em 0 $bg-main
+			font-weight: bold
+			padding: .2em
+
+			&:after
+				content: ''
+				display: block
+				background-color: $c-highlight
+				z-index: -1
+				position: absolute
+				bottom: .2em
+				left: -.2em
+				right: .7em
+				height: .3em
+				transition: all 300ms ease
+
+		// TODO: use elsewhere (left aligned items or single heading)
+			// &:hover dt span:after
+			// 	top: 0
+			// 	bottom: 0
+			// 	left: -.2em
+			// 	width: 1.5em
+			// 	right: unset
+			// 	height: unset
+
+				
+		dd
+			color: $c-primary
+			margin: 0
+			margin-inline-start: 0
+
+			&:not(:last-child)
+				margin-bottom: 1em
+
+		@media (min-width: $l-min)
+			grid-template-columns: auto 1fr
+
+			dt
+				text-align: right
+
+			dd
+				text-align: left
+
+
+	// Tag list (ul)
+	&__tag-list
+		li
+			display: inline-block
+			margin: .3em
+			font-family: monospace
+			font-size: 14px
+			color: $c-secondary
+			
+			padding: 0 .4em
+			background-color: darken($c-highlight, 35%)
+			border: 2px solid $c-highlight
+			border-radius: 4px
+
+	// Copy
+	&__copy--tight
 			max-width: 300px
 			

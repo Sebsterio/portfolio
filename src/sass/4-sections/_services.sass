@@ -1,0 +1,77 @@
+		
+/************************* App Design *************************/
+
+.services
+	width: 100%
+	max-width: 1200px
+	margin: auto
+
+	&__article
+		position: relative
+		padding: 5rem 1rem 0 1rem
+		display: grid
+		grid-template-areas: 'content' 'tags' ' pic'
+		grid-gap: 2rem
+		justify-content: center
+		justify-items: center
+		align-content: center
+		align-items: center
+		overflow: hidden
+
+		@media (min-width: $s-min)
+			&:nth-child(even)
+				grid-template-areas: 'content content' 'pic tags'
+				grid-template-columns: 6fr 4fr
+
+			&:nth-child(odd)
+				grid-template-areas: 'content content' 'tags pic'
+				grid-template-columns: 4fr 6fr
+
+		@media (min-width: $m-min)
+			grid-template-rows: 1fr auto
+	
+			&:nth-child(even)
+				grid-template-areas: 'content pic' 'content tags'
+				grid-template-columns: 6fr 4fr
+
+			&:nth-child(odd)
+				grid-template-areas: 'pic content' 'tags content'
+				grid-template-columns: 4fr 6fr
+
+	&__content
+		grid-area: content
+		text-align: center
+
+		p
+			margin: 0 auto 20px auto
+
+	&__tags
+		grid-area: tags
+		text-align: center
+				
+	&__visual
+		grid-area: pic
+		position: relative
+		margin: 0
+		width: 100%
+		height: 100%
+		min-height: 250px
+		background:
+			position: center
+			size: contain
+			repeat: no-repeat
+		// transform: scale(2)
+		// z-index: -1
+
+		&--A
+			background-image: url("../img/web-design-visual.png")
+
+		&--B
+			background-image: url("../img/app-design-visual.png")
+			
+		@media (min-width: $m-min)
+			margin-top: 5rem
+			height: calc(100% - 5rem)
+
+			
+		

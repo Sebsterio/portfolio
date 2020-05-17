@@ -10,14 +10,17 @@ Sebastian Rosloniec
 
 ## Next
 
-- sticky nav (hambureger & logo only)
-- nav link subscript
-- landing page redesign
-- about page redesign & add content  
+- nav
+  -- sticky (hamburger & logo only)
+  -- CTA: night/day mode
+- aboute
+  -- socil links & CV download
+- services  
   -- skills  
   -- principles
+- highlights
+  -- add arrows to carousel
 - projects  
-   -- add arrows to carousel  
    -- widgets viewer  
    -- load with JS
 
@@ -30,6 +33,7 @@ Sebastian Rosloniec
 - nav  
    -- @desktop auto hide; show on hover  
    -- @mobile transparent; only burger (with text shadow)
+- a11y color mode (initial, for lighthouse)
 
 ## Deets
 

@@ -3,6 +3,7 @@
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
 	font-weight: bold
+	margin: 0
 
 // Gigantic -----------------------------------------
 
@@ -16,6 +17,18 @@ h1, h2, h3, h4, h5, h6
 
 	@media (min-width: $l-min)
 		font-size: 180px
+
+	&--wide
+		font-size: 80px
+	
+		@media (min-width: $s-min)
+			font-size: 100px
+
+		@media (min-width: $m-min)
+			font-size: 120px
+
+		@media (min-width: $l-min)
+			font-size: 180px
 
 // Huge, H1 -----------------------------------------
 
@@ -39,14 +52,38 @@ h1, h2, h3, h4, h5, h6
 // Bigger, H3 -----------------------------------------
 
 .bigger, h3
-	font-size: 26px
+	font-size: 34px
 	line-height: 1.38
+
+	@media (min-width: $s-min)
+		font-size: 46px
+
+	@media (min-width: $l-min)
+		font-size: 58px
 
 // Big, H4 --------------------------------------------
 
-.big, h4
+.big, h4,
 	font-size: 22px
 	line-height: 1.38
+	
+	@media (min-width: $s-min)
+		font-size: 26px
+
+	@media (min-width: $l-min)
+		font-size: 32px
+
+// Normal, H4 --------------------------------------------
+
+.normal, h5, dt
+	font-size: 18px
+	line-height: 1.38
+	
+	@media (min-width: $s-min)
+		font-size: 20px
+
+	@media (min-width: $l-min)
+		font-size: 22px
 
 // Small ----------------------------------------------
 
