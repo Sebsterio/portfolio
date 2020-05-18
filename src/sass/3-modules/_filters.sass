@@ -1,0 +1,92 @@
+.filters
+
+	&__form
+		max-width: 900px
+		margin: auto
+		display: grid
+		justify-content: left
+		height: 2em
+		overflow: visible
+		z-index: 999
+
+		@media (min-width: $s-min)
+			height: auto
+			justify-content: center
+			justify-items: center
+			grid-template-columns: repeat(4, 1fr)
+
+	&__fieldset
+		border: none
+		display: contents
+		width: 100%
+			
+	input
+		display: none
+	
+	// ============ Toggle =============
+
+	&__toggle-label
+		display: inline-block
+		padding: .3em 1em
+		cursor: pointer
+
+		@media (min-width: $s-min)
+			display: none
+		
+		span
+			color: $c-highlight
+
+	// ============ Filters =============
+
+	&__filter-label
+		padding: .3em 1em
+		display: inline-block
+		background-color: $bg-main
+		cursor: pointer
+		white-space: nowrap
+
+		--index: 0
+		--delay: 50ms
+		transition: transform 100ms linear, opacity 100ms linear
+		transition-delay: calc(var(--delay) * var(--index))
+		transform-origin: top right
+
+	// Decorate on hover
+	&__filter-label
+		span
+			position: relative
+			z-index: 1
+
+			&::before
+				content: ''
+				display: block
+				background-color: $c-highlight
+				z-index: -1
+				position: absolute
+				top: -.2em
+				bottom: -.2em
+				left: -.3em
+				width: .8em
+				transition: transform 200ms ease
+				transform: scaleX(0)
+				transform-origin: left
+		
+		&:hover span
+			text-shadow: -1px 1px 0 $bg-main
+			
+			&::before
+				transform: scaleX(1)
+
+	// Decorate/Hide selected filter tag
+	&__filter:checked + &__filter-label
+		color: $c-highlight
+		
+		@media (max-width: $xs-max)
+			display: none
+
+	// Toggle all filter tags on __toggle click
+	&__toggle:checked ~ &__fieldset &__filter-label
+		@media (max-width: $xs-max)
+			transform: translateX(-70%)
+			opacity: 0
+			transition-delay: calc(var(--delay) * (7 - var(--index)))
