@@ -1,0 +1,60 @@
+
+// ---------------- Form ----------------
+
+.form
+	position: relative
+	max-width: 90vw
+	display: flex
+	flex-flow: column nowrap
+	align-items: center
+
+	// Wrappers
+
+	&__wrapper, &__floating-wrapper
+		padding: 1rem
+		background-color: $bg-main
+
+	&__wrapper
+		max-width: 400px
+		display: flex
+		flex-flow: row wrap
+
+	&__floating-wrapper
+		padding-top: 0
+		display: inline-block
+		margin: auto
+
+		@media (min-width: $m-min)
+			margin-right: 0
+	
+	// Elements
+
+	&__el
+		flex: 0 1 100%
+		padding: 0 0 0 1em
+		font-weight: 700
+		background-color: transparent
+		border: 1px solid $c-secondary
+		border-radius: 3px
+
+			// @media (min-width: $m-min)
+
+		&--name,
+		&--email
+			height: 3em
+			margin-bottom: 1em
+
+			@media (min-width: $l-min)
+				height: 50px
+			
+		&--message
+			height: 8em
+			padding-top: 1em
+			resize: vertical
+
+			@media (min-width: $l-min)
+				height: 150px
+
+	input[type="submit"]
+		display: inline-block
+		padding: 10px 50px

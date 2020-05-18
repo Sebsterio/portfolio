@@ -74,8 +74,9 @@
 	<main role="main">
 
 		<!-- SECTION: About -->
-		<section class="about">
+		<section id='about' class="about">
 			<div class="about__wrapper wrapper--small">
+				<div class="frame frame--A"></div>
 				<header class="title title--left about__header">
 					<div class="title__wrap">
 						<h1 class="title__heading gigantic">About</h1>
@@ -106,12 +107,12 @@
 
 
 		<!-- SECTION: Services -->
-		<section class="services">
+		<section id="services" class="services">
 
 			<header class="title title--center services__header">
 				<div class="title__wrap">
 					<h1 class="title__heading gigantic gigantic--wide">Services</h1>
-					<h2 class="title__subscript">What I do</h2>
+					<h2 class="title__subscript">What I Do</h2>
 				</div>
 			</header>
 
@@ -138,7 +139,7 @@
 				</div>
 				<div class="services__tags blurb">
 					<h4 class="blurb__sub-heading">My tech stack</h4>
-					<ul class="blurb__tag-list">
+					<ul class="blurb__tag-list small">
 						<li>JavaScript</li>
 						<li>ES6</li>
 						<li>React</li>
@@ -146,19 +147,19 @@
 						<li>Thunk</li>
 						<li>Saga</li>
 						<li>jQuery</li>
-						<li>SCSS</li>
+						<li>(S)CSS</li>
 						<li>Boostrap</li>
 						<li>Node</li>
 						<li>Firestore</li>
 					</ul>
 					<h4 class="blurb__sub-heading">Tools I use</h4>
-					<ul class="blurb__tag-list">
+					<ul class="blurb__tag-list small">
 						<li>NPM</li>
 						<li>Webpack</li>
 						<li>Gulp</li>
+						<li>Jest+Enzyme</li>
 						<li>ESLint</li>
 						<li>Git</li>
-						<li>Jest+Enzyme</li>
 					</ul>
 				</div>
 				<figure class="services__visual services__visual--A"></figure>
@@ -185,7 +186,7 @@
 				</div>
 				<div class="services__tags blurb">
 					<h4 class="blurb__sub-heading"> Tools I use </h4>
-					<ul class="blurb__tag-list">
+					<ul class="blurb__tag-list small">
 						<li>Adobe XD</li>
 						<li>Photoshop</li>
 						<li>Illustrator</li>
@@ -202,76 +203,50 @@
 		<!-- END SECTION: Services -->
 
 
-		<!-- SECTION: Work -->
-		<section id="work" class="work">
-			<h2 class="work__heading">Latest Projects</h2>
-			<div class="work__wrapper wrapper--large">
-				<ul class="work__list">
-					<li class="work__list-el work__list-el--is-active">
-						<div class="work__content">
-							<div class="work__content-blurb blurb blurb--framed">
-								<h3 class="blurb__heading">Strategik INC<br>Web Design</h3>
-								<p class="blurb__copy">The awesome guys at Strategik INC were superb to work with because they knew
-									their goals exactly.</p>
-							</div>
-							<a class="transform-link" href="#0">See full project</a>
-						</div>
-						<div class="work__visual">
-							<img src="img/work-strategik.jpg" alt="Strategik INC">
-						</div>
-					</li>
-					<li class="work__list-el">
-						<div class="work__content">
-							<div class="work__content-blurb blurb blurb--framed">
-								<h3 class="blurb__heading">Ēostre UI Kit<br>Web Design</h3>
-								<p class="blurb__copy">Ēostre UI Kit is made following the latest design trends with focus on usability
-									and fast workflow.</p>
-							</div>
-							<a class="transform-link" href="#0">See full project</a>
-						</div>
-						<div class="work__visual">
-							<img src="img/work-eostre.jpg" alt="Ēostre UI Kit">
-						</div>
-					</li>
-					<li class="work__list-el">
-						<div class="work__content">
-							<div class="work__content-blurb blurb blurb--framed">
-								<h3 class="blurb__heading">Go Outside<br>App Design</h3>
-								<p class="blurb__copy">Quick concept for a fictitious wildlife exploration app. Grab the PSD and start
-									your own exploration.</p>
-							</div>
-							<a class="transform-link" href="#0">See full project</a>
-						</div>
-						<div class="work__visual">
-							<img src="img/work-go-outside.jpg" alt="Go Outside App">
-						</div>
-					</li>
-				</ul>
-				<ul class="work__navigation">
-					<li class="work__navigation-el work__navigation-el--is-active"></li>
-					<li class="work__navigation-el"></li>
-					<li class="work__navigation-el"></li>
-				</ul>
-			</div>
-		</section>
-		<!-- END SECTION: Work -->
+		<!-- SECTION: Projects -->
+		<section id="projects" class="projects">
 
+			<header class="title title--center projects__header">
+				<div class="title__wrap">
+					<h1 class="title__heading gigantic gigantic--wide">Portfolio</h1>
+					<h2 class="title__subscript">My Work</h2>
+				</div>
+			</header>
+
+			<h2 style="text-align: center;padding: 3rem">Coming very soon...</h2>
+		</section>
+		<!-- END SECTION: Projects -->
 
 		<!-- SECTION: Contact -->
 		<section id="contact" class="contact">
-			<h2 class="contact__heading">Contact Me</h2>
-			<div class="contact__wrapper wrapper--large">
-				<div class="contact__visual">
-					<img src="img/contact-visual.png" alt="James Martin's location">
+			<div class="contact__wrapper wrapper--small">
+				<div class=" frame frame--B"></div>
+				<header class="title title--middle contact__header">
+					<div class="title__wrap">
+						<h1 class="title__heading gigantic--wide">Contact</h1>
+						<h2 class="title__subscript">Get In Touch</h2>
+					</div>
+				</header>
+				<div class="contact__content">
+					<!-- Simple form setup: formspree.io -->
+					<form class="form">
+						<div class="form__wrapper">
+							<input class="form__el form__el--name" type="text" placeholder="Your Name" spellcheck="false">
+							<input class="form__el form__el--email" type="email" placeholder="Your Email" spellcheck="false">
+							<textarea class="form__el form__el--message" placeholder="Your Message"></textarea>
+						</div>
+						<div class="form__floating-wrapper">
+							<input class="form__el form__el--submit" type="submit" value="Send">
+						</div>
+					</form>
 				</div>
-				<!-- Simple form setup: formspree.io -->
-				<form class="contact__form">
-					<input class="contact__form-el contact__form-el--name" type="text" placeholder="Your Name" spellcheck="false">
-					<input class="contact__form-el contact__form-el--email" type="email" placeholder="Your Email"
-						spellcheck="false">
-					<textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
-					<input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
-				</form>
+				<!-- <div class="contact__links">
+					<ul>
+						<li>(LIn)</li>
+						<li>(GH)</li>
+						<li>(@)</li>
+					</ul>
+				</div> -->
 			</div>
 		</section>
 		<!-- END SECTION: Contact -->
@@ -302,7 +277,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- jQuery local fallback -->
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-	<script src="js/vendor.min.js"></script>
 	<script src="js/functions.min.js"></script>
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID and uncomment -->
 	<!--

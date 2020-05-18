@@ -6,24 +6,7 @@
 	background-color: $bg-secondary
 	
 	&__wrapper
-		display: grid
 		grid-template-areas: 'header' 'content' 'pic'
-		grid-gap: 3rem
-		justify-content: center
-		justify-items: center
-		
-		&::before
-			content: ""
-			position: absolute
-			top: 8rem
-			left: 1rem
-			right: 1rem
-			bottom: 8rem
-			border: 10px solid $c-highlight
-
-			@media (min-width: $s-min)
-				top: 9rem
-				bottom: 5rem
 			
 	&__header
 		grid-area: header
@@ -50,18 +33,7 @@
 		
 		&__wrapper
 			grid-template-areas: "header pic" "content pic"
-			grid-gap: 2rem
-			align-items: center
-			margin-bottom: 3rem // *A
-			
-			&::before
-				content: ""
-				position: absolute
-				top: 4rem
-				left: 4rem
-				right: 5rem
-				bottom: -3rem // *A
-				border: 10px solid $c-highlight
+			margin-bottom: 3rem
 
 		&__content
 			align-self: start
@@ -71,16 +43,6 @@
 			padding-top: 7rem
 
 	@media (min-width: $l-min)
-
-		&__wrapper
-			&::before
-				content: ""
-				position: absolute
-				top: 7rem
-				left: 4rem
-				right: 10rem
-				bottom: 2rem
-				border: 10px solid $c-highlight
 
 		&__header
 			transform: translateX(-5rem)

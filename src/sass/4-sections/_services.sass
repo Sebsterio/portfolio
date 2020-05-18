@@ -8,7 +8,6 @@
 
 	&__article
 		position: relative
-		padding: 5rem 1rem 0 1rem
 		display: grid
 		grid-template-areas: 'content' 'tags' ' pic'
 		grid-gap: 2rem
@@ -17,6 +16,8 @@
 		align-content: center
 		align-items: center
 		overflow: hidden
+
+		padding: 3rem 1rem 0 1rem
 
 		@media (min-width: $s-min)
 			&:nth-child(even)
@@ -37,6 +38,9 @@
 			&:nth-child(odd)
 				grid-template-areas: 'pic content' 'tags content'
 				grid-template-columns: 4fr 6fr
+
+		@media (min-width: $l-min)
+			padding-bottom: 1rem
 
 	&__content
 		grid-area: content

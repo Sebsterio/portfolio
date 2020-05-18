@@ -1,10 +1,19 @@
 // Wrappers
-
+	
 .wrapper
 	position: relative
 	max-width: 90%
 	height: 100%
 	margin: 0 auto
+
+	display: grid
+	grid-gap: 3rem
+	justify-content: center
+	justify-items: center
+
+	@media (min-width: $m-min)
+		grid-gap: 2rem
+		align-items: center
 
 	&--small
 		@extend .wrapper
