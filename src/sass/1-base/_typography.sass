@@ -8,27 +8,28 @@ h1, h2, h3, h4, h5, h6
 // Gigantic -----------------------------------------
 
 .gigantic
-	font-size: 100px
 	line-height: 1.09
 	letter-spacing: -2px
-
+	font-size: 100px
 	@media (min-width: $s-min)
 		font-size: 120px
 
-	@media (min-width: $l-min)
-		font-size: 180px
-
 	&--wide
 		font-size: 80px
-	
 		@media (min-width: $s-min)
 			font-size: 100px
 
+	&--wider
+		font-size: 70px
+		@media (min-width: $s-min)
+			font-size: 90px
+
+	&, &--wide, &--wider
 		@media (min-width: $m-min)
 			font-size: 120px
-
 		@media (min-width: $l-min)
 			font-size: 180px
+
 
 // Huge, H1 -----------------------------------------
 

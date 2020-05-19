@@ -1,123 +1,72 @@
 .projects
+	max-width: $xl-min
+	margin: auto
 
 	&__nav
 		padding: 1rem 
-
-// === TODO: export ========================
 	
-.projects__gallery
-	padding: 2rem
-	
-	div
-		box-sizing: border-box
+	&__gallery
+		padding: 1rem
 
-
-	// === TODO: export ========================
-
-	.project
-		flex: 1 0 300px
-
-
-	// ======================================
-
-	// TODO
-		// breakpoints
-			// first row bigger squares (nth-child: n <= rowLength (at given breakpoint))
-		// box shadow
-		// overlay w gradient bg: click: transition opacity or move bg
-
-	.row
-		display: flex 
-		justify-content: space-between
-
-	.square
-		height: 0
-
-	.square-25
-		width: 25%
-		padding-bottom: 25%
-
-	.square-33
-		width: 33.333333%
-		padding-bottom: 33.333333%
-
-	.square-50
-		width: 50%
-		padding-bottom: 50%
-
-	.square-100
-		width: 100%
-		padding-bottom: 100%
-
-	// Styling
-
-	.grid
-		display: block
-		padding: 0
-		margin: 0 -6px 12px
+	&__grid
 		text-align: left
 		font-size: 0
+		
+		&-cell	
+			box-sizing: border-box
+			display: inline-block
+			margin: 0
+			padding: 6px
+			text-align: left
+			vertical-align: top
+			
+			// Enlarge first row cell size & font-size
 
-	.grid-cell
-		display: inline-block
-		margin: 0
-		padding: 0 6px
-		text-align: left
-		vertical-align: top
-		width: 100%
-		font-size: 16px
+			width: 100%
+			font-size: 4vw
 
-	.grid-25 
-		width: 25%
-	.grid-33 
-		width: 33.333333%
-	.grid-50 
-		width: 50%
+			@media (min-width: $s-min) and (max-width: $s-max)
 
-	.square
-		position: relative
-		display: inline-block
-		vertical-align: top
-		background-color: #eee
+				width: 50%
+				font-size: 2vw
 
+				&:nth-child(-n+1)
+					width: 100%
+					font-size: 4vw
+					
+			@media (min-width: $m-min) and (max-width: $m-max)
 
-	// Styles that are specific to this demo
+				width: 33.333333%
+				font-size: 1.33vw
 
-	.square
-		overflow: hidden
-		border-radius: 8px
-		background-size: cover
-		box-shadow: 0 0 12px 0 rgba(white, .3)
-		transition: all 200ms ease
+				&:nth-child(-n+2)
+					width: 50%
+					font-size: 2vw
+					
+			@media (min-width: $l-min) and (max-width: $l-max)
 
-		&:hover
-			box-shadow: 0 0 24px 0 rgba(white, .4)
-			filter: brightness(120%)
+				width: 25%
+				font-size: 1vw
+
+				&:nth-child(-n+3)
+					width: 33.333333%
+					font-size: 1.32vw
+					
+			@media (min-width: $xl-min)
+
+				width: 20%
+				font-size: 13px
+
+				&:nth-child(-n+4)
+					width: 25%
+					font-size: 16px
+
+		// &--previewing
+		// 	padding-right: ...%
+
+		// &:not(&--previewing)
+		// 	...cell
+		// 		nth-child stuff
+
 
 		
-	.one
-		background-image: url(https://assets.iamsteve.me/placeholder/1.jpg)
-	
-	.two
-		background-image: url(https://assets.iamsteve.me/placeholder/2.jpg)
-
-	.three
-		background-image: url(https://assets.iamsteve.me/placeholder/3.jpg)
-
-	.four
-		background-image: url(https://assets.iamsteve.me/placeholder/4.jpg)
-
-	.content h2
-		font-size: 12px
-		font-weight: 700
-		color: #fff
-		text-shadow: 0 1px rgba(black, .6)
-		background: linear-gradient(rgba(#252243, 0), rgba(#252243, .8))
-		
-		margin: 0
-		padding: 36px 12px 12px
-		
-		position: absolute
-		left: 0
-		bottom: 0
-		right: 0

@@ -10,15 +10,17 @@ Sebastian Rosloniec
 
 ## Next
 
-- nav
-  -- sticky (hamburger & logo only ?)
-  -- CTA -> night/day mode
-- social links (+ CV download)
-  -- contact: right, vertical
-  -- about: under, horizontal
 - projects  
    -- widgets viewer  
    -- load with JS
+
+- nav
+  -- sticky (hamburger & logo only ?)
+  -- CTA -> night/day mode
+
+- social links (+ CV download)
+  -- contact: right, vertical
+  -- about: under, horizontal
 
 ## Next version
 
@@ -26,14 +28,9 @@ Sebastian Rosloniec
 - redo JS functions
 - intro: animate every el
 - noscript
-- rid libs
-- nav  
-   -- @desktop auto hide; show on hover  
-   -- @mobile transparent; only burger (with text shadow)
-- a11y color mode (initial, for lighthouse)
-- highlights
-  -- add arrows to carousel
 
 ## Deets
 
+- custom decoration imgs
 - bg image resize & convert
+- portrait: color on hover

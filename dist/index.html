@@ -24,7 +24,7 @@
 		<!-- Header -->
 		<header class="title title--center projects__header">
 			<div class="title__wrap">
-				<h1 class="title__heading gigantic gigantic--wide">Portfolio</h1>
+				<h1 class="title__heading gigantic gigantic--wider">Portfolio</h1>
 				<h2 class="title__subscript">My Work</h2>
 			</div>
 		</header>
@@ -69,57 +69,76 @@
 		<!-- Gallery -->
 		<div class="projects__gallery">
 
-			<div class="project"></div>
-
-			<div class='grid'>
-				<div class='grid-cell grid-33'>
-					<div class='square two square-100'>
-						<div class='content'>
-							<h2>Colour series: tweaking your palette</h2>
+			<div class='projects__grid'>
+				<div class='projects__grid-cell'>
+					<div class='project'>
+						<div class="project__visual">
+							<div class="project__visual-overlay"></div>
+						</div>
+						<div class='project__content-container'>
+							<div class='project__content'>
+								<div class="project__title">
+									<div class="project__type">
+										E-commerce
+									</div>
+									<div class="project__name">
+										Narbon Fashion Store
+									</div>
+								</div>
+								<div class="project__description">
+									<div class="project__blurb">
+										Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+										Lorem
+										Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+									</div>
+									<ul class="project__tags">
+										<li class="project__tag">React</li>
+										<li class="project__tag">Node</li>
+										<li class="project__tag">Database</li>
+									</ul>
+								</div>
+								<ul class="project__buttons">
+									<li class="project__button">Preview</li>
+									<li class="project__button">Open</li>
+									<li class="project__button">GitHub</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class='grid-cell grid-33'>
-					<div class='square four square-100'>
-						<div class='content'>
-							<h2>Colour series: picking your palette</h2>
+				<div class='projects__grid-cell'>
+					<div class='project'>
+						<div class="project__visual">
+							<div class="project__visual-overlay"></div>
 						</div>
-					</div>
-				</div>
-				<div class='grid-cell grid-33'>
-					<div class='square three square-100'>
-						<div class='content'>
-							<h2>Feature detection with CSS</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class='grid'>
-				<div class='grid-cell grid-25'>
-					<div class='square one square-100'>
-						<div class='content'>
-							<h2>11 resources for colour inspiration</h2>
-						</div>
-					</div>
-				</div>
-				<div class='grid-cell grid-25'>
-					<div class='square two square-100'>
-						<div class='content'>
-							<h2>Browse content efficiently with toggling horizontal scrolling</h2>
-						</div>
-					</div>
-				</div>
-				<div class='grid-cell grid-25'>
-					<div class='square three square-100'>
-						<div class='content'>
-							<h2>A year in writing – 2015</h2>
-						</div>
-					</div>
-				</div>
-				<div class='grid-cell grid-25'>
-					<div class='square four square-100'>
-						<div class='content'>
-							<h2>Colour series: adding new colours & tips</h2>
+						<div class='project__content-container'>
+							<div class='project__content'>
+								<div class="project__title">
+									<div class="project__type">
+										E-commerce
+									</div>
+									<div class="project__name">
+										Narbon Fashion Store
+									</div>
+								</div>
+								<div class="project__description">
+									<div class="project__blurb">
+										Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+										Lorem
+										Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+									</div>
+									<ul class="project__tags">
+										<li class="project__tag">React</li>
+										<li class="project__tag">Node</li>
+										<li class="project__tag">Database</li>
+									</ul>
+								</div>
+								<ul class="project__buttons">
+									<li class="project__button">Preview</li>
+									<li class="project__button">Open</li>
+									<li class="project__button">GitHub</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -134,7 +153,7 @@
 			<div class=" frame frame--B"></div>
 			<header class="title title--middle contact__header">
 				<div class="title__wrap">
-					<h1 class="title__heading gigantic--wide">Contact</h1>
+					<h1 class="title__heading gigantic gigantic--wider">Contact</h1>
 					<h2 class="title__subscript">Get In Touch</h2>
 				</div>
 			</header>
@@ -183,6 +202,14 @@
 		</div>
 	</footer>
 	<!-- END SECTION: Footer -->
+
+	<script>
+		const projects = document.querySelectorAll('.project')
+		projects.forEach(proj => proj.addEventListener('click', () => {
+			projects.forEach(proj => proj.classList.remove('active'))
+			proj.classList.add('active')
+		}))
+	</script>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

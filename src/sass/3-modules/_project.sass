@@ -1,0 +1,175 @@
+// ---------------------- Project -------------------
+
+// Not using semantic heading tags due to specificity issues
+	
+@mixin transition-step-1
+	transition: all 400ms ease-out
+	transition-delay: 200ms
+
+@mixin transition-step-1-active
+	transition-delay: unset
+
+@mixin transition-step-2
+	transition: all 200ms ease-out
+	transition-delay: unset
+	opacity: 0
+
+@mixin transition-step-2-active
+	transition-delay: 400ms
+	opacity: 1
+	
+
+.project
+	position: relative
+	display: inline-block
+	vertical-align: top
+
+	// fixed size ratio
+	height: 0
+	width: 100%
+	padding-bottom: 100%
+
+	background-color: $c-highlight
+	background: linear-gradient(45deg, darken($c-highlight, 20%), $c-highlight 50%)
+	overflow: hidden
+	border-radius: 8px
+	box-shadow: 0 0 12px 0 rgba(white, .3)
+	transition: all 200ms ease-in-out
+
+	&:hover
+		box-shadow: 0 0 24px 0 rgba(white, .4)
+		filter: brightness(120%)
+
+
+	// ---- Visual ----
+
+	&__visual
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		// background-image: (element style) 
+		background-size: cover
+		@include transition-step-1
+	
+	&.active  &__visual
+		filter: grayscale(100%)
+		opacity: .1
+		@include transition-step-1-active
+
+	&__visual-overlay
+		position: absolute
+		top: 80%
+		right: 0
+		bottom: 0
+		left: 0
+		background: linear-gradient(rgba(white, 0), rgba(#252243, .8))
+
+
+	// ---- Container ----
+
+	&__content-container
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		box-shadow: inset -5px 5px 5px 0 rgba(white, .3), inset 5px -5px 5px 0 rgba(black, .3)
+
+
+	// ---- Content ----
+
+	&__content
+		position: absolute
+		top: 2.4em
+		right: 1.2em
+		bottom: .8em
+		left: 1.2em
+
+		font-family: $font-secondary
+		color: $c-white
+		text-shadow: 0 1px rgba(black, .6)
+
+	// ---- Title ----
+
+	&__title
+		position: absolute
+		top: 100%
+		transform: translateY(-100%)
+		@include transition-step-1
+	
+
+	&.active  &__title
+		top: 0
+		transform: translateY(0)
+		@include transition-step-1-active
+
+	&__type
+		font-size: .6em
+		@include transition-step-2
+
+	&.active  &__type
+		@include transition-step-2-active
+
+	&__name
+		font-size: 1.6em
+
+
+	// ---- Description ----
+
+	&__description
+		font-size: .8em
+		position: absolute
+		top: 47%
+		left: -1em
+		transform: translateY(-50%)
+		@include transition-step-2
+
+	&.active  &__description
+		left: 0
+		@include transition-step-2-active
+
+
+	// ---- Tags ----
+
+	&__tags
+		padding-top: 1.6em
+		font-size: .8em
+		font-family: $font-monospace
+
+	&__tag
+		display: inline-block
+		padding: .8em
+
+	// ---- Buttons ----
+
+	&__buttons
+		font-size: 1em
+		text-align: center
+		width: 100%
+		position: absolute
+		bottom: 0
+		@include transition-step-2
+
+	&.active  &__buttons
+		@include transition-step-2-active
+
+	&__button
+		display: inline-block
+		padding: 1em
+		cursor: pointer
+
+// ---- TEMP --------------------- <<<<<<<
+.projects__grid-cell
+	&:nth-child(1) .project__visual, &:nth-child(5) .project__visual
+		background-image: url(https://assets.iamsteve.me/placeholder/1.jpg)
+
+	&:nth-child(2) .project__visual,&:nth-child(6) .project__visual
+		background-image: url(https://assets.iamsteve.me/placeholder/2.jpg)
+
+	&:nth-child(3) .project__visual, &:nth-child(7) .project__visual
+		background-image: url(https://assets.iamsteve.me/placeholder/3.jpg)
+
+	&:nth-child(4) .project__visual
+		background-image: url(https://assets.iamsteve.me/placeholder/4.jpg)

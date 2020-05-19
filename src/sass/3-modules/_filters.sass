@@ -7,7 +7,6 @@
 		justify-content: left
 		height: 2em
 		overflow: visible
-		z-index: 999
 
 		@media (min-width: $s-min)
 			height: auto
@@ -44,15 +43,15 @@
 		background-color: $bg-main
 		cursor: pointer
 		white-space: nowrap
+		z-index: 10
 
 		--index: 0
-		--delay: 50ms
-		transition: transform 100ms linear, opacity 100ms linear
+		--delay: 40ms
+		transition: transform 150ms linear, opacity 150ms linear
 		transition-delay: calc(var(--delay) * var(--index))
 		transform-origin: top right
 
-	// Decorate on hover
-	&__filter-label
+		// Decorate on hover
 		span
 			position: relative
 			z-index: 1
@@ -77,16 +76,16 @@
 			&::before
 				transform: scaleX(1)
 
-	// Decorate/Hide selected filter tag
+	// Decorateselected filter tag
 	&__filter:checked + &__filter-label
 		color: $c-highlight
 		
-		@media (max-width: $xs-max)
-			display: none
+		// @media (max-width: $xs-max)
+		// 	display: none
 
 	// Toggle all filter tags on __toggle click
 	&__toggle:checked ~ &__fieldset &__filter-label
 		@media (max-width: $xs-max)
-			transform: translateX(-70%)
+			transform: translateY(10em)
 			opacity: 0
 			transition-delay: calc(var(--delay) * (7 - var(--index)))
