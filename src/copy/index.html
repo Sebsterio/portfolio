@@ -17,97 +17,281 @@
 
 <body>
 
+	<!-- SECTION: Splashscreen -->
+	<div class="splashscreen">
+		<div class="preloader">
+			<span class="preloader__text">Loading</span>
+		</div>
+	</div>
+	<!-- END SECTION: Splashscreen -->
 
-	<!-- SECTION: Projects -->
-	<section id="projects" class="projects">
 
-		<!-- Header -->
-		<header class="title title--center projects__header">
-			<div class="title__wrap">
-				<h1 class="title__heading gigantic gigantic--wider">Portfolio</h1>
-				<h2 class="title__subscript">My Work</h2>
-			</div>
-		</header>
-
-		<!-- Filters Nav -->
-		<nav class="projects__nav filters">
-			<form class="filters__form filters__form">
-
-				<!-- Toggle -->
-				<input checked class="filters__toggle" type="checkbox" name="toggle" value="toggle" id="filters__toggle">
-				<label class="filters__toggle-label" for="filters__toggle">Filter by: <span>All</span></label>
-
-				<!-- Filter Tags -->
-				<fieldset class="filters__fieldset">
-					<input checked class="filters__filter" type="radio" name="filter" value="all" id="all">
-					<label class="filters__filter-label" for="all" style="--index: 0"><span>All</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="commercial" id="commercial">
-					<label class="filters__filter-label" for="commercial" style="--index: 1"><span>Commercial</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="hobby" id="hobby">
-					<label class="filters__filter-label" for="hobby" style="--index: 2"><span>Hobby</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="coursework" id="coursework">
-					<label class="filters__filter-label" for="coursework" style="--index: 3"><span>Coursework</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="react" id="react">
-					<label class="filters__filter-label" for="react" style="--index: 4"><span>React</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="javascript" id="javascript">
-					<label class="filters__filter-label" for="javascript" style="--index: 5"><span>JavaScript</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="HTML + htmlcss" id="htmlcss">
-					<label class="filters__filter-label" for="htmlcss" style="--index: 6"><span>(S)CSS</label>
-
-					<input class="filters__filter" type="radio" name="filter" value="node" id="node">
-					<label class="filters__filter-label" for="node" style="--index: 7"><span>Node</label>
-				</fieldset>
-			</form>
-		</nav>
-
-		<!-- Gallery -->
-		<div class="projects__gallery">
-			<div class='projects__grid'>
-				<!-- *** Dynamic content *** -->
+	<!-- SECTION: Navigation -->
+	<div id="top" class="navigation">
+		<div class="navigation__wrapper wrapper--large">
+			<a class="navigation__logo logo" href="#0">SR</a>
+			<nav class="navigation__container">
+				<ul class="navigation__list">
+					<li><a href="#0">Home</a></li>
+					<li><a href="#work">Portfolio</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<a class="navigation__cta button" href="#0">Get A Quote</a>
+			<div class="navigation__burger">
+				<span class="navigation__burger-el navigation__burger-el--top"></span>
+				<span class="navigation__burger-el navigation__burger-el--middle"></span>
+				<span class="navigation__burger-el navigation__burger-el--bottom"></span>
 			</div>
 		</div>
-	</section>
-	<!-- END SECTION: Projects -->
+	</div>
+	<!-- END SECTION: Navigation -->
 
-	<!-- SECTION: Contact -->
-	<section id="contact" class="contact">
-		<div class="contact__wrapper wrapper--small">
-			<div class=" frame frame--B"></div>
-			<header class="title title--middle contact__header">
+
+	<!-- SECTION: Intro -->
+	<header class="header">
+		<div class="introduction">
+			<h1 class="introduction__content">
+				<span class="introduction__content-el introduction__content-el--bg-text">SR</span>
+				<span class="introduction__content-el introduction__content-el--name">Sebastian Rosloniec</span>
+				<span class="introduction__content-el introduction__content-el--description">Creative</span>
+				<span class="introduction__content-el introduction__content-el--job">Front End Developer</span>
+			</h1>
+			<svg class="introduction__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 130 65" xml:space="preserve"
+				enable-background="new 0 0 130 65">
+				<g transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)">
+					<path
+						d="M22.2 634c-50-35-40-47 293-349 174-157 323-285 333-285 24 0 635 552 647 585 8 23 6 30-14 46 -13 10-31 19-40 19s-57-37-107-83c-50-45-179-162-287-260l-197-179 -147 134c-319 289-433 388-446 388C50.2 650 34.2 643 22.2 634z" />
+				</g>
+			</svg>
+		</div>
+	</header>
+	<!-- END SECTION: Intro -->
+
+
+	<main role="main">
+
+		<!-- SECTION: About -->
+		<section id='about' class="about">
+			<div class="about__wrapper wrapper--small">
+				<div class="frame frame--A"></div>
+				<header class="title title--left about__header">
+					<div class="title__wrap">
+						<h1 class="title__heading gigantic">About</h1>
+						<h2 class="title__subscript">Hi, I'm Sebastian</h2>
+					</div>
+				</header>
+				<div class="about__content">
+					<div class="about__content-blurb blurb blurb--framed">
+						<p class="blurb__copy">
+							I'm a freelance web developer and designer based in London, UK.
+						</p>
+						<p class="blurb__copy">
+							I build high quality websites and web apps that provide smooth user experience, intuitive
+							interfaces, and pixel-perfect implementation.
+						</p>
+						<p class="blurb__copy">
+							I'm interested in the entire front-end spectrum and working on ambitious projects with positive people. My
+							current focus is on building progressive web apps with modern JS frameworks.
+						</p>
+						<br>
+						<p>--(LIn)--(GH)--(@)--(Resume)</p>
+					</div>
+				</div>
+				<img class="about__visual" src="img/portrait.jpg" alt="Sebastian Rosloniec">
+			</div>
+		</section>
+		<!-- END SECTION: About -->
+
+
+		<!-- SECTION: Services -->
+		<section id="services" class="services">
+
+			<header class="title title--center services__header">
 				<div class="title__wrap">
-					<h1 class="title__heading gigantic gigantic--wider">Contact</h1>
-					<h2 class="title__subscript">Get In Touch</h2>
+					<h1 class="title__heading gigantic gigantic--wide">Services</h1>
+					<h2 class="title__subscript">What I Do</h2>
 				</div>
 			</header>
-			<div class="contact__content">
-				<!-- Simple form setup: formspree.io -->
-				<form class="form">
-					<div class="form__wrapper">
-						<input class="form__el form__el--name" type="text" placeholder="Your Name" spellcheck="false">
-						<input class="form__el form__el--email" type="email" placeholder="Your Email" spellcheck="false">
-						<textarea class="form__el form__el--message" placeholder="Your Message"></textarea>
-					</div>
-					<div class="form__floating-wrapper">
-						<input class="form__el form__el--submit" type="submit" value="Send">
-					</div>
+
+			<!-- ARTICLE: Development -->
+			<article class="services__article">
+				<div class="services__content blurb">
+					<h3 class="blurb__heading"><span>01.</span>Development</h3>
+					<dl class="blurb__table">
+						<dt><span>Performance</span></dt>
+						<dd>My apps are highly optimised to ensure fast load times and lag free interaction</dd>
+						<dt><span>Modularity & Scalability</span></dt>
+						<dd>I build each component as an independent module than can be freely reused, edited, or removed without
+							unintended side-effects</dd>
+						<dt><span>Mobile-First Approach</span></dt>
+						<dd>My projects place mobile-specific code first, to speed up the loading on slower mobile networks at a
+							negligible cost to desktop users</dd>
+						<dt><span>Browser Compatibility</span></dt>
+						<dd>My work uses feature detection to support older browsers while allowing modern ones to take full
+							advantage of the technology</dd>
+						<dt><span>Technical Minimalism</span></dt>
+						<dd>I prefer to avoid using bloated 3rd-party plugins whenever essential technologies are sufficiently
+							equipped to handle given needs</dd>
+					</dl>
+				</div>
+				<div class="services__tags blurb">
+					<h4 class="blurb__sub-heading">My tech stack</h4>
+					<ul class="blurb__tag-list small">
+						<li>JavaScript</li>
+						<li>ES6</li>
+						<li>React</li>
+						<li>Redux</li>
+						<li>Thunk</li>
+						<li>Saga</li>
+						<li>jQuery</li>
+						<li>(S)CSS</li>
+						<li>Boostrap</li>
+						<li>Node</li>
+						<li>Firestore</li>
+					</ul>
+					<h4 class="blurb__sub-heading">Tools I use</h4>
+					<ul class="blurb__tag-list small">
+						<li>NPM</li>
+						<li>Webpack</li>
+						<li>Gulp</li>
+						<li>Jest+Enzyme</li>
+						<li>ESLint</li>
+						<li>Git</li>
+					</ul>
+				</div>
+				<figure class="services__visual services__visual--A"></figure>
+			</article>
+
+			<!-- ARTICLE: Design -->
+			<article class="services__article">
+				<div class="services__content blurb">
+					<h3 class="blurb__heading"><span>02.</span> Design</h3>
+					<dl class="blurb__table">
+						<dt><span>Experience-Focused</span></dt>
+						<dd>I use a combination of graphics, motion, and interactivity to capture users' emotional attention
+							before segueing into the informational content</dd>
+						<dt><span>Responsive Design</span></dt>
+						<dd>My layouts adapt to their surroundings, which assures they will look great on any screen size and any
+							device</dd>
+						<dt><span>Usability vs Creativity</span></dt>
+						<dd>I strive to make my work stand out by providing an aesthetic experience without sacrificing the sense
+							of familiarity and convenience of use</dd>
+						<dt><span>Design with Personality</span></dt>
+						<dd>I seek to capture the individuality and uniqueness of a brand by adding a human touch to the visual
+							identity and aim to showcase a character that interests the persona of the target audience</dd>
+					</dl>
+				</div>
+				<div class="services__tags blurb">
+					<h4 class="blurb__sub-heading"> Tools I use </h4>
+					<ul class="blurb__tag-list small">
+						<li>Adobe XD</li>
+						<li>Photoshop</li>
+						<li>Illustrator</li>
+						<li>CorelDRAW</li>
+						<li>Photo-Paint</li>
+						<li>GIMP</li>
+						<li>Gravit</li>
+					</ul>
+				</div>
+				<figure class="services__visual services__visual--B"></figure>
+			</article>
+
+		</section>
+		<!-- END SECTION: Services -->
+
+		<!-- SECTION: Projects -->
+		<section id="projects" class="projects">
+
+			<!-- Header -->
+			<header class="title title--center projects__header">
+				<div class="title__wrap">
+					<h1 class="title__heading gigantic gigantic--wider">Portfolio</h1>
+					<h2 class="title__subscript">My Work</h2>
+				</div>
+			</header>
+
+			<!-- Filters Nav -->
+			<nav class="projects__nav filters">
+				<form class="filters__form filters__form">
+
+					<!-- Toggle -->
+					<input checked class="filters__toggle" type="checkbox" name="toggle" value="toggle" id="filters__toggle">
+					<label class="filters__toggle-label" for="filters__toggle">Filter by: <span>All</span></label>
+
+					<!-- Filter Tags -->
+					<fieldset class="filters__fieldset">
+						<input checked class="filters__filter" type="radio" name="filter" value="all" id="all">
+						<label class="filters__filter-label" for="all" style="--index: 0"><span>All</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="commercial" id="commercial">
+						<label class="filters__filter-label" for="commercial" style="--index: 1"><span>Commercial</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="hobby" id="hobby">
+						<label class="filters__filter-label" for="hobby" style="--index: 2"><span>Hobby</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="coursework" id="coursework">
+						<label class="filters__filter-label" for="coursework" style="--index: 3"><span>Coursework</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="react" id="react">
+						<label class="filters__filter-label" for="react" style="--index: 4"><span>React</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="javascript" id="javascript">
+						<label class="filters__filter-label" for="javascript" style="--index: 5"><span>JavaScript</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="HTML + htmlcss" id="htmlcss">
+						<label class="filters__filter-label" for="htmlcss" style="--index: 6"><span>(S)CSS</label>
+
+						<input class="filters__filter" type="radio" name="filter" value="node" id="node">
+						<label class="filters__filter-label" for="node" style="--index: 7"><span>Node</label>
+					</fieldset>
 				</form>
+			</nav>
+
+			<!-- Gallery -->
+			<div class="projects__gallery">
+				<div class='projects__grid'>
+					<!-- *** Dynamic content *** -->
+				</div>
 			</div>
-			<!-- <div class="contact__links">
+		</section>
+		<!-- END SECTION: Projects -->
+
+		<!-- SECTION: Contact -->
+		<section id="contact" class="contact">
+			<div class="contact__wrapper wrapper--small">
+				<div class=" frame frame--B"></div>
+				<header class="title title--middle contact__header">
+					<div class="title__wrap">
+						<h1 class="title__heading gigantic gigantic--wider">Contact</h1>
+						<h2 class="title__subscript">Get In Touch</h2>
+					</div>
+				</header>
+				<div class="contact__content">
+					<!-- Simple form setup: formspree.io -->
+					<form class="form">
+						<div class="form__wrapper">
+							<input class="form__el form__el--name" type="text" placeholder="Your Name" spellcheck="false">
+							<input class="form__el form__el--email" type="email" placeholder="Your Email" spellcheck="false">
+							<textarea class="form__el form__el--message" placeholder="Your Message"></textarea>
+						</div>
+						<div class="form__floating-wrapper">
+							<input class="form__el form__el--submit" type="submit" value="Send">
+						</div>
+					</form>
+				</div>
+				<!-- <div class="contact__links">
 					<ul>
 						<li>(LIn)</li>
 						<li>(GH)</li>
 						<li>(@)</li>
 					</ul>
 				</div> -->
-		</div>
-	</section>
-	<!-- END SECTION: Contact -->
+			</div>
+		</section>
+		<!-- END SECTION: Contact -->
 
 	</main>
 
