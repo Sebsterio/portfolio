@@ -110,6 +110,7 @@
 
 	&__type
 		font-size: .6em
+		text-transform: capitalize
 		@include transition-step-2
 
 	&.active  &__type
@@ -138,13 +139,17 @@
 
 	&__tags
 		padding-top: 1.6em
-		font-size: .8em
+		font-size: .9em
 		font-family: $font-monospace
 		color: $c-primary
+		text-transform: capitalize
 
 	&__tag
 		display: inline-block
 		padding: .8em
+
+		&:first-child
+			padding-left: 0
 
 	// ---- Buttons ----
 
@@ -162,7 +167,6 @@
 
 	&__button
 		display: inline-block
-		cursor: pointer
 
 		a
 			padding: .6em
@@ -174,8 +178,13 @@
 			height: 1.8em
 			fill: $c-white
 
-		&--disabled svg
-			fill: $c-disabled
+		&--disabled 
+
+			a
+				cursor: default
+
+			svg
+				fill: $c-disabled
 
 		&:first-child svg // for particual icon
 			width: 2em

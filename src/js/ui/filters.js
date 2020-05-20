@@ -1,26 +1,3 @@
-/*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
-// ==================== Album UI ===============
-
-(function () {
-	const projects = [...document.querySelectorAll(".project")];
-
-	// Toggle the display of additional project details
-	function toggleActive(project) {
-		// Disable clicked project if active
-		if (project.classList.contains("active"))
-			project.classList.remove("active");
-		// Disable all and enable clicked
-		else {
-			projects.forEach((proj) => proj.classList.remove("active"));
-			project.classList.add("active");
-		}
-	}
-
-	projects.forEach((project) =>
-		project.addEventListener("click", () => toggleActive(project))
-	);
-})();
-
 (function () {
 	const containers = [...document.querySelectorAll(".projects__grid-cell")];
 	const form = document.querySelector(".filters__form");

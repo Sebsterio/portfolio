@@ -1,15 +1,21 @@
 // ==================== Album UI ===============
 
 (function () {
-	const projects = document.querySelectorAll(".project");
+	const projects = [...document.querySelectorAll(".project")];
 
-	projects.forEach((proj) =>
-		proj.addEventListener("click", () => {
-			if (proj.classList.contains("active")) proj.classList.remove("active");
-			else {
-				projects.forEach((proj) => proj.classList.remove("active"));
-				proj.classList.add("active");
-			}
-		})
+	// Toggle the display of additional project details
+	function toggleActive(project) {
+		// Disable clicked project if active
+		if (project.classList.contains("active"))
+			project.classList.remove("active");
+		// Disable all and enable clicked
+		else {
+			projects.forEach((proj) => proj.classList.remove("active"));
+			project.classList.add("active");
+		}
+	}
+
+	projects.forEach((project) =>
+		project.addEventListener("click", () => toggleActive(project))
 	);
 })();

@@ -1,12 +1,12 @@
 const projects = [
 	{
-		type: "E-commerce",
+		type: "e-commerce",
 		name: "Narbon Fashion Store",
 		blurb:
 			"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-		tags: ["React", "Node", "Database"],
+		tags: ["react", "node", "database"],
 		links: [
-			{ type: "preview", url: "#" },
+			{ type: "preview", url: "" },
 			{ type: "site", url: "#" },
 			{ type: "github", url: "" },
 		],

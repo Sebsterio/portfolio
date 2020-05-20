@@ -1,13 +1,13 @@
 /*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
 const projects = [
 	{
-		type: "E-commerce",
+		type: "e-commerce",
 		name: "Narbon Fashion Store",
 		blurb:
 			"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-		tags: ["React", "Node", "Database"],
+		tags: ["react", "node", "database"],
 		links: [
-			{ type: "preview", url: "#" },
+			{ type: "preview", url: "" },
 			{ type: "site", url: "#" },
 			{ type: "github", url: "" },
 		],
@@ -34,7 +34,7 @@ const icons = {
 	const album = document.querySelector(".projects__grid");
 
 	// Create Project HTML Element (wrapped in Projects__grid-cell)
-	function buildProject(project) {
+	function buildProjectHtml(project) {
 		const { type, name, blurb, tags, links, image } = project;
 
 		const titleHtml = `
@@ -81,13 +81,13 @@ const icons = {
 		`;
 
 		return `
-			<div class='projects__grid-cell'>
-				<div class='project'>
+			<div class="projects__grid-cell" data-tags="${type + " " + tags.join(" ")}">
+				<div class="project">
 					<div class="project__visual" style="background-image: url('${image}')">
 						<div class="project__visual-overlay"></div>
 					</div>
-					<div class='project__content-container'>
-						<div class='project__content'>
+					<div class="project__content-container">
+						<div class="project__content">
 							${titleHtml}
 							${descriptionHtml}
 							${buttonsHtml}
@@ -97,6 +97,7 @@ const icons = {
 			</div>
 		`;
 	}
-
-	album.innerHTML = projects.map((project) => buildProject(project)).join("");
+	album.innerHTML = projects
+		.map((project) => buildProjectHtml(project))
+		.join("");
 })();

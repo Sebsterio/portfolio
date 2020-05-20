@@ -4,7 +4,7 @@
 	const album = document.querySelector(".projects__grid");
 
 	// Create Project HTML Element (wrapped in Projects__grid-cell)
-	function buildProject(project) {
+	function buildProjectHtml(project) {
 		const { type, name, blurb, tags, links, image } = project;
 
 		const titleHtml = `
@@ -51,13 +51,13 @@
 		`;
 
 		return `
-			<div class='projects__grid-cell'>
-				<div class='project'>
+			<div class="projects__grid-cell" data-tags="${type + " " + tags.join(" ")}">
+				<div class="project">
 					<div class="project__visual" style="background-image: url('${image}')">
 						<div class="project__visual-overlay"></div>
 					</div>
-					<div class='project__content-container'>
-						<div class='project__content'>
+					<div class="project__content-container">
+						<div class="project__content">
 							${titleHtml}
 							${descriptionHtml}
 							${buttonsHtml}
@@ -67,6 +67,7 @@
 			</div>
 		`;
 	}
-
-	album.innerHTML = projects.map((project) => buildProject(project)).join("");
+	album.innerHTML = projects
+		.map((project) => buildProjectHtml(project))
+		.join("");
 })();
