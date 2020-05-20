@@ -6,7 +6,7 @@ Sebastian Rosloniec
 
 # Now
 
-- add projects data
+- bugfix: rebuild album on filter input (due to nth child sizing css)
 
 ## Next
 

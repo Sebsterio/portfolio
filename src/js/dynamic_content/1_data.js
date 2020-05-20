@@ -73,7 +73,7 @@ const projects = [
 		image: "img/projects/cosmo.jpg",
 	},
 	{
-		name: "Portfolio v1",
+		name: "Portfolio v.1",
 		type: "website",
 		category: "coursework",
 		blurb: "My old portfolio made at my first code bootcamp some years ago",

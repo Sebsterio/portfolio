@@ -1322,7 +1322,7 @@ input[type="button"]:focus {
   }
 }
 
-/* line 22, src/sass/3-modules/_project.sass */
+/* line 28, src/sass/3-modules/_project.sass */
 .project {
   position: relative;
   display: inline-block;
@@ -1333,27 +1333,29 @@ input[type="button"]:focus {
   background: linear-gradient(45deg, #25354c, #7d99c0);
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
   transition: all 200ms ease-in-out;
+  box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
   color: white;
   font-family: "Poppins", Arial, sans-serif;
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
 }
 
-/* line 43, src/sass/3-modules/_project.sass */
+/* line 50, src/sass/3-modules/_project.sass */
 .project:hover {
   box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.4);
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
   cursor: pointer;
 }
 
-/* line 48, src/sass/3-modules/_project.sass */
+/* line 55, src/sass/3-modules/_project.sass */
 .project.active {
   cursor: default;
 }
 
-/* line 53, src/sass/3-modules/_project.sass */
+/* line 60, src/sass/3-modules/_project.sass */
 .project__visual {
   position: absolute;
   top: 0;
@@ -1366,25 +1368,25 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 64, src/sass/3-modules/_project.sass */
+/* line 71, src/sass/3-modules/_project.sass */
 .project.active .project__visual {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  opacity: .03;
+  opacity: .04;
   transition-delay: unset;
 }
 
-/* line 69, src/sass/3-modules/_project.sass */
+/* line 76, src/sass/3-modules/_project.sass */
 .project__visual-overlay {
   position: absolute;
   top: 70%;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(70, 101, 145, 0.7));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(70, 101, 145, 0.8));
 }
 
-/* line 80, src/sass/3-modules/_project.sass */
+/* line 87, src/sass/3-modules/_project.sass */
 .project__content-container {
   position: absolute;
   top: 0;
@@ -1393,7 +1395,7 @@ input[type="button"]:focus {
   left: 0;
 }
 
-/* line 91, src/sass/3-modules/_project.sass */
+/* line 98, src/sass/3-modules/_project.sass */
 .project__content {
   position: absolute;
   top: 2.4em;
@@ -1402,7 +1404,7 @@ input[type="button"]:focus {
   left: 1.2em;
 }
 
-/* line 100, src/sass/3-modules/_project.sass */
+/* line 107, src/sass/3-modules/_project.sass */
 .project__title {
   position: absolute;
   top: 100%;
@@ -1411,14 +1413,14 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 107, src/sass/3-modules/_project.sass */
+/* line 114, src/sass/3-modules/_project.sass */
 .project.active .project__title {
   top: 0;
   transform: translateY(0);
   transition-delay: unset;
 }
 
-/* line 112, src/sass/3-modules/_project.sass */
+/* line 119, src/sass/3-modules/_project.sass */
 .project__type {
   font-size: .8em;
   text-transform: capitalize;
@@ -1427,56 +1429,70 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 117, src/sass/3-modules/_project.sass */
+/* line 124, src/sass/3-modules/_project.sass */
 .project.active .project__type {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 120, src/sass/3-modules/_project.sass */
+/* line 127, src/sass/3-modules/_project.sass */
 .project__name {
   font-size: 1.4em;
 }
 
-/* line 126, src/sass/3-modules/_project.sass */
+/* line 133, src/sass/3-modules/_project.sass */
 .project__description {
-  font-size: 1em;
   position: absolute;
+  width: 100%;
   top: 52%;
-  left: -1em;
   transform: translateY(-50%);
-  transition: all 200ms ease-out;
-  transition-delay: unset;
-  opacity: 0;
-}
-
-/* line 134, src/sass/3-modules/_project.sass */
-.project.active .project__description {
-  left: 0;
-  transition-delay: 400ms;
-  opacity: 1;
 }
 
 /* line 141, src/sass/3-modules/_project.sass */
+.project__blurb {
+  font-size: 1em;
+  transition: all 200ms ease-out;
+  transition-delay: unset;
+  opacity: 0;
+  transform: translateX(-1em);
+}
+
+/* line 146, src/sass/3-modules/_project.sass */
+.project.active .project__blurb {
+  transition-delay: 400ms;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* line 153, src/sass/3-modules/_project.sass */
 .project__tags {
   padding-top: 1.6em;
   font-size: .9em;
   font-family: monospace;
   color: #c0c0c0;
+  transition: all 200ms ease-out;
+  transition-delay: unset;
+  opacity: 0;
 }
 
-/* line 147, src/sass/3-modules/_project.sass */
+/* line 160, src/sass/3-modules/_project.sass */
+.project.active .project__tags {
+  transition-delay: 400ms;
+  opacity: 1;
+}
+
+/* line 163, src/sass/3-modules/_project.sass */
 .project__tag {
   display: inline-block;
   padding: .8em;
 }
 
-/* line 151, src/sass/3-modules/_project.sass */
+/* line 167, src/sass/3-modules/_project.sass */
 .project__tag:first-child {
   padding-left: 0;
 }
 
-/* line 156, src/sass/3-modules/_project.sass */
+/* line 172, src/sass/3-modules/_project.sass */
 .project__buttons {
   position: absolute;
   bottom: .6em;
@@ -1489,54 +1505,54 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 165, src/sass/3-modules/_project.sass */
+/* line 181, src/sass/3-modules/_project.sass */
 .project.active .project__buttons {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 168, src/sass/3-modules/_project.sass */
+/* line 184, src/sass/3-modules/_project.sass */
 .project__button {
   display: inline-block;
 }
 
-/* line 171, src/sass/3-modules/_project.sass */
+/* line 187, src/sass/3-modules/_project.sass */
 .project__button a {
   padding: .6em;
   display: flex;
   align-content: center;
 }
 
-/* line 176, src/sass/3-modules/_project.sass */
+/* line 192, src/sass/3-modules/_project.sass */
 .project__button svg {
   width: 1.8em;
   height: 1.8em;
   fill: white;
 }
 
-/* line 181, src/sass/3-modules/_project.sass */
+/* line 197, src/sass/3-modules/_project.sass */
 .project__button svg:hover {
   -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
           filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
-/* line 186, src/sass/3-modules/_project.sass */
+/* line 202, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 189, src/sass/3-modules/_project.sass */
+/* line 205, src/sass/3-modules/_project.sass */
 .project__button--disabled svg {
   fill: #6b8597;
 }
 
-/* line 192, src/sass/3-modules/_project.sass */
+/* line 208, src/sass/3-modules/_project.sass */
 .project__button--disabled svg:hover {
   -webkit-filter: unset;
           filter: unset;
 }
 
-/* line 195, src/sass/3-modules/_project.sass */
+/* line 211, src/sass/3-modules/_project.sass */
 .project__button:first-child svg {
   width: 2em;
   height: 2em;
