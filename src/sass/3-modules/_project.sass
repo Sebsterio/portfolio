@@ -39,7 +39,10 @@
 	&:hover
 		box-shadow: 0 0 24px 0 rgba(white, .4)
 		filter: brightness(120%)
+		cursor: pointer
 
+	&.active
+		cursor: default
 
 	// ---- Visual ----
 
@@ -121,7 +124,7 @@
 	&__description
 		font-size: .8em
 		position: absolute
-		top: 47%
+		top: 52%
 		left: -1em
 		transform: translateY(-50%)
 		@include transition-step-2
@@ -137,6 +140,7 @@
 		padding-top: 1.6em
 		font-size: .8em
 		font-family: $font-monospace
+		color: $c-primary
 
 	&__tag
 		display: inline-block
@@ -145,11 +149,12 @@
 	// ---- Buttons ----
 
 	&__buttons
-		font-size: 1em
-		text-align: center
-		width: 100%
 		position: absolute
-		bottom: 0
+		bottom: .6em
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
 		@include transition-step-2
 
 	&.active  &__buttons
@@ -157,19 +162,35 @@
 
 	&__button
 		display: inline-block
-		padding: 1em
 		cursor: pointer
 
+		a
+			padding: .6em
+			display: flex
+			align-content: center
+
+		svg
+			width: 1.8em
+			height: 1.8em
+			fill: $c-white
+
+		&--disabled svg
+			fill: $c-disabled
+
+		&:first-child svg // for particual icon
+			width: 2em
+			height: 2em
+
 // ---- TEMP --------------------- <<<<<<<
-.projects__grid-cell
-	&:nth-child(1) .project__visual, &:nth-child(5) .project__visual
-		background-image: url(https://assets.iamsteve.me/placeholder/1.jpg)
+// .projects__grid-cell
+// 	&:nth-child(1) .project__visual, &:nth-child(5) .project__visual
+// 		background-image: url(https://assets.iamsteve.me/placeholder/1.jpg)
 
-	&:nth-child(2) .project__visual,&:nth-child(6) .project__visual
-		background-image: url(https://assets.iamsteve.me/placeholder/2.jpg)
+// 	&:nth-child(2) .project__visual,&:nth-child(6) .project__visual
+// 		background-image: url(https://assets.iamsteve.me/placeholder/2.jpg)
 
-	&:nth-child(3) .project__visual, &:nth-child(7) .project__visual
-		background-image: url(https://assets.iamsteve.me/placeholder/3.jpg)
+// 	&:nth-child(3) .project__visual, &:nth-child(7) .project__visual
+// 		background-image: url(https://assets.iamsteve.me/placeholder/3.jpg)
 
-	&:nth-child(4) .project__visual
-		background-image: url(https://assets.iamsteve.me/placeholder/4.jpg)
+// 	&:nth-child(4) .project__visual
+// 		background-image: url(https://assets.iamsteve.me/placeholder/4.jpg)

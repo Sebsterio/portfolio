@@ -10,7 +10,7 @@
 
 	&__grid
 		text-align: left
-		font-size: 0
+		// font-size: 0
 		
 		&-cell	
 			box-sizing: border-box
@@ -22,45 +22,51 @@
 			
 			// Enlarge first row cell size & font-size
 
-			width: 100%
-			font-size: 4vw
+			@media (max-width: 350px)
+				.optional
+					display: none
+			
+			@media (max-width: $xs-max)
+				width: 100%
+				font-size: 4vw
 
 			@media (min-width: $s-min) and (max-width: $s-max)
-
 				width: 50%
 				font-size: 2vw
-
 				&:nth-child(-n+1)
 					width: 100%
 					font-size: 4vw
+				&:not(&:nth-child(-n+1))
+					.optional
+						display: none
 					
 			@media (min-width: $m-min) and (max-width: $m-max)
-
 				width: 33.333333%
 				font-size: 1.33vw
-
 				&:nth-child(-n+2)
 					width: 50%
 					font-size: 2vw
+				&:not(&:nth-child(-n+2))
+					.optional
+						display: none
 					
 			@media (min-width: $l-min) and (max-width: $l-max)
-
 				width: 25%
 				font-size: 1vw
-
 				&:nth-child(-n+3)
 					width: 33.333333%
 					font-size: 1.32vw
-					
-			@media (min-width: $xl-min)
+				&:not(&:nth-child(-n+3))
+					.optional
+						display: none
 
+			@media (min-width: $xl-min)
 				width: 20%
 				font-size: 13px
-
 				&:nth-child(-n+4)
 					width: 25%
 					font-size: 16px
-
+			
 		// &--previewing
 		// 	padding-right: ...%
 

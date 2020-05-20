@@ -68,80 +68,8 @@
 
 		<!-- Gallery -->
 		<div class="projects__gallery">
-
 			<div class='projects__grid'>
-				<div class='projects__grid-cell'>
-					<div class='project'>
-						<div class="project__visual">
-							<div class="project__visual-overlay"></div>
-						</div>
-						<div class='project__content-container'>
-							<div class='project__content'>
-								<div class="project__title">
-									<div class="project__type">
-										E-commerce
-									</div>
-									<div class="project__name">
-										Narbon Fashion Store
-									</div>
-								</div>
-								<div class="project__description">
-									<div class="project__blurb">
-										Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-										Lorem
-										Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-									</div>
-									<ul class="project__tags">
-										<li class="project__tag">React</li>
-										<li class="project__tag">Node</li>
-										<li class="project__tag">Database</li>
-									</ul>
-								</div>
-								<ul class="project__buttons">
-									<li class="project__button">Preview</li>
-									<li class="project__button">Open</li>
-									<li class="project__button">GitHub</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class='projects__grid-cell'>
-					<div class='project'>
-						<div class="project__visual">
-							<div class="project__visual-overlay"></div>
-						</div>
-						<div class='project__content-container'>
-							<div class='project__content'>
-								<div class="project__title">
-									<div class="project__type">
-										E-commerce
-									</div>
-									<div class="project__name">
-										Narbon Fashion Store
-									</div>
-								</div>
-								<div class="project__description">
-									<div class="project__blurb">
-										Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-										Lorem
-										Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-									</div>
-									<ul class="project__tags">
-										<li class="project__tag">React</li>
-										<li class="project__tag">Node</li>
-										<li class="project__tag">Database</li>
-									</ul>
-								</div>
-								<ul class="project__buttons">
-									<li class="project__button">Preview</li>
-									<li class="project__button">Open</li>
-									<li class="project__button">GitHub</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!-- *** Dynamic content *** -->
 			</div>
 		</div>
 	</section>
@@ -203,19 +131,13 @@
 	</footer>
 	<!-- END SECTION: Footer -->
 
-	<script>
-		const projects = document.querySelectorAll('.project')
-		projects.forEach(proj => proj.addEventListener('click', () => {
-			projects.forEach(proj => proj.classList.remove('active'))
-			proj.classList.add('active')
-		}))
-	</script>
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<!-- jQuery local fallback -->
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 	<script src="js/functions.min.js"></script>
+
+	<script src="js/dynamic_content.js"></script>
+	<script src="js/ui.js"></script>
+
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID and uncomment -->
 	<!--
 	<script>

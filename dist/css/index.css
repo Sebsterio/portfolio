@@ -1343,9 +1343,15 @@ input[type="button"]:focus {
   box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.4);
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
+  cursor: pointer;
 }
 
-/* line 46, src/sass/3-modules/_project.sass */
+/* line 44, src/sass/3-modules/_project.sass */
+.project.active {
+  cursor: default;
+}
+
+/* line 49, src/sass/3-modules/_project.sass */
 .project__visual {
   position: absolute;
   top: 0;
@@ -1357,7 +1363,7 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 56, src/sass/3-modules/_project.sass */
+/* line 59, src/sass/3-modules/_project.sass */
 .project.active .project__visual {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -1365,7 +1371,7 @@ input[type="button"]:focus {
   transition-delay: unset;
 }
 
-/* line 61, src/sass/3-modules/_project.sass */
+/* line 64, src/sass/3-modules/_project.sass */
 .project__visual-overlay {
   position: absolute;
   top: 80%;
@@ -1375,7 +1381,7 @@ input[type="button"]:focus {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(37, 34, 67, 0.8));
 }
 
-/* line 72, src/sass/3-modules/_project.sass */
+/* line 75, src/sass/3-modules/_project.sass */
 .project__content-container {
   position: absolute;
   top: 0;
@@ -1385,7 +1391,7 @@ input[type="button"]:focus {
   box-shadow: inset -5px 5px 5px 0 rgba(255, 255, 255, 0.3), inset 5px -5px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* line 83, src/sass/3-modules/_project.sass */
+/* line 86, src/sass/3-modules/_project.sass */
 .project__content {
   position: absolute;
   top: 2.4em;
@@ -1397,7 +1403,7 @@ input[type="button"]:focus {
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
 }
 
-/* line 96, src/sass/3-modules/_project.sass */
+/* line 99, src/sass/3-modules/_project.sass */
 .project__title {
   position: absolute;
   top: 100%;
@@ -1406,14 +1412,14 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 103, src/sass/3-modules/_project.sass */
+/* line 106, src/sass/3-modules/_project.sass */
 .project.active .project__title {
   top: 0;
   transform: translateY(0);
   transition-delay: unset;
 }
 
-/* line 108, src/sass/3-modules/_project.sass */
+/* line 111, src/sass/3-modules/_project.sass */
 .project__type {
   font-size: .6em;
   transition: all 200ms ease-out;
@@ -1421,22 +1427,22 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 112, src/sass/3-modules/_project.sass */
+/* line 115, src/sass/3-modules/_project.sass */
 .project.active .project__type {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 115, src/sass/3-modules/_project.sass */
+/* line 118, src/sass/3-modules/_project.sass */
 .project__name {
   font-size: 1.6em;
 }
 
-/* line 121, src/sass/3-modules/_project.sass */
+/* line 124, src/sass/3-modules/_project.sass */
 .project__description {
   font-size: .8em;
   position: absolute;
-  top: 47%;
+  top: 52%;
   left: -1em;
   transform: translateY(-50%);
   transition: all 200ms ease-out;
@@ -1444,69 +1450,75 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 129, src/sass/3-modules/_project.sass */
+/* line 132, src/sass/3-modules/_project.sass */
 .project.active .project__description {
   left: 0;
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 136, src/sass/3-modules/_project.sass */
+/* line 139, src/sass/3-modules/_project.sass */
 .project__tags {
   padding-top: 1.6em;
   font-size: .8em;
   font-family: monospace;
+  color: #c0c0c0;
 }
 
-/* line 141, src/sass/3-modules/_project.sass */
+/* line 145, src/sass/3-modules/_project.sass */
 .project__tag {
   display: inline-block;
   padding: .8em;
 }
 
-/* line 147, src/sass/3-modules/_project.sass */
+/* line 151, src/sass/3-modules/_project.sass */
 .project__buttons {
-  font-size: 1em;
-  text-align: center;
-  width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: .6em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 200ms ease-out;
   transition-delay: unset;
   opacity: 0;
 }
 
-/* line 155, src/sass/3-modules/_project.sass */
+/* line 160, src/sass/3-modules/_project.sass */
 .project.active .project__buttons {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 158, src/sass/3-modules/_project.sass */
+/* line 163, src/sass/3-modules/_project.sass */
 .project__button {
   display: inline-block;
-  padding: 1em;
   cursor: pointer;
 }
 
-/* line 165, src/sass/3-modules/_project.sass */
-.projects__grid-cell:nth-child(1) .project__visual, .projects__grid-cell:nth-child(5) .project__visual {
-  background-image: url(https://assets.iamsteve.me/placeholder/1.jpg);
+/* line 167, src/sass/3-modules/_project.sass */
+.project__button a {
+  padding: .6em;
+  display: flex;
+  align-content: center;
 }
 
-/* line 168, src/sass/3-modules/_project.sass */
-.projects__grid-cell:nth-child(2) .project__visual, .projects__grid-cell:nth-child(6) .project__visual {
-  background-image: url(https://assets.iamsteve.me/placeholder/2.jpg);
+/* line 172, src/sass/3-modules/_project.sass */
+.project__button svg {
+  width: 1.8em;
+  height: 1.8em;
+  fill: white;
 }
 
-/* line 171, src/sass/3-modules/_project.sass */
-.projects__grid-cell:nth-child(3) .project__visual, .projects__grid-cell:nth-child(7) .project__visual {
-  background-image: url(https://assets.iamsteve.me/placeholder/3.jpg);
+/* line 177, src/sass/3-modules/_project.sass */
+.project__button--disabled svg {
+  fill: #6b8597;
 }
 
-/* line 174, src/sass/3-modules/_project.sass */
-.projects__grid-cell:nth-child(4) .project__visual {
-  background-image: url(https://assets.iamsteve.me/placeholder/4.jpg);
+/* line 180, src/sass/3-modules/_project.sass */
+.project__button:first-child svg {
+  width: 2em;
+  height: 2em;
 }
 
 /************************* Introduction *************************/
@@ -1918,7 +1930,6 @@ input[type="button"]:focus {
 /* line 11, src/sass/4-sections/_projects.sass */
 .projects__grid {
   text-align: left;
-  font-size: 0;
 }
 
 /* line 15, src/sass/4-sections/_projects.sass */
@@ -1929,8 +1940,21 @@ input[type="button"]:focus {
   padding: 6px;
   text-align: left;
   vertical-align: top;
-  width: 100%;
-  font-size: 4vw;
+}
+
+@media (max-width: 350px) {
+  /* line 26, src/sass/4-sections/_projects.sass */
+  .projects__grid-cell .optional {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* line 15, src/sass/4-sections/_projects.sass */
+  .projects__grid-cell {
+    width: 100%;
+    font-size: 4vw;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1939,10 +1963,14 @@ input[type="button"]:focus {
     width: 50%;
     font-size: 2vw;
   }
-  /* line 33, src/sass/4-sections/_projects.sass */
+  /* line 36, src/sass/4-sections/_projects.sass */
   .projects__grid-cell:nth-child(-n+1) {
     width: 100%;
     font-size: 4vw;
+  }
+  /* line 40, src/sass/4-sections/_projects.sass */
+  .projects__grid-cell:not(.projects__grid-cell:nth-child(-n+1)) .optional {
+    display: none;
   }
 }
 
@@ -1952,10 +1980,14 @@ input[type="button"]:focus {
     width: 33.333333%;
     font-size: 1.33vw;
   }
-  /* line 42, src/sass/4-sections/_projects.sass */
+  /* line 46, src/sass/4-sections/_projects.sass */
   .projects__grid-cell:nth-child(-n+2) {
     width: 50%;
     font-size: 2vw;
+  }
+  /* line 50, src/sass/4-sections/_projects.sass */
+  .projects__grid-cell:not(.projects__grid-cell:nth-child(-n+2)) .optional {
+    display: none;
   }
 }
 
@@ -1965,10 +1997,14 @@ input[type="button"]:focus {
     width: 25%;
     font-size: 1vw;
   }
-  /* line 51, src/sass/4-sections/_projects.sass */
+  /* line 56, src/sass/4-sections/_projects.sass */
   .projects__grid-cell:nth-child(-n+3) {
     width: 33.333333%;
     font-size: 1.32vw;
+  }
+  /* line 60, src/sass/4-sections/_projects.sass */
+  .projects__grid-cell:not(.projects__grid-cell:nth-child(-n+3)) .optional {
+    display: none;
   }
 }
 
@@ -1978,7 +2014,7 @@ input[type="button"]:focus {
     width: 20%;
     font-size: 13px;
   }
-  /* line 60, src/sass/4-sections/_projects.sass */
+  /* line 66, src/sass/4-sections/_projects.sass */
   .projects__grid-cell:nth-child(-n+4) {
     width: 25%;
     font-size: 16px;

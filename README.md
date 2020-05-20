@@ -6,8 +6,6 @@ Sebastian Rosloniec
 
 # Now
 
-- projects section layout
-
 ## Next
 
 - projects  
@@ -18,19 +16,23 @@ Sebastian Rosloniec
   -- sticky (hamburger & logo only ?)
   -- CTA -> night/day mode
 
+- sticky filter nav (merge w main nav; black bg)
+
+- project icons
 - social links (+ CV download)
   -- contact: right, vertical
   -- about: under, horizontal
 
-## Next version
-
 - form stuff
 - redo JS functions
-- intro: animate every el
 - noscript
 
 ## Deets
 
 - custom decoration imgs
 - bg image resize & convert
+
+## Next version
+
+- intro: animate every el
 - portrait: color on hover
