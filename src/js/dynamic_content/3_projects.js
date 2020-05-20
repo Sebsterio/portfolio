@@ -5,12 +5,14 @@
 
 	// Create Project HTML Element (wrapped in Projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, blurb, tags, links, image } = project;
+		const { type, name, category, blurb, tags, links, image } = project;
+
+		const tagsString = tags.map((tag) => tag.toLowerCase()).join(" ");
 
 		const titleHtml = `
 			<div class="project__title">
 				<div class="project__type optional">
-					${type}
+					${type.replace("_", " ")}
 				</div>
 				<div class="project__name">
 					${name}
@@ -51,7 +53,9 @@
 		`;
 
 		return `
-			<div class="projects__grid-cell" data-tags="${type + " " + tags.join(" ")}">
+			<div class="projects__grid-cell" data-tags="${
+				type + " " + category + " " + tagsString
+			}">
 				<div class="project">
 					<div class="project__visual" style="background-image: url('${image}')">
 						<div class="project__visual-overlay"></div>

@@ -30,10 +30,12 @@
 		// Ignore dropdown toggle
 		if (!e.target.classList.contains("filters__filter")) return;
 
-		const filter = this.filter.value;
+		const filter = form.filter.value;
+		console.log(filter);
 
 		containers.forEach((el) => {
 			const tags = el.dataset.tags;
+			console.log(tags);
 			if (tags.includes(filter) || filter === "all")
 				el.classList.remove("hidden");
 			else el.classList.add("hidden");
@@ -46,8 +48,8 @@
 	// 	toggle.checked = true; // set input value (true = disabled)
 	// }
 
-	form.addEventListener("input", () => {
-		filterProjects;
+	form.addEventListener("input", (e) => {
+		filterProjects(e);
 		// hideDropdown;
 	});
 })();

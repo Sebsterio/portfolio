@@ -1326,19 +1326,21 @@ input[type="button"]:focus {
 .project {
   position: relative;
   display: inline-block;
-  vertical-align: top;
   height: 0;
   width: 100%;
   padding-bottom: 100%;
   background-color: #466591;
-  background: linear-gradient(45deg, #25354c, #466591 50%);
+  background: linear-gradient(45deg, #25354c, #7d99c0);
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
   transition: all 200ms ease-in-out;
+  color: white;
+  font-family: "Poppins", Arial, sans-serif;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.6);
 }
 
-/* line 39, src/sass/3-modules/_project.sass */
+/* line 43, src/sass/3-modules/_project.sass */
 .project:hover {
   box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.4);
   -webkit-filter: brightness(120%);
@@ -1346,12 +1348,12 @@ input[type="button"]:focus {
   cursor: pointer;
 }
 
-/* line 44, src/sass/3-modules/_project.sass */
+/* line 48, src/sass/3-modules/_project.sass */
 .project.active {
   cursor: default;
 }
 
-/* line 49, src/sass/3-modules/_project.sass */
+/* line 53, src/sass/3-modules/_project.sass */
 .project__visual {
   position: absolute;
   top: 0;
@@ -1359,51 +1361,48 @@ input[type="button"]:focus {
   bottom: 0;
   left: 0;
   background-size: cover;
+  background-position: center;
   transition: all 400ms ease-out;
   transition-delay: 200ms;
 }
 
-/* line 59, src/sass/3-modules/_project.sass */
+/* line 64, src/sass/3-modules/_project.sass */
 .project.active .project__visual {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  opacity: .1;
+  opacity: .03;
   transition-delay: unset;
 }
 
-/* line 64, src/sass/3-modules/_project.sass */
+/* line 69, src/sass/3-modules/_project.sass */
 .project__visual-overlay {
   position: absolute;
-  top: 80%;
+  top: 70%;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(37, 34, 67, 0.8));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(70, 101, 145, 0.7));
 }
 
-/* line 75, src/sass/3-modules/_project.sass */
+/* line 80, src/sass/3-modules/_project.sass */
 .project__content-container {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: inset -5px 5px 5px 0 rgba(255, 255, 255, 0.3), inset 5px -5px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* line 86, src/sass/3-modules/_project.sass */
+/* line 91, src/sass/3-modules/_project.sass */
 .project__content {
   position: absolute;
   top: 2.4em;
   right: 1.2em;
   bottom: .8em;
   left: 1.2em;
-  font-family: "Poppins", Arial, sans-serif;
-  color: white;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.6);
 }
 
-/* line 99, src/sass/3-modules/_project.sass */
+/* line 100, src/sass/3-modules/_project.sass */
 .project__title {
   position: absolute;
   top: 100%;
@@ -1412,36 +1411,36 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 106, src/sass/3-modules/_project.sass */
+/* line 107, src/sass/3-modules/_project.sass */
 .project.active .project__title {
   top: 0;
   transform: translateY(0);
   transition-delay: unset;
 }
 
-/* line 111, src/sass/3-modules/_project.sass */
+/* line 112, src/sass/3-modules/_project.sass */
 .project__type {
-  font-size: .6em;
+  font-size: .8em;
   text-transform: capitalize;
   transition: all 200ms ease-out;
   transition-delay: unset;
   opacity: 0;
 }
 
-/* line 116, src/sass/3-modules/_project.sass */
+/* line 117, src/sass/3-modules/_project.sass */
 .project.active .project__type {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 119, src/sass/3-modules/_project.sass */
+/* line 120, src/sass/3-modules/_project.sass */
 .project__name {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
-/* line 125, src/sass/3-modules/_project.sass */
+/* line 126, src/sass/3-modules/_project.sass */
 .project__description {
-  font-size: .8em;
+  font-size: 1em;
   position: absolute;
   top: 52%;
   left: -1em;
@@ -1451,20 +1450,19 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 133, src/sass/3-modules/_project.sass */
+/* line 134, src/sass/3-modules/_project.sass */
 .project.active .project__description {
   left: 0;
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 140, src/sass/3-modules/_project.sass */
+/* line 141, src/sass/3-modules/_project.sass */
 .project__tags {
   padding-top: 1.6em;
   font-size: .9em;
   font-family: monospace;
   color: #c0c0c0;
-  text-transform: capitalize;
 }
 
 /* line 147, src/sass/3-modules/_project.sass */
@@ -1516,17 +1514,29 @@ input[type="button"]:focus {
   fill: white;
 }
 
-/* line 183, src/sass/3-modules/_project.sass */
+/* line 181, src/sass/3-modules/_project.sass */
+.project__button svg:hover {
+  -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+          filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+}
+
+/* line 186, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 186, src/sass/3-modules/_project.sass */
+/* line 189, src/sass/3-modules/_project.sass */
 .project__button--disabled svg {
   fill: #6b8597;
 }
 
-/* line 189, src/sass/3-modules/_project.sass */
+/* line 192, src/sass/3-modules/_project.sass */
+.project__button--disabled svg:hover {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+/* line 195, src/sass/3-modules/_project.sass */
 .project__button:first-child svg {
   width: 2em;
   height: 2em;
@@ -1941,6 +1951,7 @@ input[type="button"]:focus {
 /* line 11, src/sass/4-sections/_projects.sass */
 .projects__grid {
   text-align: left;
+  font-size: 0;
 }
 
 /* line 15, src/sass/4-sections/_projects.sass */

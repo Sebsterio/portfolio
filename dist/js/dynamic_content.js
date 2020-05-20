@@ -1,24 +1,95 @@
 /*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
 const projects = [
 	{
-		type: "e-commerce",
 		name: "Narbon Fashion Store",
+		type: "e-commerce",
+		category: "commercial",
 		blurb:
-			"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-		tags: ["react", "node", "database"],
+			"Modern progressive web app with animated transitions between lazy-loaded routes",
+		tags: ["React", "Node", "Database"],
 		links: [
 			{ type: "preview", url: "" },
-			{ type: "site", url: "#" },
+			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
 			{ type: "github", url: "" },
 		],
 		preview: true,
-		image: "https://assets.iamsteve.me/placeholder/1.jpg",
+		image: "img/projects/narbon.jpg",
+	},
+	{
+		name: "NicoleRoss Personal Training",
+		type: "website",
+		category: "commercial",
+		blurb: "Responsive mobile-first website with Instagarm feed integration",
+		tags: ["JavaScript", "SCSS"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://nicoleross.fitness/" },
+			{ type: "github", url: "" },
+		],
+		preview: true,
+		image: "img/projects/nicole.jpg",
+	},
+	{
+		name: "Rolewicz Transport",
+		type: "website",
+		category: "commercial",
+		blurb:
+			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimzed for given screen size and browser support",
+		tags: ["JavaScript", "SCSS", "Bootstrap"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://rolewicz-tsl.com/" },
+			{ type: "github", url: "" },
+		],
+		preview: true,
+		image: "img/projects/rolewicz.jpg",
+	},
+	{
+		name: "WarmUp Community Album",
+		type: "web_app",
+		category: "hobby",
+		blurb:
+			"Animated and interactive 3D media album supporting photos, video, and Youtube",
+		tags: ["JavaScript", "SCSS", "Database"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
+			{ type: "github", url: "" },
+		],
+		preview: true,
+		image: "img/projects/warmup.jpg",
+	},
+	{
+		name: "Cosmo Events",
+		type: "website",
+		category: "commercial",
+		blurb: "Responsive brochure website",
+		tags: ["WordPress"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
+			{ type: "github", url: "" },
+		],
+		preview: true,
+		image: "img/projects/cosmo.jpg",
+	},
+	{
+		name: "Portfolio v1",
+		type: "website",
+		category: "coursework",
+		blurb: "My old portfolio made at my first code bootcamp some years ago",
+		tags: ["JavaScript", "CSS"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "" },
+			{ type: "codepen", url: "https://codepen.io/Semaviro/full/oZZgRx" },
+		],
+		preview: true,
+		image: "img/projects/portfolio_v1.jpg",
 	},
 ];
 
-// https://assets.iamsteve.me/placeholder/2.jpg
-// https://assets.iamsteve.me/placeholder/3.jpg
-// https://assets.iamsteve.me/placeholder/4.jpg
+// Missing Filters: WordPress, CSS
 
 const icons = {
 	site: `<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg>`,
@@ -35,12 +106,14 @@ const icons = {
 
 	// Create Project HTML Element (wrapped in Projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, blurb, tags, links, image } = project;
+		const { type, name, category, blurb, tags, links, image } = project;
+
+		const tagsString = tags.map((tag) => tag.toLowerCase()).join(" ");
 
 		const titleHtml = `
 			<div class="project__title">
 				<div class="project__type optional">
-					${type}
+					${type.replace("_", " ")}
 				</div>
 				<div class="project__name">
 					${name}
@@ -81,7 +154,9 @@ const icons = {
 		`;
 
 		return `
-			<div class="projects__grid-cell" data-tags="${type + " " + tags.join(" ")}">
+			<div class="projects__grid-cell" data-tags="${
+				type + " " + category + " " + tagsString
+			}">
 				<div class="project">
 					<div class="project__visual" style="background-image: url('${image}')">
 						<div class="project__visual-overlay"></div>

@@ -6,18 +6,14 @@ Sebastian Rosloniec
 
 # Now
 
-- album filters logic
+- add projects data
 
 ## Next
-
-- add projects data
 
 - social links (+ CV download)
   -- contact: right, vertical
   -- about: under, horizontal
-
 - form stuff
-
 - redo jQ functions + noscript
 
 ## Deets
