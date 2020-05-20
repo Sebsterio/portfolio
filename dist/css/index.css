@@ -1334,9 +1334,9 @@ input[type="button"]:focus {
   overflow: hidden;
   border-radius: 8px;
   transition: all 200ms ease-in-out;
-  box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
+  box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.2);
+  -webkit-filter: brightness(95%) saturate(90%);
+          filter: brightness(95%) saturate(90%);
   color: white;
   font-family: "Poppins", Arial, sans-serif;
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
@@ -1344,7 +1344,7 @@ input[type="button"]:focus {
 
 /* line 50, src/sass/3-modules/_project.sass */
 .project:hover {
-  box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.2);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   cursor: pointer;
