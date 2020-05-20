@@ -5,7 +5,7 @@ const projects = [
 		category: "commercial",
 		blurb:
 			"Modern progressive web app with animated transitions between lazy-loaded routes",
-		tags: ["React", "Node", "Database"],
+		tech: ["React", "Node", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
@@ -19,7 +19,7 @@ const projects = [
 		type: "website",
 		category: "commercial",
 		blurb: "Responsive mobile-first website with Instagarm feed integration",
-		tags: ["JavaScript", "SCSS"],
+		tech: ["JavaScript", "SCSS"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
@@ -34,7 +34,7 @@ const projects = [
 		category: "commercial",
 		blurb:
 			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimzed for given screen size and browser support",
-		tags: ["JavaScript", "SCSS", "Bootstrap"],
+		tech: ["JavaScript", "SCSS", "Bootstrap"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
@@ -49,7 +49,7 @@ const projects = [
 		category: "hobby",
 		blurb:
 			"Animated and interactive 3D media album supporting photos, video, and Youtube",
-		tags: ["JavaScript", "SCSS", "Database"],
+		tech: ["JavaScript", "SCSS", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
@@ -63,7 +63,7 @@ const projects = [
 		type: "website",
 		category: "commercial",
 		blurb: "Responsive brochure website",
-		tags: ["WordPress"],
+		tech: ["WordPress"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
@@ -77,7 +77,7 @@ const projects = [
 		type: "website",
 		category: "coursework",
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
-		tags: ["JavaScript", "CSS"],
+		tech: ["JavaScript", "CSS"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },

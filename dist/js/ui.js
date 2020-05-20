@@ -5,10 +5,15 @@
 	const projects = [...document.querySelectorAll(".project")];
 
 	// Toggle the display of additional project details
-	function toggleActive(project) {
+	function toggleActive(e, project) {
+		// Ignore button click
+		if (e.target.closest(".project__button")) return;
+
 		// Disable clicked project if active
-		if (project.classList.contains("active"))
+		if (project.classList.contains("active")) {
 			project.classList.remove("active");
+		}
+
 		// Disable all and enable clicked
 		else {
 			projects.forEach((proj) => proj.classList.remove("active"));
@@ -17,7 +22,7 @@
 	}
 
 	projects.forEach((project) =>
-		project.addEventListener("click", () => toggleActive(project))
+		project.addEventListener("click", (e) => toggleActive(e, project))
 	);
 })();
 
@@ -30,16 +35,8 @@
 		// Ignore dropdown toggle
 		if (!e.target.classList.contains("filters__filter")) return;
 
-		const filter = form.filter.value;
-		console.log(filter);
-
-		containers.forEach((el) => {
-			const tags = el.dataset.tags;
-			console.log(tags);
-			if (tags.includes(filter) || filter === "all")
-				el.classList.remove("hidden");
-			else el.classList.add("hidden");
-		});
+		// rebuilding instead of disabling due to the nth-child styles for enlarged first row
+		window.insertProjectsHtml(form.filter.value);
 	}
 
 	// TODO later <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

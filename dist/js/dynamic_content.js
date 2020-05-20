@@ -6,7 +6,7 @@ const projects = [
 		category: "commercial",
 		blurb:
 			"Modern progressive web app with animated transitions between lazy-loaded routes",
-		tags: ["React", "Node", "Database"],
+		tech: ["React", "Node", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
@@ -20,7 +20,7 @@ const projects = [
 		type: "website",
 		category: "commercial",
 		blurb: "Responsive mobile-first website with Instagarm feed integration",
-		tags: ["JavaScript", "SCSS"],
+		tech: ["JavaScript", "SCSS"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
@@ -35,7 +35,7 @@ const projects = [
 		category: "commercial",
 		blurb:
 			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimzed for given screen size and browser support",
-		tags: ["JavaScript", "SCSS", "Bootstrap"],
+		tech: ["JavaScript", "SCSS", "Bootstrap"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
@@ -50,7 +50,7 @@ const projects = [
 		category: "hobby",
 		blurb:
 			"Animated and interactive 3D media album supporting photos, video, and Youtube",
-		tags: ["JavaScript", "SCSS", "Database"],
+		tech: ["JavaScript", "SCSS", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
@@ -64,7 +64,7 @@ const projects = [
 		type: "website",
 		category: "commercial",
 		blurb: "Responsive brochure website",
-		tags: ["WordPress"],
+		tech: ["WordPress"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
@@ -78,7 +78,7 @@ const projects = [
 		type: "website",
 		category: "coursework",
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
-		tags: ["JavaScript", "CSS"],
+		tech: ["JavaScript", "CSS"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },
@@ -106,9 +106,7 @@ const icons = {
 
 	// Create Project HTML Element (wrapped in Projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, category, blurb, tags, links, image } = project;
-
-		const tagsString = tags.map((tag) => tag.toLowerCase()).join(" ");
+		const { type, name, category, blurb, tech, links, image } = project;
 
 		const titleHtml = `
 			<div class="project__title">
@@ -127,7 +125,7 @@ const icons = {
 					${blurb}
 				</div>
 				<ul class="project__tags optional">
-					${tags.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
+					${tech.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
 				</ul>
 			</div>
 		`;
@@ -154,9 +152,7 @@ const icons = {
 		`;
 
 		return `
-			<div class="projects__grid-cell" data-tags="${
-				type + " " + category + " " + tagsString
-			}">
+			<div class="projects__grid-cell"">
 				<div class="project">
 					<div class="project__visual" style="background-image: url('${image}')">
 						<div class="project__visual-overlay"></div>
@@ -172,7 +168,26 @@ const icons = {
 			</div>
 		`;
 	}
-	album.innerHTML = projects
-		.map((project) => buildProjectHtml(project))
-		.join("");
+
+	function generateProjectsProps(projects) {
+		projects = projects.map((project) => {
+			const { type, category, tech } = project;
+			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
+			project.html = buildProjectHtml(project);
+		});
+	}
+
+	window.insertProjectsHtml = function (filter) {
+		album.innerHTML = projects
+			.filter(
+				(project) => project.tags.indexOf(filter) > -1 || filter === "all"
+			)
+			.map((project) => project.html)
+			.join("");
+	};
+
+	// ---------------- init ------------
+
+	generateProjectsProps(projects);
+	insertProjectsHtml("all");
 })();

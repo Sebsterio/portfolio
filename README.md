@@ -6,13 +6,12 @@ Sebastian Rosloniec
 
 # Now
 
-- bugfix: rebuild album on filter input (due to nth child sizing css)
-
-## Next
-
 - social links (+ CV download)
   -- contact: right, vertical
   -- about: under, horizontal
+
+## Next
+
 - form stuff
 - redo jQ functions + noscript
 

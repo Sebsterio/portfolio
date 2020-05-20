@@ -7,16 +7,8 @@
 		// Ignore dropdown toggle
 		if (!e.target.classList.contains("filters__filter")) return;
 
-		const filter = form.filter.value;
-		console.log(filter);
-
-		containers.forEach((el) => {
-			const tags = el.dataset.tags;
-			console.log(tags);
-			if (tags.includes(filter) || filter === "all")
-				el.classList.remove("hidden");
-			else el.classList.add("hidden");
-		});
+		// rebuilding instead of disabling due to the nth-child styles for enlarged first row
+		window.insertProjectsHtml(form.filter.value);
 	}
 
 	// TODO later <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
