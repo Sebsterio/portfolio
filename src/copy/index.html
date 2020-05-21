@@ -283,9 +283,13 @@
 					<!-- Simple form setup: formspree.io -->
 					<form class="form">
 						<div class="form__wrapper">
-							<input class="form__el form__el--name" type="text" placeholder="Your Name" spellcheck="false">
-							<input class="form__el form__el--email" type="email" placeholder="Your Email" spellcheck="false">
-							<textarea class="form__el form__el--message" placeholder="Your Message"></textarea>
+
+							<input title="Your Name" class="form__el form__el--name" type="text" placeholder="Your Name"
+								autocomplete="on" spellcheck="false">
+							<input title="Your Email" class="form__el form__el--email" type="email" placeholder="Your Email"
+								autocomplete="on" spellcheck="false" required>
+							<textarea title="Your Message" class="form__el form__el--message" placeholder="Your Message"></textarea>
+
 						</div>
 						<div class="form__floating-wrapper">
 							<input class="form__el form__el--submit" type="submit" value="Send">
