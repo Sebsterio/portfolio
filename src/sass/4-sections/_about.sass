@@ -22,8 +22,9 @@
 			text-indent: 1em
 
 	&__social-links
+		grid-area: links
 		text-align: center
-		transform: translateY(1em)
+		transform: translateY(1rem)
 
 	&__visual
 		grid-area: pic
@@ -32,6 +33,25 @@
 		height: 360px
 		width: auto
 		object-fit: contain
+
+	@media (min-width: $s-min)
+
+		&__social-links
+			transform: none
+			position: absolute
+			left: -1rem
+			bottom: 3.1rem
+
+	@media (min-width: $s-min) and (max-width: $s-max)
+
+		&__content
+			margin-bottom: -1rem
+		
+		&__social-links	.social-links
+			flex-flow: column nowrap
+
+		&__visual
+			transform: translateX(3rem)
 
 	@media (min-width: $m-min)
 		
@@ -42,6 +62,10 @@
 		&__content
 			align-self: start
 			padding-left: 1rem
+
+		&__social-links
+			bottom: -4.8rem
+			left: 7rem
 
 		&__visual
 			padding-top: 7rem
@@ -54,6 +78,11 @@
 		&__content
 			padding-left: 0
 			transform: translateY(-2rem)
+
+		&__social-links
+			bottom: -6.5rem
+			left: 9rem
+
 
 		&__visual
 			height: 450px
