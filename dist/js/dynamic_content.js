@@ -1,5 +1,6 @@
 /*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
 const projects = [
+	// --------------------- Narbon ---------------------
 	{
 		name: "Narbon Fashion Store",
 		type: "e-commerce",
@@ -10,11 +11,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/narbon" },
 		],
 		preview: true,
 		image: "img/projects/narbon.jpg",
 	},
+	// --------------------- Nicole ---------------------
 	{
 		name: "NicoleRoss Personal Training",
 		type: "website",
@@ -24,11 +26,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/nicole-pt" },
 		],
 		preview: true,
 		image: "img/projects/nicole.jpg",
 	},
+	// --------------------- Rolewicz ---------------------
 	{
 		name: "Rolewicz Transport",
 		type: "website",
@@ -39,11 +42,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/rolewicz" },
 		],
 		preview: true,
 		image: "img/projects/rolewicz.jpg",
 	},
+	// --------------------- Warm Up ---------------------
 	{
 		name: "WarmUp Community Album",
 		type: "web_app",
@@ -54,11 +58,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/warmup" },
 		],
 		preview: true,
 		image: "img/projects/warmup.jpg",
 	},
+	// --------------------- Cosmo ---------------------
 	{
 		name: "Cosmo Events",
 		type: "website",
@@ -68,11 +73,11 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
-			{ type: "github", url: "" },
 		],
 		preview: true,
 		image: "img/projects/cosmo.jpg",
 	},
+	// --------------------- Portfolio 2 ---------------------
 	{
 		name: "Portfolio v.2",
 		type: "website",
@@ -83,6 +88,7 @@ const projects = [
 		preview: true,
 		image: "",
 	},
+	// --------------------- Portfolio 1 ---------------------
 	{
 		name: "Portfolio v.1",
 		type: "website",
@@ -98,8 +104,6 @@ const projects = [
 		image: "img/projects/portfolio_v1.jpg",
 	},
 ];
-
-// Missing Filters: WordPress, CSS
 
 const icons = {
 	site: `<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg>`,

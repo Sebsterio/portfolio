@@ -1,4 +1,5 @@
 const projects = [
+	// --------------------- Narbon ---------------------
 	{
 		name: "Narbon Fashion Store",
 		type: "e-commerce",
@@ -9,11 +10,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/narbon" },
 		],
 		preview: true,
 		image: "img/projects/narbon.jpg",
 	},
+	// --------------------- Nicole ---------------------
 	{
 		name: "NicoleRoss Personal Training",
 		type: "website",
@@ -23,11 +25,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/nicole-pt" },
 		],
 		preview: true,
 		image: "img/projects/nicole.jpg",
 	},
+	// --------------------- Rolewicz ---------------------
 	{
 		name: "Rolewicz Transport",
 		type: "website",
@@ -38,11 +41,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/rolewicz" },
 		],
 		preview: true,
 		image: "img/projects/rolewicz.jpg",
 	},
+	// --------------------- Warm Up ---------------------
 	{
 		name: "WarmUp Community Album",
 		type: "web_app",
@@ -53,11 +57,12 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
-			{ type: "github", url: "" },
+			{ type: "github", url: "https://github.com/Sebsterio/warmup" },
 		],
 		preview: true,
 		image: "img/projects/warmup.jpg",
 	},
+	// --------------------- Cosmo ---------------------
 	{
 		name: "Cosmo Events",
 		type: "website",
@@ -67,11 +72,11 @@ const projects = [
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
-			{ type: "github", url: "" },
 		],
 		preview: true,
 		image: "img/projects/cosmo.jpg",
 	},
+	// --------------------- Portfolio 2 ---------------------
 	{
 		name: "Portfolio v.2",
 		type: "website",
@@ -82,6 +87,7 @@ const projects = [
 		preview: true,
 		image: "",
 	},
+	// --------------------- Portfolio 1 ---------------------
 	{
 		name: "Portfolio v.1",
 		type: "website",
@@ -97,5 +103,3 @@ const projects = [
 		image: "img/projects/portfolio_v1.jpg",
 	},
 ];
-
-// Missing Filters: WordPress, CSS
