@@ -11,10 +11,9 @@
 
 	&__sub-heading
 		color: $c-primary
-		margin: 1em 0 .5em 0
 
-		&:first-child
-			margin-top: 0
+		&:not(:first-child)
+			margin-top: 1em
 
 	
 	// Blurb
@@ -70,6 +69,8 @@
 
 	// Tag list (ul)
 	&__tag-list
+		padding: 1em
+
 		li
 			display: inline-block
 			margin: .3em

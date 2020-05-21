@@ -661,29 +661,28 @@ input[type="button"]:focus {
 /* line 12, src/sass/3-modules/_text.sass */
 .text__sub-heading {
   color: #c0c0c0;
-  margin: 1em 0 .5em 0;
 }
 
-/* line 16, src/sass/3-modules/_text.sass */
-.text__sub-heading:first-child {
-  margin-top: 0;
+/* line 15, src/sass/3-modules/_text.sass */
+.text__sub-heading:not(:first-child) {
+  margin-top: 1em;
 }
 
-/* line 21, src/sass/3-modules/_text.sass */
+/* line 20, src/sass/3-modules/_text.sass */
 .text__blurb {
   padding: 1em;
   background-color: black;
   color: #c0c0c0;
 }
 
-/* line 28, src/sass/3-modules/_text.sass */
+/* line 27, src/sass/3-modules/_text.sass */
 .text__table {
   display: grid;
   grid-gap: 1.2em;
   margin: 0;
 }
 
-/* line 33, src/sass/3-modules/_text.sass */
+/* line 32, src/sass/3-modules/_text.sass */
 .text__table dt span {
   position: relative;
   color: #c0c0c0;
@@ -692,7 +691,7 @@ input[type="button"]:focus {
   padding: .2em;
 }
 
-/* line 41, src/sass/3-modules/_text.sass */
+/* line 40, src/sass/3-modules/_text.sass */
 .text__table dt span:after {
   content: '';
   display: block;
@@ -706,7 +705,7 @@ input[type="button"]:focus {
   transition: all 300ms ease;
 }
 
-/* line 53, src/sass/3-modules/_text.sass */
+/* line 52, src/sass/3-modules/_text.sass */
 .text__table dd {
   color: #c0c0c0;
   margin: 0;
@@ -714,27 +713,32 @@ input[type="button"]:focus {
           margin-inline-start: 0;
 }
 
-/* line 58, src/sass/3-modules/_text.sass */
+/* line 57, src/sass/3-modules/_text.sass */
 .text__table dd:not(:last-child) {
   margin-bottom: 1em;
 }
 
 @media (min-width: 992px) {
-  /* line 28, src/sass/3-modules/_text.sass */
+  /* line 27, src/sass/3-modules/_text.sass */
   .text__table {
     grid-template-columns: auto 1fr;
   }
-  /* line 64, src/sass/3-modules/_text.sass */
+  /* line 63, src/sass/3-modules/_text.sass */
   .text__table dt {
     text-align: right;
   }
-  /* line 67, src/sass/3-modules/_text.sass */
+  /* line 66, src/sass/3-modules/_text.sass */
   .text__table dd {
     text-align: left;
   }
 }
 
-/* line 73, src/sass/3-modules/_text.sass */
+/* line 71, src/sass/3-modules/_text.sass */
+.text__tag-list {
+  padding: 1em;
+}
+
+/* line 74, src/sass/3-modules/_text.sass */
 .text__tag-list li {
   display: inline-block;
   margin: .3em;
@@ -747,7 +751,7 @@ input[type="button"]:focus {
   border-radius: 4px;
 }
 
-/* line 86, src/sass/3-modules/_text.sass */
+/* line 87, src/sass/3-modules/_text.sass */
 .text__copy--tight {
   max-width: 300px;
 }
@@ -1444,7 +1448,7 @@ input[type="button"]:focus {
 .project__description {
   position: absolute;
   width: 100%;
-  top: 52%;
+  top: 55%;
   transform: translateY(-50%);
 }
 
@@ -1466,7 +1470,7 @@ input[type="button"]:focus {
 
 /* line 154, src/sass/3-modules/_project.sass */
 .project__tags {
-  padding-top: 1.6em;
+  padding-top: .6em;
   font-size: .9em;
   font-family: monospace;
   color: #c0c0c0;
@@ -1556,6 +1560,11 @@ input[type="button"]:focus {
 .project__button--disabled svg:hover {
   -webkit-filter: unset;
           filter: unset;
+}
+
+/* line 216, src/sass/3-modules/_project.sass */
+.project:not(.active) .project__button {
+  pointer-events: none;
 }
 
 /* line 1, src/sass/3-modules/_social-links.sass */
@@ -1873,7 +1882,6 @@ input[type="button"]:focus {
   justify-items: center;
   align-content: center;
   align-items: center;
-  overflow: hidden;
   padding: 3rem 1rem 0 1rem;
 }
 
@@ -1935,30 +1943,46 @@ input[type="button"]:focus {
 .services__visual {
   grid-area: pic;
   position: relative;
-  margin: 0;
   width: 100%;
+  min-height: 350px;
   height: 100%;
-  min-height: 250px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  margin: 0;
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-/* line 70, src/sass/4-sections/_services.sass */
-.services__visual--A {
-  background-image: url("../img/web-design-visual.png");
+/* line 66, src/sass/4-sections/_services.sass */
+.services__img {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
 }
 
-/* line 73, src/sass/4-sections/_services.sass */
-.services__visual--B {
-  background-image: url("../img/app-design-visual.png");
+@media (max-width: 767px) {
+  /* line 72, src/sass/4-sections/_services.sass */
+  .services__img--A {
+    right: 0;
+  }
+  /* line 75, src/sass/4-sections/_services.sass */
+  .services__img--B {
+    left: 0;
+  }
 }
 
 @media (min-width: 768px) {
-  /* line 56, src/sass/4-sections/_services.sass */
-  .services__visual {
-    margin-top: 5rem;
+  /* line 66, src/sass/4-sections/_services.sass */
+  .services__img {
+    top: 5rem;
     height: calc(100% - 5rem);
+  }
+  /* line 82, src/sass/4-sections/_services.sass */
+  .services__img--A {
+    left: 0;
+  }
+  /* line 85, src/sass/4-sections/_services.sass */
+  .services__img--B {
+    right: 0;
   }
 }
 

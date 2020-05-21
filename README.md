@@ -6,11 +6,10 @@
 
 ### Now
 
-- form stuff
+- About: custom imgs
 
 ### Next
 
-- About: custom imgs
 - intro bg image resize & convert
 - rewrite functions.js + handle noscript
 

@@ -133,7 +133,7 @@
 	&__description
 		position: absolute
 		width: 100%
-		top: 52%
+		top: 55%
 		transform: translateY(-50%)
 		// font-family: $font-primary
 
@@ -152,7 +152,7 @@
 	// ---- Tags ----
 
 	&__tags
-		padding-top: 1.6em
+		padding-top: .6em
 		font-size: .9em
 		font-family: $font-monospace
 		color: $c-primary
@@ -212,3 +212,6 @@
 
 				&:hover
 					filter: unset
+
+	&:not(.active) &__button
+		pointer-events: none
