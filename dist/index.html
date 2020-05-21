@@ -29,16 +29,16 @@
 	<!-- SECTION: Navigation -->
 	<div id="top" class="navigation">
 		<div class="navigation__wrapper wrapper--large">
-			<a class="navigation__logo logo" href="#0">SR</a>
+			<a class="navigation__logo logo" href="#">SR</a>
 			<nav class="navigation__container">
 				<ul class="navigation__list">
-					<li><a href="#0">Home</a></li>
-					<li><a href="#work">Portfolio</a></li>
-					<li><a href="#blog">Blog</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#projects">Portfolio</a></li>
 				</ul>
 			</nav>
-			<a class="navigation__cta button" href="#0">Get A Quote</a>
+			<a class="navigation__cta button" href="#contact">Contact</a>
 			<div class="navigation__burger">
 				<span class="navigation__burger-el navigation__burger-el--top"></span>
 				<span class="navigation__burger-el navigation__burger-el--middle"></span>
@@ -84,20 +84,36 @@
 					</div>
 				</header>
 				<div class="about__content">
-					<div class="about__content-blurb blurb blurb--framed">
-						<p class="blurb__copy">
+					<div class="about__content-text text text__blurb">
+						<p class="text__copy">
 							I'm a freelance web developer and designer based in London, UK.
 						</p>
-						<p class="blurb__copy">
+						<p class="text__copy">
 							I build high quality websites and web apps that provide smooth user experience, intuitive
 							interfaces, and pixel-perfect implementation.
 						</p>
-						<p class="blurb__copy">
+						<p class="text__copy">
 							I'm interested in the entire front-end spectrum and working on ambitious projects with positive people. My
 							current focus is on building progressive web apps with modern JS frameworks.
 						</p>
-						<br>
-						<p>--(LIn)--(GH)--(@)--(Resume)</p>
+					</div>
+					<div class="about__social-links">
+						<ul class="social-links social-links--horizontal">
+							<li><a class="social-link" data-svg="email" href="#contact">
+									Email
+								</a></li>
+							<li><a class="social-link" data-svg="linkedin"
+									href="https://www.linkedin.com/in/sebastian-rosloniec-571b3940/">
+									LinkedIn
+								</a></li>
+							<li><a class="social-link" data-svg="github" href="https://github.com/Sebsterio">
+									Github
+								</a></li>
+							<li><a class="social-link social-link--resume"
+									href="https://docs.google.com/document/d/1OGEtvBjEW8DmpF1uZKvCuRHyQvrTziSR3uwa5IddjRU/edit?usp=sharing">
+									Resume
+								</a></li>
+						</ul>
 					</div>
 				</div>
 				<img class="about__visual" src="img/portrait.jpg" alt="Sebastian Rosloniec">
@@ -118,48 +134,42 @@
 
 			<!-- ARTICLE: Development -->
 			<article class="services__article">
-				<div class="services__content blurb">
-					<h3 class="blurb__heading"><span>01.</span>Development</h3>
-					<dl class="blurb__table">
+				<div class="services__content text">
+					<h3 class="text__heading"><span>01.</span>Development</h3>
+					<dl class="text__table">
 						<dt><span>Performance</span></dt>
 						<dd>My apps are highly optimised to ensure fast load times and lag free interaction</dd>
 						<dt><span>Modularity & Scalability</span></dt>
 						<dd>I build each component as an independent module than can be freely reused, edited, or removed without
 							unintended side-effects</dd>
 						<dt><span>Mobile-First Approach</span></dt>
-						<dd>My projects place mobile-specific code first, to speed up the loading on slower mobile networks at a
+						<dd>My projects place mobile-specific code first, to minimize loading time on slower mobile networks at a
 							negligible cost to desktop users</dd>
 						<dt><span>Browser Compatibility</span></dt>
 						<dd>My work uses feature detection to support older browsers while allowing modern ones to take full
 							advantage of the technology</dd>
 						<dt><span>Technical Minimalism</span></dt>
-						<dd>I prefer to avoid using bloated 3rd-party plugins whenever essential technologies are sufficiently
+						<dd>I avoid using bloated 3rd-party plugins whenever essential technologies are sufficiently
 							equipped to handle given needs</dd>
 					</dl>
 				</div>
-				<div class="services__tags blurb">
-					<h4 class="blurb__sub-heading">My tech stack</h4>
-					<ul class="blurb__tag-list small">
+				<div class="services__tags text">
+					<h4 class="text__sub-heading">My tech stack</h4>
+					<ul class="text__tag-list small">
 						<li>JavaScript</li>
-						<li>ES6</li>
 						<li>React</li>
-						<li>Redux</li>
-						<li>Thunk</li>
-						<li>Saga</li>
 						<li>jQuery</li>
 						<li>(S)CSS</li>
 						<li>Boostrap</li>
 						<li>Node</li>
 						<li>Firestore</li>
 					</ul>
-					<h4 class="blurb__sub-heading">Tools I use</h4>
-					<ul class="blurb__tag-list small">
-						<li>NPM</li>
+					<h4 class="text__sub-heading">Tools I use</h4>
+					<ul class="text__tag-list small">
 						<li>Webpack</li>
 						<li>Gulp</li>
 						<li>Jest+Enzyme</li>
 						<li>ESLint</li>
-						<li>Git</li>
 					</ul>
 				</div>
 				<figure class="services__visual services__visual--A"></figure>
@@ -167,9 +177,9 @@
 
 			<!-- ARTICLE: Design -->
 			<article class="services__article">
-				<div class="services__content blurb">
-					<h3 class="blurb__heading"><span>02.</span> Design</h3>
-					<dl class="blurb__table">
+				<div class="services__content text">
+					<h3 class="text__heading"><span>02.</span> Design</h3>
+					<dl class="text__table">
 						<dt><span>Experience-Focused</span></dt>
 						<dd>I use a combination of graphics, motion, and interactivity to capture users' emotional attention
 							before segueing into the informational content</dd>
@@ -184,9 +194,9 @@
 							identity and aim to showcase a character that interests the persona of the target audience</dd>
 					</dl>
 				</div>
-				<div class="services__tags blurb">
-					<h4 class="blurb__sub-heading"> Tools I use </h4>
-					<ul class="blurb__tag-list small">
+				<div class="services__tags text">
+					<h4 class="text__sub-heading"> Tools I use </h4>
+					<ul class="text__tag-list small">
 						<li>Adobe XD</li>
 						<li>Photoshop</li>
 						<li>Illustrator</li>
@@ -241,8 +251,8 @@
 						<input class="filters__filter" type="radio" name="filter" value="javascript" id="javascript">
 						<label class="filters__filter-label" for="javascript" style="--index: 5"><span>JavaScript</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="scss" id="scss">
-						<label class="filters__filter-label" for="scss" style="--index: 6"><span>(S)CSS</label>
+						<input class="filters__filter" type="radio" name="filter" value="wordpress" id="wordpress">
+						<label class="filters__filter-label" for="wordpress" style="--index: 6"><span>WordPress</label>
 
 						<input class="filters__filter" type="radio" name="filter" value="node" id="node">
 						<label class="filters__filter-label" for="node" style="--index: 7"><span>Node</label>
@@ -281,6 +291,17 @@
 							<input class="form__el form__el--submit" type="submit" value="Send">
 						</div>
 					</form>
+					<div class="contact__social-links">
+						<ul class="social-links social-links--vertical">
+							<li><a class="social-link" data-svg="linkedin"
+									href="https://www.linkedin.com/in/sebastian-rosloniec-571b3940/">
+									LinkedIn
+								</a></li>
+							<li><a class="social-link" data-svg="github" href="https://github.com/Sebsterio">
+									Github
+								</a></li>
+						</ul>
+					</div>
 				</div>
 				<!-- <div class="contact__links">
 					<ul>

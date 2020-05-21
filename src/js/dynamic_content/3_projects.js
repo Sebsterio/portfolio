@@ -1,11 +1,18 @@
 // ==================== Projects ====================
 
-(function () {
+(function (projects) {
 	const album = document.querySelector(".projects__grid");
 
-	// Create Project HTML Element (wrapped in Projects__grid-cell)
+	// Create Project HTML Element (wrapped in .projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, category, blurb, tech, links, image } = project;
+		const { type, name, blurb, tech, links, image } = project;
+
+		const visual = `
+			<div class="project__visual" 
+					style="${image ? `background-image: url('${image}')` : ""}">
+				<div class="project__visual-overlay"></div>
+			</div>
+		`;
 
 		const titleHtml = `
 			<div class="project__title">
@@ -44,6 +51,7 @@
 				</li>
 			`;
 		}
+
 		const buttonsHtml = `
 			<ul class="project__buttons">
 				${links.map((link) => getButtonHtml(link)).join("")}
@@ -53,9 +61,7 @@
 		return `
 			<div class="projects__grid-cell"">
 				<div class="project">
-					<div class="project__visual" style="background-image: url('${image}')">
-						<div class="project__visual-overlay"></div>
-					</div>
+					${visual}
 					<div class="project__content-container">
 						<div class="project__content">
 							${titleHtml}
@@ -68,14 +74,16 @@
 		`;
 	}
 
+	// Create element html and project tags
 	function generateProjectsProps(projects) {
-		projects = projects.map((project) => {
+		projects.map((project) => {
 			const { type, category, tech } = project;
 			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
 			project.html = buildProjectHtml(project);
 		});
 	}
 
+	// Rebuild album with filtered projects array
 	window.insertProjectsHtml = function (filter) {
 		album.innerHTML = projects
 			.filter(
@@ -89,4 +97,4 @@
 
 	generateProjectsProps(projects);
 	insertProjectsHtml("all");
-})();
+})(projects);

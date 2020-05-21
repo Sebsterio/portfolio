@@ -7,7 +7,7 @@
 	background-color: $bg-secondary
 	
 	&__wrapper
-		grid-template-areas: 'header' 'content'
+		grid-template-areas: 'header' 'content' 
 			
 	&__header
 		grid-area: header
@@ -17,22 +17,22 @@
 		grid-area: content
 		z-index: 2
 
-	&__visual
-		grid-area: pic
-		z-index: 1
-	
-		height: 360px
-		width: auto
-		object-fit: contain
-
-
-	@media (min-width: $l-min)
-		&__content
+		@media (min-width: $l-min)
 			// align-self: start
 			padding-left: 1rem
 
-		&__visual
-				width: 100%
-				height: auto
+	&__social-links
+		display: none
+		grid-area: links
+		
+		@media (min-width: $m-min)
+			display: inline-block
+			position: absolute
+			bottom: 6.5rem
+			left: 3.3rem
+			transform: translate(-50%, -50%) // future-proof the position
 
-	// @media (min-width: $l-min)
+		@media (min-width: $l-min)
+			bottom: 9.3rem
+			left: 8.3rem
+

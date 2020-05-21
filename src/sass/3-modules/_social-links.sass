@@ -1,0 +1,28 @@
+.social-links
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	background-color: $bg-main
+
+	&--horizontal
+		flex-flow: row nowrap
+
+	&--vertical
+		flex-flow: column nowrap
+
+	.social-link
+		margin: 1em
+		display: flex
+		align-items: center
+
+		&--resume
+			font-size: 1.1em
+			font-weight: 700
+			padding: .1em 1em
+			border: 2px solid $c-highlight
+			border-radius: 2em
+		
+		svg
+			width: 2em
+			height: 2em
+			fill: $c-primary

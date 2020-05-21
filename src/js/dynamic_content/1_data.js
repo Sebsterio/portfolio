@@ -4,7 +4,7 @@ const projects = [
 		type: "e-commerce",
 		category: "commercial",
 		blurb:
-			"Modern progressive web app with animated transitions between lazy-loaded routes",
+			"Progressive web app with user authentication and animated transitions between lazy-loaded routes",
 		tech: ["React", "Node", "Database"],
 		links: [
 			{ type: "preview", url: "" },
@@ -71,6 +71,16 @@ const projects = [
 		],
 		preview: true,
 		image: "img/projects/cosmo.jpg",
+	},
+	{
+		name: "Portfolio v.2",
+		type: "website",
+		category: "hobby",
+		blurb: "This website",
+		tech: ["JavaScript", "SCSS"],
+		links: [{ type: "github", url: "https://github.com/Sebsterio/portfolio" }],
+		preview: true,
+		image: "",
 	},
 	{
 		name: "Portfolio v.1",

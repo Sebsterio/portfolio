@@ -27,9 +27,8 @@
 })();
 
 (function () {
-	const containers = [...document.querySelectorAll(".projects__grid-cell")];
 	const form = document.querySelector(".filters__form");
-	const toggle = document.querySelector(".filters__toggle");
+	// const toggle = document.querySelector(".filters__toggle");
 
 	function filterProjects(e) {
 		// Ignore dropdown toggle
