@@ -16,36 +16,45 @@
 	
 	&__content
 		color: $c-secondary
-		font-size: 16px
-		font-weight: 800
+		// .name & .job :
+		font-size: 14px
+		--offset-x: 1.2em
+		--offset-y: .7em
+
+		@media (min-width: $m-min)
+			font-size: 19px
 		
+		@media (min-width: $l-min)
+			font-size: 23px
+
 		&-el
 			display: block
-
-			&--bg-text
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-				font-size: 40vw
-				font-weight: 900
-				opacity: .1
-				color: $bg-main
-				text-shadow: 3px 0 rgba(255,255,255,1), -3px 0 white
-				user-select: none
 			
-			&--name
-				transform: translateX(-30px)
+			&--name, &--job
+				position: relative
+				// font-weight: normal
 				opacity: 1 // TODO: animate entry
+				z-index: 10
+				color: $c-primary
+
+			&--name
+				transform: translate(calc(-1 * var(--offset-x)), var(--offset-y))
 				
+			&--job
+				text-align: right
+				transform: translate(var(--offset-x), calc(-1 * var(--offset-y)))
+				// font-size: 2em
+
 			&--description
 				transform: matrix( 1.01107311016097,0,0,1.01107311016097,0,0)
 				margin: 10px 0
 				color: $c-special
 				font-size: 16vw
+				font-weight: 800
 				text-align: center
 				text-transform: uppercase
 				text-shadow: 0 0 35px rgba(255,255,255,.2)
+				z-index: 1
 
 				background-image: url('https://devonblog.com/wp-content/uploads/2017/09/codeblauw.jpg')
 				background-size: contain
@@ -54,11 +63,18 @@
 				-webkit-background-clip: text
 				color: transparent
 				// animation: loop 2s linear infinite
-				
-			&--job
-				transform: translateX(30px)
-				text-align: right
-				opacity: 1 // TODO: animate entry
+
+			&--bg-text
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				font-size: 40vw
+				font-weight: 900
+				color: $bg-main
+				text-shadow: 2px 0 0 rgba(255,255,255,.2), -2px 0 0 rgba(255,255,255,.2)
+				user-select: none
+				z-index: -1
 	
 	&__arrow
 		position: absolute

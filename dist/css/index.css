@@ -1038,7 +1038,7 @@ input[type="button"]:focus {
   font-weight: bolder;
   text-transform: uppercase;
   color: black;
-  text-shadow: 2px 0 0 rgba(255, 255, 255, 0.2), -2px 0 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 0 0 rgba(255, 255, 255, 0.25), -2px 0 0 rgba(255, 255, 255, 0.25), 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 /* line 40, src/sass/3-modules/_title.sass */
@@ -1370,9 +1370,9 @@ input[type="button"]:focus {
 
 /* line 71, src/sass/3-modules/_project.sass */
 .project.active .project__visual {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  opacity: .04;
+  -webkit-filter: grayscale(100%) blur(5px);
+          filter: grayscale(100%) blur(5px);
+  opacity: .2;
   transition-delay: unset;
 }
 
@@ -1448,7 +1448,7 @@ input[type="button"]:focus {
   transform: translateY(-50%);
 }
 
-/* line 141, src/sass/3-modules/_project.sass */
+/* line 142, src/sass/3-modules/_project.sass */
 .project__blurb {
   font-size: 1em;
   transition: all 200ms ease-out;
@@ -1457,14 +1457,14 @@ input[type="button"]:focus {
   transform: translateX(-1em);
 }
 
-/* line 146, src/sass/3-modules/_project.sass */
+/* line 147, src/sass/3-modules/_project.sass */
 .project.active .project__blurb {
   transition-delay: 400ms;
   opacity: 1;
   transform: translateX(0);
 }
 
-/* line 153, src/sass/3-modules/_project.sass */
+/* line 154, src/sass/3-modules/_project.sass */
 .project__tags {
   padding-top: 1.6em;
   font-size: .9em;
@@ -1475,24 +1475,24 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 160, src/sass/3-modules/_project.sass */
+/* line 161, src/sass/3-modules/_project.sass */
 .project.active .project__tags {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 163, src/sass/3-modules/_project.sass */
+/* line 164, src/sass/3-modules/_project.sass */
 .project__tag {
   display: inline-block;
   padding: .8em;
 }
 
-/* line 167, src/sass/3-modules/_project.sass */
+/* line 168, src/sass/3-modules/_project.sass */
 .project__tag:first-child {
   padding-left: 0;
 }
 
-/* line 172, src/sass/3-modules/_project.sass */
+/* line 173, src/sass/3-modules/_project.sass */
 .project__buttons {
   position: absolute;
   bottom: .6em;
@@ -1503,59 +1503,59 @@ input[type="button"]:focus {
   transition: all 200ms ease-out;
   transition-delay: unset;
   opacity: 0;
-}
-
-/* line 181, src/sass/3-modules/_project.sass */
-.project.active .project__buttons {
-  transition-delay: 400ms;
-  opacity: 1;
+  transform: scale(1.1);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 /* line 184, src/sass/3-modules/_project.sass */
+.project.active .project__buttons {
+  transition-delay: 400ms;
+  opacity: 1;
+  transform: scale(1);
+  -webkit-filter: none;
+          filter: none;
+}
+
+/* line 189, src/sass/3-modules/_project.sass */
 .project__button {
   display: inline-block;
 }
 
-/* line 187, src/sass/3-modules/_project.sass */
+/* line 192, src/sass/3-modules/_project.sass */
 .project__button a {
   padding: .6em;
   display: flex;
   align-content: center;
 }
 
-/* line 192, src/sass/3-modules/_project.sass */
+/* line 197, src/sass/3-modules/_project.sass */
 .project__button svg {
   width: 1.8em;
   height: 1.8em;
   fill: white;
 }
 
-/* line 197, src/sass/3-modules/_project.sass */
+/* line 202, src/sass/3-modules/_project.sass */
 .project__button svg:hover {
   -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
           filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
-/* line 202, src/sass/3-modules/_project.sass */
+/* line 207, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 205, src/sass/3-modules/_project.sass */
+/* line 210, src/sass/3-modules/_project.sass */
 .project__button--disabled svg {
   fill: #6b8597;
 }
 
-/* line 208, src/sass/3-modules/_project.sass */
+/* line 213, src/sass/3-modules/_project.sass */
 .project__button--disabled svg:hover {
   -webkit-filter: unset;
           filter: unset;
-}
-
-/* line 211, src/sass/3-modules/_project.sass */
-.project__button:first-child svg {
-  width: 2em;
-  height: 2em;
 }
 
 /* line 1, src/sass/3-modules/_social-links.sass */
@@ -1599,6 +1599,11 @@ input[type="button"]:focus {
   fill: #c0c0c0;
 }
 
+/* line 30, src/sass/3-modules/_social-links.sass */
+.social-links .social-link:hover svg {
+  fill: white;
+}
+
 /************************* Introduction *************************/
 @-webkit-keyframes loop {
   0% {
@@ -1630,47 +1635,60 @@ input[type="button"]:focus {
 /* line 17, src/sass/4-sections/_intro.sass */
 .introduction__content {
   color: #919191;
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 14px;
+  --offset-x: 1.2em;
+  --offset-y: .7em;
 }
 
-/* line 22, src/sass/4-sections/_intro.sass */
+@media (min-width: 768px) {
+  /* line 17, src/sass/4-sections/_intro.sass */
+  .introduction__content {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 17, src/sass/4-sections/_intro.sass */
+  .introduction__content {
+    font-size: 23px;
+  }
+}
+
+/* line 30, src/sass/4-sections/_intro.sass */
 .introduction__content-el {
   display: block;
 }
 
-/* line 25, src/sass/4-sections/_intro.sass */
-.introduction__content-el--bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40vw;
-  font-weight: 900;
-  opacity: .1;
-  color: black;
-  text-shadow: 3px 0 white, -3px 0 white;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/* line 37, src/sass/4-sections/_intro.sass */
-.introduction__content-el--name {
-  transform: translateX(-30px);
+/* line 33, src/sass/4-sections/_intro.sass */
+.introduction__content-el--name, .introduction__content-el--job {
+  position: relative;
   opacity: 1;
+  z-index: 10;
+  color: #c0c0c0;
 }
 
-/* line 41, src/sass/4-sections/_intro.sass */
+/* line 40, src/sass/4-sections/_intro.sass */
+.introduction__content-el--name {
+  transform: translate(calc(-1 * var(--offset-x)), var(--offset-y));
+}
+
+/* line 43, src/sass/4-sections/_intro.sass */
+.introduction__content-el--job {
+  text-align: right;
+  transform: translate(var(--offset-x), calc(-1 * var(--offset-y)));
+}
+
+/* line 48, src/sass/4-sections/_intro.sass */
 .introduction__content-el--description {
   transform: matrix(1.01107, 0, 0, 1.01107, 0, 0);
   margin: 10px 0;
   color: black;
   font-size: 16vw;
+  font-weight: 800;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 35px rgba(255, 255, 255, 0.2);
+  z-index: 1;
   background-image: url("https://devonblog.com/wp-content/uploads/2017/09/codeblauw.jpg");
   background-size: contain;
   background-clip: text;
@@ -1679,14 +1697,24 @@ input[type="button"]:focus {
   color: transparent;
 }
 
-/* line 58, src/sass/4-sections/_intro.sass */
-.introduction__content-el--job {
-  transform: translateX(30px);
-  text-align: right;
-  opacity: 1;
+/* line 67, src/sass/4-sections/_intro.sass */
+.introduction__content-el--bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40vw;
+  font-weight: 900;
+  color: black;
+  text-shadow: 2px 0 0 rgba(255, 255, 255, 0.2), -2px 0 0 rgba(255, 255, 255, 0.2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: -1;
 }
 
-/* line 63, src/sass/4-sections/_intro.sass */
+/* line 79, src/sass/4-sections/_intro.sass */
 .introduction__arrow {
   position: absolute;
   bottom: 10%;
@@ -1699,18 +1727,18 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 1440px) {
-  /* line 74, src/sass/4-sections/_intro.sass */
+  /* line 90, src/sass/4-sections/_intro.sass */
   .introduction::before {
     font-size: 576px;
   }
-  /* line 81, src/sass/4-sections/_intro.sass */
+  /* line 97, src/sass/4-sections/_intro.sass */
   .introduction__content-el--description {
     font-size: 230px;
   }
 }
 
 @media (max-height: 540px) {
-  /* line 86, src/sass/4-sections/_intro.sass */
+  /* line 102, src/sass/4-sections/_intro.sass */
   .introduction__arrow {
     -webkit-animation: none;
             animation: none;

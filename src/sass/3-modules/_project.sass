@@ -69,8 +69,8 @@
 		@include transition-step-1
 	
 	&.active  &__visual
-		filter: grayscale(100%)
-		opacity: .04
+		filter: grayscale(100%) blur(5px)
+		opacity: .2
 		@include transition-step-1-active
 
 	&__visual-overlay
@@ -135,6 +135,7 @@
 		width: 100%
 		top: 52%
 		transform: translateY(-50%)
+		// font-family: $font-primary
 
 	// ---- Blurb ----
 
@@ -177,9 +178,13 @@
 		justify-content: center
 		align-items: center
 		@include transition-step-2
+		transform: scale(1.1)
+		filter: blur(3px)
 
 	&.active  &__buttons
 		@include transition-step-2-active
+		transform: scale(1)
+		filter: none
 
 	&__button
 		display: inline-block
@@ -207,7 +212,3 @@
 
 				&:hover
 					filter: unset
-
-		&:first-child svg // for particual icon
-			width: 2em
-			height: 2em

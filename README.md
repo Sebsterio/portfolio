@@ -8,21 +8,13 @@
 
 ### Next
 
-- form stuff
-- redo jQ functions + noscript
-
-## Style
-
-- title backlight (add blurred text shadow)
-- About --- custom imgs
-- Portfolio --- blur visual when .active
-- Portfolio --- project buttons: animate scale
-- Portfolio --- description change font. title type maybe too
-
-### Optimization
-
-- change eye & email icons
+- add GH links to projects
+- unify blue button styles (3 on page)
+- social link: same transition as blue button
+- About: custom imgs
 - intro bg image resize & convert
+- form stuff
+- rewrite functions.js + handle noscript
 
 ### Next version
 
