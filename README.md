@@ -6,14 +6,12 @@
 
 ### Now
 
+- form stuff
+
 ### Next
 
-- add GH links to projects
-- unify blue button styles (3 on page)
-- social link: same transition as blue button
 - About: custom imgs
 - intro bg image resize & convert
-- form stuff
 - rewrite functions.js + handle noscript
 
 ### Next version

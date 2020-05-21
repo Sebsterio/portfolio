@@ -642,8 +642,8 @@ input[type="reset"]:focus,
 input[type="button"]:hover,
 input[type="button"]:active,
 input[type="button"]:focus {
-  color: #6c8bb8;
-  border-color: #6c8bb8;
+  color: #7d99c0;
+  border-color: #7d99c0;
 }
 
 /* line 4, src/sass/3-modules/_text.sass */
@@ -1588,9 +1588,10 @@ input[type="button"]:focus {
   width: 2em;
   height: 2em;
   fill: #c0c0c0;
+  transition: .2s all ease-in-out;
 }
 
-/* line 23, src/sass/3-modules/_social-links.sass */
+/* line 24, src/sass/3-modules/_social-links.sass */
 .social-links .social-link:hover svg {
   fill: white;
 }
