@@ -16,10 +16,28 @@
 	100%
 		transform: translate(-12px, 45px)
 		opacity: 0
-		
-@keyframes scaleUp
-	0%
+
+@keyframes scroll-bg
+	0% 
+		background-position: 0 0
+	100% 
+		background-position: 0 250px
+
+// On-scroll transitions
+
+.js .animated
+	transition: 800ms ease-out
+	opacity: 0
+
+	&.fadeInRight
+		transform: translateX(-5vw)
+	
+	&.fadeInLeft
+		transform: translateX(5vw)
+
+	&.scaleUp
 		transform: scale(.95)
-	100%
-		transform: scale(1)
-		
+
+	&.active
+		transform: none
+		opacity: 1

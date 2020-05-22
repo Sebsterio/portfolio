@@ -6,11 +6,9 @@
 
 ### Now
 
-- filter label update on input
+- rewrite functions.js + handle noscript
 
 ### Next
-
-- rewrite functions.js + handle noscript
 
 - project rows parallax 2 levels
 
@@ -20,6 +18,8 @@
   -- OR at least parallax
 
 - title: increase blur radius the closer the el is to window middle
+
+- contact link in movile nav
 
 ### Next version
 

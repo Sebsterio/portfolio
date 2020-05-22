@@ -26,6 +26,128 @@
 	);
 })();
 
+//---------------------- Animations ----------------------
+
+(function () {
+	// const NAV_OFFSET_THRESHOLD = 70;
+	const FADE_PEEK_THRESHOLD = 150;
+	const PARALLAX_PEEK_THRESHOLD = -250;
+	const PARALLAX_MIN_WIDTH = 768;
+	const DEBOUNCE_INTERVAL = 100;
+
+	const hero = document.querySelector(".introduction__content-el--hero");
+	const nav = document.querySelector(".navigation");
+	const animated = document.querySelectorAll(".animated");
+	const parallaxed = document.querySelectorAll(".parallax");
+
+	let navHeight = 0;
+	let windowWidth = 0;
+
+	// ------------------------ Utils -------------------------------
+
+	function updateWindowWidth() {
+		windowWidth =
+			window.innerWidth ||
+			document.documentElement.clientWidth ||
+			document.body.clientWidth;
+	}
+
+	function updateNavHeight() {
+		navHeight = nav.offsetHeight;
+	}
+
+	// threshold < 0 --> image near viewports
+	function isPeekingIntoViewport(img, threshold) {
+		const rect = img.getBoundingClientRect();
+		const imgIsAboveViewport = rect.bottom - threshold < navHeight;
+		const imgIsBelowViewport = rect.top + threshold > window.innerHeight;
+		return !imgIsBelowViewport && !imgIsAboveViewport;
+	}
+
+	// Toggle Nav styles
+	function updateNav() {
+		return;
+		// if (window.pageYOffset > NAV_OFFSET_THRESHOLD)
+		// 	document.body.classList.add("page-on-scroll");
+		// else document.body.classList.remove("page-on-scroll");
+	}
+
+	// ------------------------ Setup -------------------------------
+
+	function setUpParallax() {
+		parallaxed.forEach((el) => {
+			el.rellax = new Rellax(".parallax");
+		});
+	}
+
+	// ------------------------ View -------------------------------
+
+	// Kill parallax when element not in view
+	function toggleParallaxed() {
+		parallaxed.forEach((el) => {
+			if (
+				windowWidth < PARALLAX_MIN_WIDTH ||
+				!isPeekingIntoViewport(el, PARALLAX_PEEK_THRESHOLD)
+			) {
+				el.rellax.destroy();
+			} else {
+				el.rellax.refresh();
+			}
+		});
+	}
+
+	// Fade in element when in view
+	function fadeAnimated() {
+		animated.forEach((el) => {
+			// is any part of the el within viewport
+			if (isPeekingIntoViewport(el, FADE_PEEK_THRESHOLD)) {
+				el.classList.add("active");
+			}
+			// entire image is outside viewport
+			else if (!isPeekingIntoViewport(el, 0)) {
+				el.classList.remove("active");
+			}
+		});
+	}
+
+	// ----------------------- Model ---------------------------
+
+	function handleScroll() {
+		updateNav();
+		toggleParallaxed();
+		fadeAnimated();
+	}
+
+	// Debounce
+	var scheduled = false;
+	function debounceScroll() {
+		if (!scheduled) {
+			scheduled = true;
+			setTimeout((function () {
+				scheduled = false;
+				/* without timeout, window.offsetY is received when the scrolling starts,
+					instead of when it ends */
+				setTimeout(handleScroll, 150);
+			}), DEBOUNCE_INTERVAL);
+		}
+	}
+
+	function handleResize() {
+		// updateNavHeight();
+		updateWindowWidth();
+		debounceScroll();
+	}
+
+	// ----------------------- Controller ---------------------------
+
+	hero.addEventListener("click", () => hero.classList.toggle("animating"));
+
+	window.addEventListener("scroll", debounceScroll);
+	window.addEventListener("resize", handleResize);
+
+	handleResize();
+})();
+
 (function () {
 	const form = document.querySelector(".filters__form");
 	const mainLabel = document.querySelector(".filters__toggle-label span");
@@ -75,6 +197,65 @@
 })();
 
 (function () {
-	const hero = document.querySelector(".introduction__content-el--hero");
-	hero.addEventListener("click", () => hero.classList.toggle("animate"));
+	//---------------------- Responsive Nav ----------------------
+
+	const navBurger = document.querySelector(".navigation__burger");
+	const navContainer = document.querySelector(".navigation__container");
+
+	function toggleNav() {
+		navBurger.classList.toggle("navigation__burger--is-open");
+		navContainer.classList.toggle("navigation__container--is-open");
+		document.documentElement.classList.toggle("scroll-lock");
+		document.body.classList.toggle("scroll-lock");
+	}
+
+	navBurger.addEventListener("click", toggleNav);
+
+	//---------------------- Smooth Scroll ----------------------
+
+	const links = document.querySelectorAll(".nav-link");
+
+	links.forEach((link) =>
+		link.addEventListener("click", (e) => {
+			const targetId = link.href.match(/#\w*/);
+			const target = document.querySelector(targetId);
+			if (!target) return;
+
+			e.preventDefault();
+
+			const initialScroll = window.pageYOffset;
+			const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+			window.scrollTo({
+				behavior: "smooth",
+				left: 0,
+				top: targetTop,
+			});
+
+			// Clunky fix for Edge & IE:
+			// Jump to target if scroll didn't work correctly
+			setTimeout((function () {
+				if (window.pageYOffset === initialScroll || window.pageYOffset === 0)
+					window.scrollTo(0, targetTop);
+			}), 100);
+
+			// Close navContainer on mobile
+			if (navContainer.classList.contains("navigation__container--is-open"))
+				toggleNav();
+		})
+	);
+})();
+
+//---------------------- Splashscreen ----------------------
+
+(function () {
+	const splashscreen = document.querySelector(".splashscreen");
+
+	splashscreen.classList.add("splashscreen--hidden");
+
+	setTimeout(() => {
+		splashscreen.style.display = "none";
+
+		// Enable onScroll transitions
+		document.documentElement.classList.add("active");
+	}, 800);
 })();

@@ -535,7 +535,7 @@ textarea {
   justify-content: center;
   background-color: black;
   z-index: 100;
-  transition: opacity .4s .4s;
+  transition: opacity .8s;
 }
 
 /* line 14, src/sass/3-modules/_splashscreen.sass */
@@ -815,22 +815,49 @@ input[type="button"]:focus {
   }
 }
 
-@-webkit-keyframes scaleUp {
+@-webkit-keyframes scroll-bg {
   0% {
-    transform: scale(0.95);
+    background-position: 0 0;
   }
   100% {
-    transform: scale(1);
+    background-position: 0 250px;
   }
 }
 
-@keyframes scaleUp {
+@keyframes scroll-bg {
   0% {
-    transform: scale(0.95);
+    background-position: 0 0;
   }
   100% {
-    transform: scale(1);
+    background-position: 0 250px;
   }
+}
+
+/* line 28, src/sass/3-modules/_animations.sass */
+.js .animated {
+  transition: 800ms ease-out;
+  opacity: 0;
+}
+
+/* line 32, src/sass/3-modules/_animations.sass */
+.js .animated.fadeInRight {
+  transform: translateX(-5vw);
+}
+
+/* line 35, src/sass/3-modules/_animations.sass */
+.js .animated.fadeInLeft {
+  transform: translateX(5vw);
+}
+
+/* line 38, src/sass/3-modules/_animations.sass */
+.js .animated.scaleUp {
+  transform: scale(0.95);
+}
+
+/* line 41, src/sass/3-modules/_animations.sass */
+.js .animated.active {
+  transform: none;
+  opacity: 1;
 }
 
 /* line 1, src/sass/3-modules/_navigation.sass */
@@ -838,7 +865,7 @@ input[type="button"]:focus {
   position: absolute;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* line 7, src/sass/3-modules/_navigation.sass */
@@ -1606,24 +1633,7 @@ input[type="button"]:focus {
 }
 
 /************************* Introduction *************************/
-@-webkit-keyframes loop {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 4760px;
-  }
-}
-@keyframes loop {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 4760px;
-  }
-}
-
-/* line 9, src/sass/4-sections/_intro.sass */
+/* line 3, src/sass/4-sections/_intro.sass */
 .introduction {
   position: relative;
   display: flex;
@@ -1633,53 +1643,52 @@ input[type="button"]:focus {
   justify-content: center;
 }
 
-/* line 17, src/sass/4-sections/_intro.sass */
+/* line 11, src/sass/4-sections/_intro.sass */
 .introduction__content {
   color: #919191;
   font-size: 14px;
-  --offset-x: 1.2em;
-  --offset-y: .7em;
 }
 
 @media (min-width: 768px) {
-  /* line 17, src/sass/4-sections/_intro.sass */
+  /* line 11, src/sass/4-sections/_intro.sass */
   .introduction__content {
     font-size: 19px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 17, src/sass/4-sections/_intro.sass */
+  /* line 11, src/sass/4-sections/_intro.sass */
   .introduction__content {
     font-size: 23px;
   }
 }
 
-/* line 30, src/sass/4-sections/_intro.sass */
+/* line 22, src/sass/4-sections/_intro.sass */
 .introduction__content-el {
   display: block;
 }
 
-/* line 33, src/sass/4-sections/_intro.sass */
+/* line 25, src/sass/4-sections/_intro.sass */
 .introduction__content-el--name, .introduction__content-el--job {
   position: relative;
-  opacity: 1;
   z-index: 10;
   color: #c0c0c0;
 }
 
-/* line 40, src/sass/4-sections/_intro.sass */
+/* line 31, src/sass/4-sections/_intro.sass */
 .introduction__content-el--name {
-  transform: translate(calc(-1 * var(--offset-x)), var(--offset-y));
+  left: -1.2em;
+  bottom: -.7em;
 }
 
-/* line 43, src/sass/4-sections/_intro.sass */
+/* line 35, src/sass/4-sections/_intro.sass */
 .introduction__content-el--job {
   text-align: right;
-  transform: translate(var(--offset-x), calc(-1 * var(--offset-y)));
+  right: -1.2em;
+  top: -.7em;
 }
 
-/* line 48, src/sass/4-sections/_intro.sass */
+/* line 41, src/sass/4-sections/_intro.sass */
 .introduction__content-el--hero {
   transform: matrix(1.01107, 0, 0, 1.01107, 0, 0);
   margin: 10px 0;
@@ -1689,6 +1698,7 @@ input[type="button"]:focus {
   text-align: center;
   text-transform: uppercase;
   z-index: 1;
+  cursor: pointer;
   background-image: url("../img/bg-code-m70.jpg");
   color: transparent;
   -webkit-background-clip: text;
@@ -1699,13 +1709,20 @@ input[type="button"]:focus {
   text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.2);
 }
 
-/* line 66, src/sass/4-sections/_intro.sass */
-.introduction__content-el--hero.animate {
-  -webkit-animation: loop 100s linear infinite;
-          animation: loop 100s linear infinite;
+/* line 60, src/sass/4-sections/_intro.sass */
+.introduction__content-el--hero.animating {
+  -webkit-animation: scroll-bg 10s linear infinite;
+          animation: scroll-bg 10s linear infinite;
 }
 
-/* line 69, src/sass/4-sections/_intro.sass */
+@media (max-width: 767px) {
+  /* line 41, src/sass/4-sections/_intro.sass */
+  .introduction__content-el--hero {
+    background-image: url("../img/bg-code-s85.jpg");
+  }
+}
+
+/* line 67, src/sass/4-sections/_intro.sass */
 .introduction__content-el--bg-text {
   position: absolute;
   top: 50%;
@@ -1722,7 +1739,7 @@ input[type="button"]:focus {
   z-index: -1;
 }
 
-/* line 81, src/sass/4-sections/_intro.sass */
+/* line 79, src/sass/4-sections/_intro.sass */
 .introduction__arrow {
   position: absolute;
   bottom: 10%;
@@ -1735,18 +1752,18 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 1440px) {
-  /* line 92, src/sass/4-sections/_intro.sass */
+  /* line 90, src/sass/4-sections/_intro.sass */
   .introduction::before {
     font-size: 576px;
   }
-  /* line 99, src/sass/4-sections/_intro.sass */
+  /* line 97, src/sass/4-sections/_intro.sass */
   .introduction__content-el--description {
     font-size: 230px;
   }
 }
 
 @media (max-height: 540px) {
-  /* line 104, src/sass/4-sections/_intro.sass */
+  /* line 102, src/sass/4-sections/_intro.sass */
   .introduction__arrow {
     -webkit-animation: none;
             animation: none;
@@ -2106,12 +2123,12 @@ input[type="button"]:focus {
 
 /* line 8, src/sass/4-sections/_projects.sass */
 .projects__gallery {
-  padding: 8rem 1rem;
+  padding: 1rem;
 }
 
 /* line 11, src/sass/4-sections/_projects.sass */
 .projects__error-msg {
-  padding: 1rem;
+  padding: 8rem 1rem;
 }
 
 /* line 14, src/sass/4-sections/_projects.sass */
@@ -2246,28 +2263,26 @@ input[type="button"]:focus {
   }
 }
 
-/* line 24, src/sass/4-sections/_contact.sass */
+/* line 23, src/sass/4-sections/_contact.sass */
 .contact__social-links {
   display: none;
-  grid-area: links;
 }
 
 @media (min-width: 768px) {
-  /* line 24, src/sass/4-sections/_contact.sass */
+  /* line 23, src/sass/4-sections/_contact.sass */
   .contact__social-links {
     display: inline-block;
     position: absolute;
-    bottom: 6.5rem;
-    left: 3.3rem;
-    transform: translate(-50%, -50%);
+    bottom: 10rem;
+    left: 1.3rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 24, src/sass/4-sections/_contact.sass */
+  /* line 23, src/sass/4-sections/_contact.sass */
   .contact__social-links {
-    bottom: 9.3rem;
-    left: 8.3rem;
+    bottom: 14rem;
+    left: 6.3rem;
   }
 }
 

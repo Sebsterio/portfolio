@@ -1,10 +1,4 @@
 /************************* Introduction *************************/
-@keyframes loop
-	0% 
-		background-position: 0 0
-	100% 
-		background-position: 0 4760px
-
 
 .introduction
 	position: relative
@@ -18,8 +12,6 @@
 		color: $c-secondary
 		// .name & .job :
 		font-size: 14px
-		--offset-x: 1.2em
-		--offset-y: .7em
 
 		@media (min-width: $m-min)
 			font-size: 19px
@@ -33,16 +25,17 @@
 			&--name, &--job
 				position: relative
 				// font-weight: normal
-				opacity: 1 // TODO: animate entry
 				z-index: 10
 				color: $c-primary
 
 			&--name
-				transform: translate(calc(-1 * var(--offset-x)), var(--offset-y))
+				left: -1.2em
+				bottom: -.7em
 				
 			&--job
 				text-align: right
-				transform: translate(var(--offset-x), calc(-1 * var(--offset-y)))
+				right: -1.2em
+				top: -.7em
 				// font-size: 2em
 
 			&--hero
@@ -54,6 +47,7 @@
 				text-align: center
 				text-transform: uppercase
 				z-index: 1
+				cursor: pointer
 
 				background-image: url('../img/bg-code-m70.jpg')
 				color: transparent
@@ -63,8 +57,12 @@
 				background-repeat: repeat
 				text-shadow: 0 0 .1em rgba(white,.2) // ~ inset
 
-				&.animate
-					animation: loop 100s linear infinite
+				&.animating
+					animation: scroll-bg 10s linear infinite
+				
+				@media (max-width: $s-max)
+					background-image: url('../img/bg-code-s85.jpg')
+
 
 			&--bg-text
 				position: absolute
