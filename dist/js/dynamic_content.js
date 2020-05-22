@@ -86,7 +86,7 @@ const projects = [
 		tech: ["JavaScript", "SCSS"],
 		links: [{ type: "github", url: "https://github.com/Sebsterio/portfolio" }],
 		preview: true,
-		image: "",
+		image: "img/projects/feedback-loop.jpg",
 	},
 	// --------------------- Portfolio 1 ---------------------
 	{
