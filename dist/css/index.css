@@ -1611,7 +1611,7 @@ input[type="button"]:focus {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 -100px;
+    background-position: 0 4760px;
   }
 }
 @keyframes loop {
@@ -1619,7 +1619,7 @@ input[type="button"]:focus {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 -100px;
+    background-position: 0 4760px;
   }
 }
 
@@ -1680,7 +1680,7 @@ input[type="button"]:focus {
 }
 
 /* line 48, src/sass/4-sections/_intro.sass */
-.introduction__content-el--description {
+.introduction__content-el--hero {
   transform: matrix(1.01107, 0, 0, 1.01107, 0, 0);
   margin: 10px 0;
   color: black;
@@ -1688,17 +1688,24 @@ input[type="button"]:focus {
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 35px rgba(255, 255, 255, 0.2);
   z-index: 1;
-  background-image: url("https://devonblog.com/wp-content/uploads/2017/09/codeblauw.jpg");
-  background-size: contain;
-  background-clip: text;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
+  background-image: url("../img/bg-code-m70.jpg");
   color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.2);
 }
 
-/* line 67, src/sass/4-sections/_intro.sass */
+/* line 66, src/sass/4-sections/_intro.sass */
+.introduction__content-el--hero.animate {
+  -webkit-animation: loop 100s linear infinite;
+          animation: loop 100s linear infinite;
+}
+
+/* line 69, src/sass/4-sections/_intro.sass */
 .introduction__content-el--bg-text {
   position: absolute;
   top: 50%;
@@ -1715,7 +1722,7 @@ input[type="button"]:focus {
   z-index: -1;
 }
 
-/* line 79, src/sass/4-sections/_intro.sass */
+/* line 81, src/sass/4-sections/_intro.sass */
 .introduction__arrow {
   position: absolute;
   bottom: 10%;
@@ -1728,18 +1735,18 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 1440px) {
-  /* line 90, src/sass/4-sections/_intro.sass */
+  /* line 92, src/sass/4-sections/_intro.sass */
   .introduction::before {
     font-size: 576px;
   }
-  /* line 97, src/sass/4-sections/_intro.sass */
+  /* line 99, src/sass/4-sections/_intro.sass */
   .introduction__content-el--description {
     font-size: 230px;
   }
 }
 
 @media (max-height: 540px) {
-  /* line 102, src/sass/4-sections/_intro.sass */
+  /* line 104, src/sass/4-sections/_intro.sass */
   .introduction__arrow {
     -webkit-animation: none;
             animation: none;
