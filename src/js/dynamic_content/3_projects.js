@@ -4,10 +4,8 @@
 	const album = document.querySelector(".projects__grid");
 
 	// Create Project HTML Element (wrapped in .projects__grid-cell)
-	function buildProjectHtml(project, i) {
+	function buildProjectHtml(project) {
 		const { type, name, blurb, tech, links, image } = project;
-
-		const zIndex = i * -1;
 
 		const visual = `
 			<div class="project__visual" 
@@ -62,7 +60,7 @@
 		//data-rellax-speed="5"
 		return `
 			<div class="projects__grid-cell" style="--index: 0">
-				<div class="project" style="z-index:${zIndex}">
+				<div class="project">
 					${visual}
 					<div class="project__content-container">
 						<div class="project__content">
@@ -78,10 +76,10 @@
 
 	// Create element html and project tags
 	function generateProjectsProps(projects) {
-		projects.map((project, i) => {
+		projects.map((project) => {
 			const { type, category, tech } = project;
 			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
-			project.html = buildProjectHtml(project, i);
+			project.html = buildProjectHtml(project);
 		});
 	}
 
