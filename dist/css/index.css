@@ -1336,7 +1336,7 @@ input[type="button"]:focus {
   background-color: #466591;
   background: linear-gradient(45deg, #25354c, #7d99c0);
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 3px;
   transition: all 200ms ease-in-out;
   box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.2);
   -webkit-filter: brightness(95%) saturate(90%);
@@ -1470,7 +1470,7 @@ input[type="button"]:focus {
 
 /* line 154, src/sass/3-modules/_project.sass */
 .project__tags {
-  padding-top: .6em;
+  padding-top: .4em;
   font-size: .9em;
   font-family: monospace;
   color: #c0c0c0;
@@ -1488,15 +1488,10 @@ input[type="button"]:focus {
 /* line 164, src/sass/3-modules/_project.sass */
 .project__tag {
   display: inline-block;
-  padding: .8em;
+  padding: .9em;
 }
 
-/* line 168, src/sass/3-modules/_project.sass */
-.project__tag:first-child {
-  padding-left: 0;
-}
-
-/* line 173, src/sass/3-modules/_project.sass */
+/* line 170, src/sass/3-modules/_project.sass */
 .project__buttons {
   position: absolute;
   bottom: .6em;
@@ -1512,7 +1507,7 @@ input[type="button"]:focus {
           filter: blur(3px);
 }
 
-/* line 184, src/sass/3-modules/_project.sass */
+/* line 181, src/sass/3-modules/_project.sass */
 .project.active .project__buttons {
   transition-delay: 400ms;
   opacity: 1;
@@ -1521,48 +1516,48 @@ input[type="button"]:focus {
           filter: none;
 }
 
-/* line 189, src/sass/3-modules/_project.sass */
+/* line 186, src/sass/3-modules/_project.sass */
 .project__button {
   display: inline-block;
 }
 
-/* line 192, src/sass/3-modules/_project.sass */
+/* line 189, src/sass/3-modules/_project.sass */
 .project__button a {
   padding: .6em;
   display: flex;
   align-content: center;
 }
 
-/* line 197, src/sass/3-modules/_project.sass */
+/* line 194, src/sass/3-modules/_project.sass */
 .project__button svg {
   width: 1.8em;
   height: 1.8em;
   fill: white;
 }
 
-/* line 202, src/sass/3-modules/_project.sass */
+/* line 199, src/sass/3-modules/_project.sass */
 .project__button svg:hover {
   -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
           filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
-/* line 207, src/sass/3-modules/_project.sass */
+/* line 204, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 210, src/sass/3-modules/_project.sass */
+/* line 207, src/sass/3-modules/_project.sass */
 .project__button--disabled svg {
   fill: #6b8597;
 }
 
-/* line 213, src/sass/3-modules/_project.sass */
+/* line 210, src/sass/3-modules/_project.sass */
 .project__button--disabled svg:hover {
   -webkit-filter: unset;
           filter: unset;
 }
 
-/* line 216, src/sass/3-modules/_project.sass */
+/* line 213, src/sass/3-modules/_project.sass */
 .project:not(.active) .project__button {
   pointer-events: none;
 }

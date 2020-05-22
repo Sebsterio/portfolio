@@ -38,7 +38,7 @@
 	background-color: $c-highlight
 	background: linear-gradient(45deg, darken($c-highlight, 20%), lighten($c-highlight, 20%))
 	overflow: hidden
-	border-radius: 8px
+	border-radius: 3px
 	@include transition-hover
 	box-shadow: 0 0 12px 0 rgba(white, .2)
 	filter: brightness(95%) saturate(90%)
@@ -152,7 +152,7 @@
 	// ---- Tags ----
 
 	&__tags
-		padding-top: .6em
+		padding-top: .4em
 		font-size: .9em
 		font-family: $font-monospace
 		color: $c-primary
@@ -163,10 +163,7 @@
 
 	&__tag
 		display: inline-block
-		padding: .8em
-
-		&:first-child
-			padding-left: 0
+		padding: .9em
 
 	// ---- Buttons ----
 
