@@ -13,6 +13,12 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Merriweather+Sans:400,700,800">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
 	<link rel="stylesheet" href="css/index.css">
+
+	<!-- Feature detection -->
+	<script>
+		document.documentElement.classList.remove('no-js')
+		document.documentElement.classList.add('js')
+	</script>
 </head>
 
 <body>
@@ -268,6 +274,7 @@
 			<div class="projects__gallery">
 				<div class='projects__grid'>
 					<!-- *** Dynamic content *** -->
+					<h2 class="projects__error-msg">Please enable JavaScript to view the projects.</h2>
 				</div>
 			</div>
 		</section>

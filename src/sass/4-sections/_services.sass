@@ -68,8 +68,15 @@
 		min-width: 100%
 		object-fit: contain
 
+		@media (max-width: $xs-max)
+			&--A
+				left: 0
+				width: 100%
+
 		@media (max-width: $s-max)
 			&--A
+				left: unset
+				width: unset
 				right: 0
 
 			&--B
