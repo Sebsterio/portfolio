@@ -45,7 +45,7 @@
 					<a href="${disabled ? "#" : url}" 
 							target="_blank" 
 							rel="nofollow noopener noreferrer" 
-							aria-label="GitHub">
+							aria-label="${type}">
 						${icons[type]}
 					</a>
 				</li>
