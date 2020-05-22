@@ -1448,7 +1448,7 @@ input[type="button"]:focus {
 .project__description {
   position: absolute;
   width: 100%;
-  top: 55%;
+  top: 53%;
   transform: translateY(-50%);
 }
 
@@ -1579,12 +1579,12 @@ input[type="button"]:focus {
   flex-flow: row nowrap;
 }
 
-/* line 9, src/sass/3-modules/_social-links.sass */
+/* line 12, src/sass/3-modules/_social-links.sass */
 .social-links--vertical {
   flex-flow: column nowrap;
 }
 
-/* line 12, src/sass/3-modules/_social-links.sass */
+/* line 18, src/sass/3-modules/_social-links.sass */
 .social-links .social-link {
   padding: 1em;
   display: flex;
@@ -1592,7 +1592,7 @@ input[type="button"]:focus {
   background-color: black;
 }
 
-/* line 18, src/sass/3-modules/_social-links.sass */
+/* line 24, src/sass/3-modules/_social-links.sass */
 .social-links .social-link svg {
   width: 2em;
   height: 2em;
@@ -1600,7 +1600,7 @@ input[type="button"]:focus {
   transition: .2s all ease-in-out;
 }
 
-/* line 24, src/sass/3-modules/_social-links.sass */
+/* line 30, src/sass/3-modules/_social-links.sass */
 .social-links .social-link:hover svg {
   fill: white;
 }
@@ -1948,15 +1948,15 @@ input[type="button"]:focus {
   height: 100%;
   margin: 0;
   z-index: -1;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
-/* line 66, src/sass/4-sections/_services.sass */
+/* line 65, src/sass/4-sections/_services.sass */
 .services__img {
   position: absolute;
   height: 100%;
   min-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 767px) {
@@ -1971,7 +1971,7 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 768px) {
-  /* line 66, src/sass/4-sections/_services.sass */
+  /* line 65, src/sass/4-sections/_services.sass */
   .services__img {
     top: 5rem;
     height: calc(100% - 5rem);

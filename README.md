@@ -10,8 +10,17 @@
 
 ### Next
 
+- bug: project second consequtive click - weird animation
 - intro bg image resize & convert
+- portrait: color on hover
+- portfolio_2 img: feedback loop effect
 - rewrite functions.js + handle noscript
+- project rows parallax 2 levels
+- intro: animate every el
+  -- creative add js-tilt
+  -- OR rotate with perspective and rotate bg in place to make impression as pointer is the camera point
+  -- ORor at least parallax
+- title: increase blur radius the closer the el is to window middle
 
 ### Next version
 
@@ -20,8 +29,4 @@
   -- CTA -> night/day mode
 - sticky filter nav (merge w main nav; black bg)
 - widgets viewer
-- intro: animate every el
-  -- creative add js-tilt or at least parallax or rotate with perspective and - rotate bg in place to make impression as pointer is the camera point
-- portrait: color on hover
-- title: increase blur radius the closer the el is to window middle
-- project rows parallax 2 levels
+- contact: blue vertical text on right (email? not s.r@g)
