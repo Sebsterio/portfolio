@@ -31,14 +31,14 @@
 (function () {
 	// const NAV_OFFSET_THRESHOLD = 70;
 	const FADE_PEEK_THRESHOLD = 150;
-	const PARALLAX_PEEK_THRESHOLD = -250;
-	const PARALLAX_MIN_WIDTH = 768;
+	// const PARALLAX_PEEK_THRESHOLD = -250;
+	// const PARALLAX_MIN_WIDTH = 768;
 	const DEBOUNCE_INTERVAL = 100;
 
 	const hero = document.querySelector(".introduction__content-el--hero");
 	const nav = document.querySelector(".navigation");
 	const animated = document.querySelectorAll(".animated");
-	const parallaxed = document.querySelectorAll(".parallax");
+	// const parallaxed = document.querySelectorAll(".parallax");
 
 	let navHeight = 0;
 	let windowWidth = 0;
@@ -74,27 +74,29 @@
 
 	// ------------------------ Setup -------------------------------
 
-	function setUpParallax() {
-		parallaxed.forEach((el) => {
-			el.rellax = new Rellax(".parallax");
-		});
-	}
+	// function setUpParallax() {
+	// 	parallaxed.forEach((el) => {
+	// 		el.rellax = new Rellax(".parallax", {
+	// 			center: true
+	// 		});
+	// 	});
+	// }
 
 	// ------------------------ View -------------------------------
 
 	// Kill parallax when element not in view
-	function toggleParallaxed() {
-		parallaxed.forEach((el) => {
-			if (
-				windowWidth < PARALLAX_MIN_WIDTH ||
-				!isPeekingIntoViewport(el, PARALLAX_PEEK_THRESHOLD)
-			) {
-				el.rellax.destroy();
-			} else {
-				el.rellax.refresh();
-			}
-		});
-	}
+	// function toggleParallaxed() {
+	// 	parallaxed.forEach((el) => {
+	// 		if (
+	// 			windowWidth < PARALLAX_MIN_WIDTH ||
+	// 			!isPeekingIntoViewport(el, PARALLAX_PEEK_THRESHOLD)
+	// 		) {
+	// 			// el.rellax.destroy();
+	// 		} else {
+	// 			// el.rellax.refresh();
+	// 		}
+	// 	});
+	// }
 
 	// Fade in element when in view
 	function fadeAnimated() {
@@ -104,7 +106,10 @@
 				el.classList.add("active");
 			}
 			// entire image is outside viewport
-			else if (!isPeekingIntoViewport(el, 0)) {
+			else if (
+				!isPeekingIntoViewport(el, 0) // &&
+				// !el.classList.contains("animate-once")
+			) {
 				el.classList.remove("active");
 			}
 		});
@@ -114,7 +119,7 @@
 
 	function handleScroll() {
 		updateNav();
-		toggleParallaxed();
+		// toggleParallaxed();
 		fadeAnimated();
 	}
 
@@ -141,10 +146,10 @@
 	// ----------------------- Controller ---------------------------
 
 	hero.addEventListener("click", () => hero.classList.toggle("animating"));
-
 	window.addEventListener("scroll", debounceScroll);
 	window.addEventListener("resize", handleResize);
 
+	// setUpParallax();
 	handleResize();
 })();
 

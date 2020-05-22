@@ -30,9 +30,15 @@
 				
 	&__burger
 		display: none
+
+	
+	@media (min-width: 992px)
+
+		.mobile-only
+			display: none
 		
 	@media (max-width: 991px)
-	
+
 		&__cta
 			display: none
 			
@@ -59,9 +65,9 @@
 				.navigation__list
 					
 					& > li
-						@for $i from 1 through 4
+						@for $i from 1 through 5
 							&:nth-child(#{$i}) a
-								transition: transform .2s .2s * $i + .2s, color .2s ease-in-out
+								transition: transform .2s .08s * $i + .2s, color .2s ease-in-out
 					
 						& a
 							transform: translateY(0)

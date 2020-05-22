@@ -4,8 +4,10 @@
 	const album = document.querySelector(".projects__grid");
 
 	// Create Project HTML Element (wrapped in .projects__grid-cell)
-	function buildProjectHtml(project) {
+	function buildProjectHtml(project, i) {
 		const { type, name, blurb, tech, links, image } = project;
+
+		const zIndex = i * -1;
 
 		const visual = `
 			<div class="project__visual" 
@@ -57,10 +59,10 @@
 				${links.map((link) => getButtonHtml(link)).join("")}
 			</ul>
 		`;
-
+		//data-rellax-speed="5"
 		return `
-			<div class="projects__grid-cell"">
-				<div class="project">
+			<div class="projects__grid-cell" style="--index: 0">
+				<div class="project" style="z-index:${zIndex}">
 					${visual}
 					<div class="project__content-container">
 						<div class="project__content">
@@ -76,10 +78,10 @@
 
 	// Create element html and project tags
 	function generateProjectsProps(projects) {
-		projects.map((project) => {
+		projects.map((project, i) => {
 			const { type, category, tech } = project;
 			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
-			project.html = buildProjectHtml(project);
+			project.html = buildProjectHtml(project, i);
 		});
 	}
 
@@ -89,7 +91,9 @@
 			.filter(
 				(project) => project.tags.indexOf(filter) > -1 || filter === "all"
 			)
-			.map((project) => project.html)
+			.map((project, i) =>
+				project.html.replace('style="--index: 0', 'style="--index:' + i)
+			)
 			.join("");
 	};
 
