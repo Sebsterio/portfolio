@@ -22,7 +22,7 @@ const projects = [
 		type: "website",
 		category: "commercial",
 		blurb: "Responsive mobile-first website with Instagarm feed integration",
-		tech: ["JavaScript", "SCSS"],
+		tech: ["JavaScript", "SCSS", "APIs"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
@@ -94,7 +94,7 @@ const projects = [
 		type: "website",
 		category: "coursework",
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
-		tech: ["JavaScript", "CSS"],
+		tech: ["jQuery", "CSS"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },

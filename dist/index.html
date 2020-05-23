@@ -300,21 +300,30 @@
 					</div>
 				</header>
 				<div class="contact__content">
-					<!-- Simple form setup: formspree.io -->
-					<form class="form">
-						<div class="form__wrapper">
 
+					<!-- Contact Form -->
+					<form class="contact__form form" action="https://formsubmit.co/938332bcfddd8fbaee39cbc3dcca7557"
+						method="POST">
+						<input type="hidden" name="_subject" value="New submission @ www.sebster.dev">
+						<input type="hidden" name="_captcha" value="false">
+						<input type="hidden" name="_next" value="https://sebster.dev?form-sent">
+						<input type="text" name="_honey" style="display:none">
+
+						<!-- Visible Input Fields -->
+						<div class="form__wrapper">
 							<input title="Your Name" class="form__el form__el--name" type="text" placeholder="Your Name"
-								autocomplete="on" spellcheck="false">
+								autocomplete="on" spellcheck="false" required>
 							<input title="Your Email" class="form__el form__el--email" type="email" placeholder="Your Email"
 								autocomplete="on" spellcheck="false" required>
-							<textarea title="Your Message" class="form__el form__el--message" placeholder="Your Message"></textarea>
-
+							<textarea title="Your Message" class="form__el form__el--message" placeholder="Your Message"
+								required></textarea>
 						</div>
 						<div class="form__floating-wrapper">
 							<input class="form__el form__el--submit" type="submit" value="Send">
 						</div>
 					</form>
+
+					<!-- Social Links -->
 					<div class="contact__social-links animated scaleUp">
 						<ul class="social-links social-links--vertical">
 							<li><a class="social-link" data-svg="linkedin"
