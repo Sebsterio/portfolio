@@ -17,7 +17,8 @@
 - title: increase blur radius the closer the el is to window middle
 - nav
   - sticky (hamburger & logo only ?)
-  - CTA -> night/day mode
+- night/day mode (or a11y mode)
+  - nav CTA -> mode switch
 - sticky filter nav (merge w main nav; black bg)
 - widgets viewer
 - portrait: color on hover

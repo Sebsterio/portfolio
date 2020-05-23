@@ -35,7 +35,7 @@
 	<div class="splashscreen splashscreen--popup splashscreen--closed">
 		<div class="splashscreen__message">
 			<h4 class="splashscreen__message-line">Thank you. Your message has been sent</h4>
-			<p class="splashscreen__message-line">Click anywhere to close</p>
+			<p class="splashscreen__message-line">Click anywhere to return</p>
 		</div>
 	</div>
 	<!-- END SECTION: Splashscreen -->
@@ -320,12 +320,12 @@
 
 						<!-- Visible Input Fields -->
 						<div class="form__wrapper">
-							<input title="Your Name" class="form__el form__el--name" type="text" placeholder="Your Name"
+							<input title="Your Name" name="name" class="form__el form__el--name" type="text" placeholder="Your Name"
 								autocomplete="on" spellcheck="false" required>
-							<input title="Your Email" class="form__el form__el--email" type="email" placeholder="Your Email"
-								autocomplete="on" spellcheck="false" required>
-							<textarea title="Your Message" class="form__el form__el--message" placeholder="Your Message"
-								required></textarea>
+							<input title="Your Email" name="email" class="form__el form__el--email" type="email"
+								placeholder="Your Email" autocomplete="on" spellcheck="false" required>
+							<textarea title="Your Message" name="message" class="form__el form__el--message"
+								placeholder="Your Message" required></textarea>
 						</div>
 						<div class="form__floating-wrapper">
 							<input class="form__el form__el--submit" type="submit" value="Send">
