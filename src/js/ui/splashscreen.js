@@ -16,7 +16,7 @@
 	function hidePopup() {
 		popup.classList.add("splashscreen--hidden");
 		setTimeout(() => {
-			spinner.style.display = "none";
+			popup.style.display = "none";
 		}, 800);
 	}
 
