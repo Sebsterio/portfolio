@@ -263,7 +263,7 @@
 	if (urlParams["form-sent"]) {
 		// Show "Thank You" popup
 		const popup = document.querySelector(".splashscreen--popup");
-		popup.classList.remove("splashscreen--hidden");
+		popup.classList.remove("splashscreen--closed");
 
 		// clear URL bar
 		if (window.history.replaceState) {
@@ -281,7 +281,7 @@
 	function activatePage() {
 		spinner.classList.add("splashscreen--hidden");
 		setTimeout(() => {
-			spinner.style.display = "none";
+			spinner.classList.add("splashscreen--closed");
 			// Enable onScroll transitions
 			document.documentElement.classList.add("active");
 		}, 800);
@@ -290,7 +290,7 @@
 	function hidePopup() {
 		popup.classList.add("splashscreen--hidden");
 		setTimeout(() => {
-			popup.style.display = "none";
+			popup.classList.add("splashscreen--closed");
 		}, 800);
 	}
 

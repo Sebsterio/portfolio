@@ -549,21 +549,26 @@ textarea {
 }
 
 /* line 20, src/sass/3-modules/_splashscreen.sass */
+.js .splashscreen--closed {
+  display: none;
+}
+
+/* line 23, src/sass/3-modules/_splashscreen.sass */
 .js .splashscreen__message {
   text-align: center;
 }
 
-/* line 23, src/sass/3-modules/_splashscreen.sass */
+/* line 26, src/sass/3-modules/_splashscreen.sass */
 .js .splashscreen__message-line {
   padding: 1em;
 }
 
-/* line 27, src/sass/3-modules/_splashscreen.sass */
+/* line 29, src/sass/3-modules/_splashscreen.sass */
 .no-js .splashscreen {
   display: none;
 }
 
-/* line 30, src/sass/3-modules/_splashscreen.sass */
+/* line 32, src/sass/3-modules/_splashscreen.sass */
 .preloader {
   position: relative;
   width: 200px;
@@ -571,7 +576,7 @@ textarea {
   transition: opacity .4s;
 }
 
-/* line 36, src/sass/3-modules/_splashscreen.sass */
+/* line 38, src/sass/3-modules/_splashscreen.sass */
 .preloader::before {
   content: "";
   position: absolute;
@@ -584,7 +589,7 @@ textarea {
           animation: fadeInOut 1.6s linear infinite;
 }
 
-/* line 46, src/sass/3-modules/_splashscreen.sass */
+/* line 48, src/sass/3-modules/_splashscreen.sass */
 .preloader__text {
   position: absolute;
   top: 50%;

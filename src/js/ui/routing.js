@@ -11,7 +11,7 @@
 	if (urlParams["form-sent"]) {
 		// Show "Thank You" popup
 		const popup = document.querySelector(".splashscreen--popup");
-		popup.classList.remove("splashscreen--hidden");
+		popup.classList.remove("splashscreen--closed");
 
 		// clear URL bar
 		if (window.history.replaceState) {

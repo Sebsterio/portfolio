@@ -7,7 +7,7 @@
 	function activatePage() {
 		spinner.classList.add("splashscreen--hidden");
 		setTimeout(() => {
-			spinner.style.display = "none";
+			spinner.classList.add("splashscreen--closed");
 			// Enable onScroll transitions
 			document.documentElement.classList.add("active");
 		}, 800);
@@ -16,7 +16,7 @@
 	function hidePopup() {
 		popup.classList.add("splashscreen--hidden");
 		setTimeout(() => {
-			popup.style.display = "none";
+			popup.classList.add("splashscreen--closed");
 		}, 800);
 	}
 
