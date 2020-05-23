@@ -549,11 +549,21 @@ textarea {
 }
 
 /* line 20, src/sass/3-modules/_splashscreen.sass */
+.js .splashscreen__message {
+  text-align: center;
+}
+
+/* line 23, src/sass/3-modules/_splashscreen.sass */
+.js .splashscreen__message-line {
+  padding: 1em;
+}
+
+/* line 27, src/sass/3-modules/_splashscreen.sass */
 .no-js .splashscreen {
   display: none;
 }
 
-/* line 23, src/sass/3-modules/_splashscreen.sass */
+/* line 30, src/sass/3-modules/_splashscreen.sass */
 .preloader {
   position: relative;
   width: 200px;
@@ -561,7 +571,7 @@ textarea {
   transition: opacity .4s;
 }
 
-/* line 29, src/sass/3-modules/_splashscreen.sass */
+/* line 36, src/sass/3-modules/_splashscreen.sass */
 .preloader::before {
   content: "";
   position: absolute;
@@ -574,7 +584,7 @@ textarea {
           animation: fadeInOut 1.6s linear infinite;
 }
 
-/* line 39, src/sass/3-modules/_splashscreen.sass */
+/* line 46, src/sass/3-modules/_splashscreen.sass */
 .preloader__text {
   position: absolute;
   top: 50%;
@@ -834,28 +844,28 @@ input[type="button"]:focus {
 }
 
 /* line 28, src/sass/3-modules/_animations.sass */
-.js .animated {
+.js.active .animated {
   transition: 800ms ease-out;
   opacity: 0;
 }
 
 /* line 34, src/sass/3-modules/_animations.sass */
-.js .animated.fadeInRight {
+.js.active .animated.fadeInRight {
   transform: translateX(-5vw);
 }
 
 /* line 37, src/sass/3-modules/_animations.sass */
-.js .animated.fadeInLeft {
+.js.active .animated.fadeInLeft {
   transform: translateX(5vw);
 }
 
 /* line 40, src/sass/3-modules/_animations.sass */
-.js .animated.scaleUp {
+.js.active .animated.scaleUp {
   transform: scale(0.95);
 }
 
 /* line 43, src/sass/3-modules/_animations.sass */
-.js .animated.active {
+.js.active .animated.active {
   transform: none;
   opacity: 1;
 }

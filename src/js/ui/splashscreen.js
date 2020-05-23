@@ -1,14 +1,26 @@
 //---------------------- Splashscreen ----------------------
 
 (function () {
-	const splashscreen = document.querySelector(".splashscreen");
+	const spinner = document.querySelector(".splashscreen--spinner");
+	const popup = document.querySelector(".splashscreen--popup");
 
-	splashscreen.classList.add("splashscreen--hidden");
+	function activatePage() {
+		spinner.classList.add("splashscreen--hidden");
+		setTimeout(() => {
+			spinner.style.display = "none";
+			// Enable onScroll transitions
+			document.documentElement.classList.add("active");
+		}, 800);
+	}
 
-	setTimeout(() => {
-		splashscreen.style.display = "none";
+	function hidePopup() {
+		popup.classList.add("splashscreen--hidden");
+	}
 
-		// Enable onScroll transitions
-		document.documentElement.classList.add("active");
-	}, 800);
+	// ------------------------- Init -------------------------
+
+	activatePage();
+
+	popup.addEventListener("click", hidePopup);
+	setTimeout(hidePopup, 3000);
 })();

@@ -250,17 +250,51 @@
 	);
 })();
 
+(function () {
+	const urlParams = window.location.search
+		.replace("?", "")
+		.split("&")
+		.reduce((obj, param) => {
+			param = param.split("=");
+			if (param[0]) obj[param[0]] = param[1] ? param[1] : true;
+			return obj;
+		}, {});
+
+	if (urlParams["form-sent"]) {
+		// Show "Thank You" popup
+		const popup = document.querySelector(".splashscreen--popup");
+		popup.classList.remove("splashscreen--hidden");
+
+		// clear URL bar
+		if (window.history.replaceState) {
+			window.history.replaceState({ page: "main" }, "home", "/");
+		}
+	}
+})();
+
 //---------------------- Splashscreen ----------------------
 
 (function () {
-	const splashscreen = document.querySelector(".splashscreen");
+	const spinner = document.querySelector(".splashscreen--spinner");
+	const popup = document.querySelector(".splashscreen--popup");
 
-	splashscreen.classList.add("splashscreen--hidden");
+	function activatePage() {
+		spinner.classList.add("splashscreen--hidden");
+		setTimeout(() => {
+			spinner.style.display = "none";
+			// Enable onScroll transitions
+			document.documentElement.classList.add("active");
+		}, 800);
+	}
 
-	setTimeout(() => {
-		splashscreen.style.display = "none";
+	function hidePopup() {
+		popup.classList.add("splashscreen--hidden");
+	}
 
-		// Enable onScroll transitions
-		document.documentElement.classList.add("active");
-	}, 800);
+	// ------------------------- Init -------------------------
+
+	activatePage();
+
+	popup.addEventListener("click", hidePopup);
+	setTimeout(hidePopup, 3000);
 })();
