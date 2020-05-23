@@ -88,6 +88,20 @@ const projects = [
 		preview: true,
 		image: "img/projects/feedback-loop.jpg",
 	},
+	// --------------------- Say Color Name ---------------------
+	{
+		name: "Say Color Name",
+		type: "code_challenge",
+		category: "hobby",
+		blurb: "Fun with speech recognition",
+		tech: ["JavaScript", "APIs"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://say-color-name.netlify.app/" },
+		],
+		preview: true,
+		image: "img/projects/sayColor.jpg",
+	},
 	// --------------------- Portfolio 1 ---------------------
 	{
 		name: "Portfolio v.1",
