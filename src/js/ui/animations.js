@@ -9,7 +9,7 @@
 
 	const hero = document.querySelector(".introduction__content-el--hero");
 	const nav = document.querySelector(".navigation");
-	const animated = document.querySelectorAll(".animated");
+	const animated = document.querySelectorAll(".active-in-view");
 	// const parallaxed = document.querySelectorAll(".parallax");
 
 	let navHeight = 0;

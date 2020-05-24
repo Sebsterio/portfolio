@@ -21,25 +21,29 @@
 	0% 
 		background-position: 0 0
 	100% 
-		background-position: 0 250px
+		background-position: 0 30vw
 
 // On-scroll transitions
 
-.js.active .animated
-	transition: 800ms ease-out
-	// --index: 0
-	// transition-delay: calc(var(--index)*30ms)
-	opacity: 0
+.js.active 
+	.animated
+		transition: 800ms ease-out
+		// --index: 0
+		// transition-delay: calc(var(--index)*30ms)
+		opacity: 0
 
-	&.fadeInRight
-		transform: translateX(-5vw)
-	
-	&.fadeInLeft
-		transform: translateX(5vw)
+		&.fadeInRight
+			transform: translateX(-5vw)
+		
+		&.fadeInLeft
+			transform: translateX(5vw)
 
-	&.scaleUp
-		transform: scale(.95)
+		&.scaleUp
+			transform: scale(.95)
 
-	&.active
-		transform: none
-		opacity: 1
+		&.active
+			transform: none
+			opacity: 1
+
+	.animating.active
+		animation: scroll-bg 20s linear infinite

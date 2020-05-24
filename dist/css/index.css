@@ -835,7 +835,7 @@ input[type="button"]:focus {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 250px;
+    background-position: 0 30vw;
   }
 }
 
@@ -844,35 +844,41 @@ input[type="button"]:focus {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 250px;
+    background-position: 0 30vw;
   }
 }
 
-/* line 28, src/sass/3-modules/_animations.sass */
+/* line 29, src/sass/3-modules/_animations.sass */
 .js.active .animated {
   transition: 800ms ease-out;
   opacity: 0;
 }
 
-/* line 34, src/sass/3-modules/_animations.sass */
+/* line 35, src/sass/3-modules/_animations.sass */
 .js.active .animated.fadeInRight {
   transform: translateX(-5vw);
 }
 
-/* line 37, src/sass/3-modules/_animations.sass */
+/* line 38, src/sass/3-modules/_animations.sass */
 .js.active .animated.fadeInLeft {
   transform: translateX(5vw);
 }
 
-/* line 40, src/sass/3-modules/_animations.sass */
+/* line 41, src/sass/3-modules/_animations.sass */
 .js.active .animated.scaleUp {
   transform: scale(0.95);
 }
 
-/* line 43, src/sass/3-modules/_animations.sass */
+/* line 44, src/sass/3-modules/_animations.sass */
 .js.active .animated.active {
   transform: none;
   opacity: 1;
+}
+
+/* line 48, src/sass/3-modules/_animations.sass */
+.js.active .animating.active {
+  -webkit-animation: scroll-bg 20s linear infinite;
+          animation: scroll-bg 20s linear infinite;
 }
 
 /* line 1, src/sass/3-modules/_navigation.sass */
@@ -1726,6 +1732,7 @@ input[type="button"]:focus {
   text-transform: uppercase;
   z-index: 1;
   cursor: pointer;
+  background-color: #0a2761;
   background-image: url("../img/bg-code-m70.jpg");
   color: transparent;
   -webkit-background-clip: text;
@@ -1736,12 +1743,6 @@ input[type="button"]:focus {
   text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.2);
 }
 
-/* line 60, src/sass/4-sections/_intro.sass */
-.introduction__content-el--hero.animating {
-  -webkit-animation: scroll-bg 10s linear infinite;
-          animation: scroll-bg 10s linear infinite;
-}
-
 @media (max-width: 767px) {
   /* line 41, src/sass/4-sections/_intro.sass */
   .introduction__content-el--hero {
@@ -1749,7 +1750,7 @@ input[type="button"]:focus {
   }
 }
 
-/* line 67, src/sass/4-sections/_intro.sass */
+/* line 65, src/sass/4-sections/_intro.sass */
 .introduction__content-el--bg-text {
   position: absolute;
   top: 50%;
@@ -1766,7 +1767,7 @@ input[type="button"]:focus {
   z-index: -1;
 }
 
-/* line 79, src/sass/4-sections/_intro.sass */
+/* line 77, src/sass/4-sections/_intro.sass */
 .introduction__arrow {
   position: absolute;
   bottom: 10%;
@@ -1779,18 +1780,18 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 1440px) {
-  /* line 90, src/sass/4-sections/_intro.sass */
+  /* line 88, src/sass/4-sections/_intro.sass */
   .introduction::before {
     font-size: 576px;
   }
-  /* line 97, src/sass/4-sections/_intro.sass */
+  /* line 95, src/sass/4-sections/_intro.sass */
   .introduction__content-el--description {
     font-size: 230px;
   }
 }
 
 @media (max-height: 540px) {
-  /* line 102, src/sass/4-sections/_intro.sass */
+  /* line 100, src/sass/4-sections/_intro.sass */
   .introduction__arrow {
     -webkit-animation: none;
             animation: none;
