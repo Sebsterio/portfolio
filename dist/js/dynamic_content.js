@@ -13,7 +13,6 @@ const projects = [
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
 			{ type: "github", url: "https://github.com/Sebsterio/narbon" },
 		],
-		preview: true,
 		image: "img/projects/narbon.jpg",
 	},
 	// --------------------- Nicole ---------------------
@@ -28,7 +27,6 @@ const projects = [
 			{ type: "site", url: "https://nicoleross.fitness/" },
 			{ type: "github", url: "https://github.com/Sebsterio/nicole-pt" },
 		],
-		preview: true,
 		image: "img/projects/nicole.jpg",
 	},
 	// --------------------- Rolewicz ---------------------
@@ -44,7 +42,6 @@ const projects = [
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
 			{ type: "github", url: "https://github.com/Sebsterio/rolewicz" },
 		],
-		preview: true,
 		image: "img/projects/rolewicz.jpg",
 	},
 	// --------------------- Warm Up ---------------------
@@ -60,7 +57,6 @@ const projects = [
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
 			{ type: "github", url: "https://github.com/Sebsterio/warmup" },
 		],
-		preview: true,
 		image: "img/projects/warmup.jpg",
 	},
 	// --------------------- Cosmo ---------------------
@@ -74,7 +70,6 @@ const projects = [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
 		],
-		preview: true,
 		image: "img/projects/cosmo.jpg",
 	},
 	// --------------------- Portfolio 2 ---------------------
@@ -85,7 +80,6 @@ const projects = [
 		blurb: "This website",
 		tech: ["JavaScript", "SCSS"],
 		links: [{ type: "github", url: "https://github.com/Sebsterio/portfolio" }],
-		preview: true,
 		image: "img/projects/feedback-loop.jpg",
 	},
 	// --------------------- Say Color Name ---------------------
@@ -99,8 +93,20 @@ const projects = [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://say-color-name.netlify.app/" },
 		],
-		preview: true,
 		image: "img/projects/sayColor.jpg",
+	},
+	// --------------------- Paint Undo ---------------------
+	{
+		name: "Paint Undo",
+		type: "code_challenge",
+		category: "hobby",
+		blurb: "Canvas drawing app with the undo feature",
+		tech: ["JavaScript", "Canvas"],
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://paint-undo.netlify.app/" },
+		],
+		image: "img/projects/paintUndo.jpg",
 	},
 	// --------------------- Portfolio 1 ---------------------
 	{
@@ -108,13 +114,12 @@ const projects = [
 		type: "website",
 		category: "coursework",
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
-		tech: ["jQuery", "CSS"],
+		tech: ["jQuery", "CSS", "APIs"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },
 			{ type: "codepen", url: "https://codepen.io/Semaviro/full/oZZgRx" },
 		],
-		preview: true,
 		image: "img/projects/portfolio_v1.jpg",
 	},
 ];
