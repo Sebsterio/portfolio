@@ -6,10 +6,9 @@
 
 ### Now
 
-### Next
+### Next Version
 
-### Next version
-
+- preload hq bg
 - intro: animate every el
   - creative add js-tilt
   - OR rotate with perspective and rotate bg in place to make impression as pointer is the camera point
