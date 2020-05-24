@@ -1468,6 +1468,7 @@ input[type="button"]:focus {
 
 /* line 107, src/sass/3-modules/_project.sass */
 .project__title {
+  font-size: .95em;
   position: absolute;
   top: 100%;
   transform: translateY(-100%);
@@ -1475,14 +1476,14 @@ input[type="button"]:focus {
   transition-delay: 200ms;
 }
 
-/* line 114, src/sass/3-modules/_project.sass */
+/* line 115, src/sass/3-modules/_project.sass */
 .project.active .project__title {
   top: 0;
   transform: translateY(0);
   transition-delay: unset;
 }
 
-/* line 119, src/sass/3-modules/_project.sass */
+/* line 120, src/sass/3-modules/_project.sass */
 .project__type {
   font-size: .8em;
   text-transform: capitalize;
@@ -1491,18 +1492,18 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 124, src/sass/3-modules/_project.sass */
+/* line 125, src/sass/3-modules/_project.sass */
 .project.active .project__type {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 127, src/sass/3-modules/_project.sass */
+/* line 128, src/sass/3-modules/_project.sass */
 .project__name {
   font-size: 1.4em;
 }
 
-/* line 133, src/sass/3-modules/_project.sass */
+/* line 134, src/sass/3-modules/_project.sass */
 .project__description {
   position: absolute;
   width: 100%;
@@ -1510,7 +1511,7 @@ input[type="button"]:focus {
   transform: translateY(-50%);
 }
 
-/* line 142, src/sass/3-modules/_project.sass */
+/* line 143, src/sass/3-modules/_project.sass */
 .project__blurb {
   font-size: 1em;
   transition: all 200ms ease-out;
@@ -1519,14 +1520,14 @@ input[type="button"]:focus {
   transform: translateX(-1em);
 }
 
-/* line 147, src/sass/3-modules/_project.sass */
+/* line 148, src/sass/3-modules/_project.sass */
 .project.active .project__blurb {
   transition-delay: 400ms;
   opacity: 1;
   transform: translateX(0);
 }
 
-/* line 154, src/sass/3-modules/_project.sass */
+/* line 155, src/sass/3-modules/_project.sass */
 .project__tags {
   padding-top: .4em;
   font-size: .9em;
@@ -1537,19 +1538,19 @@ input[type="button"]:focus {
   opacity: 0;
 }
 
-/* line 161, src/sass/3-modules/_project.sass */
+/* line 162, src/sass/3-modules/_project.sass */
 .project.active .project__tags {
   transition-delay: 400ms;
   opacity: 1;
 }
 
-/* line 164, src/sass/3-modules/_project.sass */
+/* line 165, src/sass/3-modules/_project.sass */
 .project__tag {
   display: inline-block;
   padding: .9em;
 }
 
-/* line 170, src/sass/3-modules/_project.sass */
+/* line 171, src/sass/3-modules/_project.sass */
 .project__buttons {
   position: absolute;
   bottom: .6em;
@@ -1565,7 +1566,7 @@ input[type="button"]:focus {
           filter: blur(3px);
 }
 
-/* line 181, src/sass/3-modules/_project.sass */
+/* line 182, src/sass/3-modules/_project.sass */
 .project.active .project__buttons {
   transition-delay: 400ms;
   opacity: 1;
@@ -1574,48 +1575,48 @@ input[type="button"]:focus {
           filter: none;
 }
 
-/* line 186, src/sass/3-modules/_project.sass */
+/* line 187, src/sass/3-modules/_project.sass */
 .project__button {
   display: inline-block;
 }
 
-/* line 189, src/sass/3-modules/_project.sass */
+/* line 190, src/sass/3-modules/_project.sass */
 .project__button a {
   padding: .6em;
   display: flex;
   align-content: center;
 }
 
-/* line 194, src/sass/3-modules/_project.sass */
+/* line 195, src/sass/3-modules/_project.sass */
 .project__button svg {
   width: 1.8em;
   height: 1.8em;
   fill: white;
 }
 
-/* line 199, src/sass/3-modules/_project.sass */
+/* line 200, src/sass/3-modules/_project.sass */
 .project__button svg:hover {
   -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
           filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
-/* line 204, src/sass/3-modules/_project.sass */
+/* line 205, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 207, src/sass/3-modules/_project.sass */
+/* line 208, src/sass/3-modules/_project.sass */
 .project__button--disabled svg {
   fill: #6b8597;
 }
 
-/* line 210, src/sass/3-modules/_project.sass */
+/* line 211, src/sass/3-modules/_project.sass */
 .project__button--disabled svg:hover {
   -webkit-filter: unset;
           filter: unset;
 }
 
-/* line 213, src/sass/3-modules/_project.sass */
+/* line 214, src/sass/3-modules/_project.sass */
 .project:not(.active) .project__button {
   pointer-events: none;
 }

@@ -48,7 +48,7 @@ const projects = [
 	},
 	// --------------------- Warm Up ---------------------
 	{
-		name: "WarmUp Community Album",
+		name: "WarmUp 3D Album",
 		type: "web_app",
 		category: "hobby",
 		blurb:
@@ -89,7 +89,7 @@ const projects = [
 	},
 	// --------------------- Say Color Name ---------------------
 	{
-		name: "Say Color Name",
+		name: "Say Color",
 		type: "code_challenge",
 		category: "hobby",
 		blurb: "Fun with speech recognition",
