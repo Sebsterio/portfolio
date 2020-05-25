@@ -25,10 +25,10 @@ const projects = [
 	// --------------------- Nicole ---------------------
 	{
 		name: "NicoleRoss Personal Training",
-		displayedTags: ["JavaScript", "SCSS", "APIs"],
 		type: "website",
+		displayedTags: ["JavaScript", "SCSS", "APIs"],
 		hiddenTags: ["commercial"],
-		blurb: "Responsive mobile-first website with Instagarm feed integration",
+		blurb: "Responsive brochure website with Instagarm feed integration",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
@@ -69,8 +69,8 @@ const projects = [
 	// --------------------- Cosmo ---------------------
 	{
 		name: "Cosmo Events",
-		displayedTags: ["WordPress"],
 		type: "website",
+		displayedTags: ["WordPress"],
 		hiddenTags: ["commercial"],
 		blurb: "Responsive brochure website",
 		links: [
@@ -82,8 +82,8 @@ const projects = [
 	// --------------------- Portfolio 2 ---------------------
 	{
 		name: "Portfolio v.2",
-		displayedTags: ["JavaScript", "SCSS"],
 		type: "website",
+		displayedTags: ["JavaScript", "SCSS"],
 		hiddenTags: ["hobby"],
 		blurb: "This website",
 		links: [{ type: "github", url: "https://github.com/Sebsterio/portfolio" }],
@@ -92,8 +92,8 @@ const projects = [
 	// --------------------- Say Color Name ---------------------
 	{
 		name: "Say Color",
-		displayedTags: ["JavaScript", "APIs"],
 		type: "code_challenge",
+		displayedTags: ["JavaScript", "APIs"],
 		hiddenTags: ["hobby"],
 		blurb: "Fun with speech recognition",
 		links: [
@@ -105,8 +105,8 @@ const projects = [
 	// --------------------- Paint Undo ---------------------
 	{
 		name: "Paint Undo",
-		displayedTags: ["JavaScript", "Canvas"],
 		type: "code_challenge",
+		displayedTags: ["JavaScript", "Canvas"],
 		hiddenTags: ["hobby"],
 		blurb: "Canvas drawing app with the undo feature",
 		links: [
@@ -118,8 +118,8 @@ const projects = [
 	// --------------------- Portfolio 1 ---------------------
 	{
 		name: "Portfolio v.1",
-		displayedTags: ["jQuery", "CSS", "APIs"],
 		type: "website",
+		displayedTags: ["jQuery", "CSS", "APIs"],
 		hiddenTags: ["coursework"],
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
 		links: [

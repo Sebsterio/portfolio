@@ -1996,9 +1996,10 @@ input[type="button"]:focus {
 .services__tags {
   grid-area: tags;
   text-align: center;
+  margin-top: 1rem;
 }
 
-/* line 54, src/sass/4-sections/_services.sass */
+/* line 55, src/sass/4-sections/_services.sass */
 .services__visual {
   grid-area: pic;
   position: relative;
@@ -2009,7 +2010,7 @@ input[type="button"]:focus {
   z-index: -1;
 }
 
-/* line 63, src/sass/4-sections/_services.sass */
+/* line 64, src/sass/4-sections/_services.sass */
 .services__img {
   position: absolute;
   height: 100%;
@@ -2019,7 +2020,7 @@ input[type="button"]:focus {
 }
 
 @media (max-width: 480px) {
-  /* line 70, src/sass/4-sections/_services.sass */
+  /* line 71, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: 0;
     width: 100%;
@@ -2027,29 +2028,29 @@ input[type="button"]:focus {
 }
 
 @media (max-width: 767px) {
-  /* line 75, src/sass/4-sections/_services.sass */
+  /* line 76, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: unset;
     width: unset;
     right: 0;
   }
-  /* line 80, src/sass/4-sections/_services.sass */
+  /* line 81, src/sass/4-sections/_services.sass */
   .services__img--B {
     left: 0;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 63, src/sass/4-sections/_services.sass */
+  /* line 64, src/sass/4-sections/_services.sass */
   .services__img {
     top: 1rem;
     height: calc(100% - 1rem);
   }
-  /* line 87, src/sass/4-sections/_services.sass */
+  /* line 88, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: 0;
   }
-  /* line 90, src/sass/4-sections/_services.sass */
+  /* line 91, src/sass/4-sections/_services.sass */
   .services__img--B {
     right: 0;
   }
