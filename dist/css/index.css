@@ -1834,10 +1834,9 @@ input[type="button"]:focus {
 .about__social-links {
   grid-area: links;
   text-align: center;
-  transform: translateY(1rem);
 }
 
-/* line 29, src/sass/4-sections/_about.sass */
+/* line 28, src/sass/4-sections/_about.sass */
 .about__visual {
   grid-area: pic;
   z-index: 1;
@@ -1847,10 +1846,18 @@ input[type="button"]:focus {
      object-fit: contain;
 }
 
-@media (min-width: 481px) {
-  /* line 39, src/sass/4-sections/_about.sass */
+@media (max-width: 480px) {
+  /* line 38, src/sass/4-sections/_about.sass */
   .about__social-links {
-    transform: none;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+}
+
+@media (min-width: 481px) {
+  /* line 45, src/sass/4-sections/_about.sass */
+  .about__social-links {
+    margin-top: 1rem;
     position: absolute;
     left: -1rem;
     bottom: 3.1rem;
@@ -1858,58 +1865,58 @@ input[type="button"]:focus {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 47, src/sass/4-sections/_about.sass */
+  /* line 54, src/sass/4-sections/_about.sass */
   .about__content {
     margin-bottom: -1rem;
   }
-  /* line 50, src/sass/4-sections/_about.sass */
+  /* line 57, src/sass/4-sections/_about.sass */
   .about__social-links .social-links {
     flex-flow: column nowrap;
   }
-  /* line 53, src/sass/4-sections/_about.sass */
+  /* line 60, src/sass/4-sections/_about.sass */
   .about__visual {
     transform: translateX(3rem);
   }
 }
 
 @media (min-width: 768px) {
-  /* line 58, src/sass/4-sections/_about.sass */
+  /* line 65, src/sass/4-sections/_about.sass */
   .about__wrapper {
     grid-template-areas: "header pic" "content pic";
     margin-bottom: 3rem;
   }
-  /* line 62, src/sass/4-sections/_about.sass */
+  /* line 69, src/sass/4-sections/_about.sass */
   .about__content {
     align-self: start;
     padding-left: 1rem;
   }
-  /* line 66, src/sass/4-sections/_about.sass */
+  /* line 73, src/sass/4-sections/_about.sass */
   .about__social-links {
     bottom: -4.8rem;
     left: 7rem;
   }
-  /* line 70, src/sass/4-sections/_about.sass */
+  /* line 77, src/sass/4-sections/_about.sass */
   .about__visual {
     padding-top: 7rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 75, src/sass/4-sections/_about.sass */
+  /* line 82, src/sass/4-sections/_about.sass */
   .about__header {
     transform: translateX(-5rem);
   }
-  /* line 78, src/sass/4-sections/_about.sass */
+  /* line 85, src/sass/4-sections/_about.sass */
   .about__content {
     padding-left: 0;
     transform: translateY(-2rem);
   }
-  /* line 82, src/sass/4-sections/_about.sass */
+  /* line 89, src/sass/4-sections/_about.sass */
   .about__social-links {
     bottom: -6.5rem;
     left: 9rem;
   }
-  /* line 87, src/sass/4-sections/_about.sass */
+  /* line 94, src/sass/4-sections/_about.sass */
   .about__visual {
     height: 450px;
     padding-top: 9rem;

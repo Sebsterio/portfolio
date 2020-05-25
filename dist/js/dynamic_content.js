@@ -1,13 +1,21 @@
 /*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
+// name:          Displayed when tile active or not active,
+// type:          Name superscript; displayed when tile active
+// displayedTags: Displayed when tile active
+// hiddenTags:    For filtering only
+// blurb:         Shown when tile active
+// links:         Displayed if not empty
+// image:         500x500
+
 const projects = [
 	// --------------------- Narbon ---------------------
 	{
 		name: "Narbon Fashion Store",
 		type: "e-commerce",
-		category: "commercial",
+		displayedTags: ["React", "Node", "Database"],
+		hiddenTags: ["commercial"],
 		blurb:
 			"Progressive web app with user authentication and animated transitions between lazy-loaded routes",
-		tech: ["React", "Node", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
@@ -18,10 +26,10 @@ const projects = [
 	// --------------------- Nicole ---------------------
 	{
 		name: "NicoleRoss Personal Training",
+		displayedTags: ["JavaScript", "SCSS", "APIs"],
 		type: "website",
-		category: "commercial",
+		hiddenTags: ["commercial"],
 		blurb: "Responsive mobile-first website with Instagarm feed integration",
-		tech: ["JavaScript", "SCSS", "APIs"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://nicoleross.fitness/" },
@@ -33,10 +41,10 @@ const projects = [
 	{
 		name: "Rolewicz Transport",
 		type: "website",
-		category: "commercial",
+		displayedTags: ["JavaScript", "SCSS", "Bootstrap"],
+		hiddenTags: ["commercial"],
 		blurb:
 			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimzed for given screen size and browser support",
-		tech: ["JavaScript", "SCSS", "Bootstrap"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
@@ -48,10 +56,10 @@ const projects = [
 	{
 		name: "WarmUp 3D Album",
 		type: "web_app",
-		category: "hobby",
+		displayedTags: ["JavaScript", "SCSS", "Database"],
+		hiddenTags: ["hobby"],
 		blurb:
 			"Animated and interactive 3D media album supporting photos, video, and Youtube",
-		tech: ["JavaScript", "SCSS", "Database"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://warmup.netlify.app/?edit&house=portfolio" },
@@ -62,10 +70,10 @@ const projects = [
 	// --------------------- Cosmo ---------------------
 	{
 		name: "Cosmo Events",
+		displayedTags: ["WordPress"],
 		type: "website",
-		category: "commercial",
+		hiddenTags: ["commercial"],
 		blurb: "Responsive brochure website",
-		tech: ["WordPress"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://www.cosmo-events.co.uk/" },
@@ -75,20 +83,20 @@ const projects = [
 	// --------------------- Portfolio 2 ---------------------
 	{
 		name: "Portfolio v.2",
+		displayedTags: ["JavaScript", "SCSS"],
 		type: "website",
-		category: "hobby",
+		hiddenTags: ["hobby"],
 		blurb: "This website",
-		tech: ["JavaScript", "SCSS"],
 		links: [{ type: "github", url: "https://github.com/Sebsterio/portfolio" }],
 		image: "img/projects/feedback-loop.jpg",
 	},
 	// --------------------- Say Color Name ---------------------
 	{
 		name: "Say Color",
+		displayedTags: ["JavaScript", "APIs"],
 		type: "code_challenge",
-		category: "hobby",
+		hiddenTags: ["hobby"],
 		blurb: "Fun with speech recognition",
-		tech: ["JavaScript", "APIs"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://say-color-name.netlify.app/" },
@@ -98,10 +106,10 @@ const projects = [
 	// --------------------- Paint Undo ---------------------
 	{
 		name: "Paint Undo",
+		displayedTags: ["JavaScript", "Canvas"],
 		type: "code_challenge",
-		category: "hobby",
+		hiddenTags: ["hobby"],
 		blurb: "Canvas drawing app with the undo feature",
-		tech: ["JavaScript", "Canvas"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://paint-undo.netlify.app/" },
@@ -111,10 +119,10 @@ const projects = [
 	// --------------------- Portfolio 1 ---------------------
 	{
 		name: "Portfolio v.1",
+		displayedTags: ["jQuery", "CSS", "APIs"],
 		type: "website",
-		category: "coursework",
+		hiddenTags: ["coursework"],
 		blurb: "My old portfolio made at my first code bootcamp some years ago",
-		tech: ["jQuery", "CSS", "APIs"],
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },
@@ -144,7 +152,7 @@ const icons = {
 
 	// Create Project HTML Element (wrapped in .projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, blurb, tech, links, image } = project;
+		const { type, name, blurb, displayedTags, links, image } = project;
 
 		const visual = `
 			<div class="project__visual" 
@@ -170,7 +178,7 @@ const icons = {
 					${blurb}
 				</div>
 				<ul class="project__tags optional">
-					${tech.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
+					${displayedTags.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
 				</ul>
 			</div>
 		`;
@@ -216,8 +224,10 @@ const icons = {
 	// Create element html and project tags
 	function generateProjectsProps(projects) {
 		projects.map((project) => {
-			const { type, category, tech } = project;
-			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
+			const { type, hiddenTags, displayedTags } = project;
+			project.tags = [type, ...hiddenTags, ...displayedTags].map((tag) =>
+				tag.toLowerCase()
+			);
 			project.html = buildProjectHtml(project);
 		});
 	}

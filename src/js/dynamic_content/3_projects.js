@@ -5,7 +5,7 @@
 
 	// Create Project HTML Element (wrapped in .projects__grid-cell)
 	function buildProjectHtml(project) {
-		const { type, name, blurb, tech, links, image } = project;
+		const { type, name, blurb, displayedTags, links, image } = project;
 
 		const visual = `
 			<div class="project__visual" 
@@ -31,7 +31,7 @@
 					${blurb}
 				</div>
 				<ul class="project__tags optional">
-					${tech.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
+					${displayedTags.map((tag) => `<li class="project__tag">${tag}</li>`).join("")}
 				</ul>
 			</div>
 		`;
@@ -77,8 +77,10 @@
 	// Create element html and project tags
 	function generateProjectsProps(projects) {
 		projects.map((project) => {
-			const { type, category, tech } = project;
-			project.tags = [type, category, ...tech].map((tag) => tag.toLowerCase());
+			const { type, hiddenTags, displayedTags } = project;
+			project.tags = [type, ...hiddenTags, ...displayedTags].map((tag) =>
+				tag.toLowerCase()
+			);
 			project.html = buildProjectHtml(project);
 		});
 	}

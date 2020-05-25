@@ -24,7 +24,6 @@
 	&__social-links
 		grid-area: links
 		text-align: center
-		transform: translateY(1rem)
 
 	&__visual
 		grid-area: pic
@@ -34,10 +33,18 @@
 		width: auto
 		object-fit: contain
 
+	@media (max-width: $xs-max)
+
+		&__social-links
+			// transform prop reserved by animation styles
+			margin-top: 1rem
+			margin-bottom: -1rem
+
 	@media (min-width: $s-min)
 
 		&__social-links
-			transform: none
+			margin-top: 1rem
+			// transform: none
 			position: absolute
 			left: -1rem
 			bottom: 3.1rem
