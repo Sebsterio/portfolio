@@ -493,6 +493,13 @@ textarea {
   font-style: italic;
 }
 
+@media (min-width: 992px) {
+  /* line 29, src/sass/1-base/_globals.sass */
+  .mobile-only {
+    display: none;
+  }
+}
+
 /* line 3, src/sass/2-layout/_wrapper.sass */
 .wrapper, .wrapper--small, .wrapper--large {
   position: relative;
@@ -928,19 +935,12 @@ input[type="button"]:focus {
   display: none;
 }
 
-@media (min-width: 992px) {
-  /* line 37, src/sass/3-modules/_navigation.sass */
-  .navigation .mobile-only {
-    display: none;
-  }
-}
-
 @media (max-width: 991px) {
-  /* line 42, src/sass/3-modules/_navigation.sass */
+  /* line 36, src/sass/3-modules/_navigation.sass */
   .navigation__cta {
     display: none;
   }
-  /* line 45, src/sass/3-modules/_navigation.sass */
+  /* line 39, src/sass/3-modules/_navigation.sass */
   .navigation__container {
     position: fixed;
     top: 0;
@@ -956,58 +956,58 @@ input[type="button"]:focus {
     visibility: hidden;
     transition: visibility 0s .4s, opacity .4s;
   }
-  /* line 60, src/sass/3-modules/_navigation.sass */
+  /* line 54, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open {
     opacity: 1;
     visibility: visible;
     transition: visibility 0s, opacity .4s;
   }
-  /* line 69, src/sass/3-modules/_navigation.sass */
+  /* line 63, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li:nth-child(1) a {
     transition: transform 0.2s 0.28s, color 0.2s ease-in-out;
   }
-  /* line 69, src/sass/3-modules/_navigation.sass */
+  /* line 63, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li:nth-child(2) a {
     transition: transform 0.2s 0.36s, color 0.2s ease-in-out;
   }
-  /* line 69, src/sass/3-modules/_navigation.sass */
+  /* line 63, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li:nth-child(3) a {
     transition: transform 0.2s 0.44s, color 0.2s ease-in-out;
   }
-  /* line 69, src/sass/3-modules/_navigation.sass */
+  /* line 63, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li:nth-child(4) a {
     transition: transform 0.2s 0.52s, color 0.2s ease-in-out;
   }
-  /* line 69, src/sass/3-modules/_navigation.sass */
+  /* line 63, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li:nth-child(5) a {
     transition: transform 0.2s 0.6s, color 0.2s ease-in-out;
   }
-  /* line 72, src/sass/3-modules/_navigation.sass */
+  /* line 66, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li a {
     transform: translateY(0);
   }
-  /* line 75, src/sass/3-modules/_navigation.sass */
+  /* line 69, src/sass/3-modules/_navigation.sass */
   .navigation__container--is-open .navigation__list > li a:hover {
     color: #b7b7b7;
   }
-  /* line 78, src/sass/3-modules/_navigation.sass */
+  /* line 72, src/sass/3-modules/_navigation.sass */
   .navigation__list {
     height: 250px;
     flex-direction: column;
     align-items: center;
   }
-  /* line 83, src/sass/3-modules/_navigation.sass */
+  /* line 77, src/sass/3-modules/_navigation.sass */
   .navigation__list > li {
     overflow: hidden;
   }
-  /* line 86, src/sass/3-modules/_navigation.sass */
+  /* line 80, src/sass/3-modules/_navigation.sass */
   .navigation__list > li a {
     transform: translateY(100%);
     color: #c0c0c0;
     font-weight: 700;
     transition: transform 0s .4s;
   }
-  /* line 92, src/sass/3-modules/_navigation.sass */
+  /* line 86, src/sass/3-modules/_navigation.sass */
   .navigation__burger {
     position: relative;
     display: flex;
@@ -1017,23 +1017,23 @@ input[type="button"]:focus {
     justify-content: space-between;
     cursor: pointer;
   }
-  /* line 103, src/sass/3-modules/_navigation.sass */
+  /* line 97, src/sass/3-modules/_navigation.sass */
   .navigation__burger--is-open .navigation__burger-el {
     transition: transform .4s, opacity .2s;
   }
-  /* line 106, src/sass/3-modules/_navigation.sass */
+  /* line 100, src/sass/3-modules/_navigation.sass */
   .navigation__burger--is-open .navigation__burger-el--top {
     transform: rotate(45deg);
   }
-  /* line 109, src/sass/3-modules/_navigation.sass */
+  /* line 103, src/sass/3-modules/_navigation.sass */
   .navigation__burger--is-open .navigation__burger-el--bottom {
     transform: rotate(-45deg);
   }
-  /* line 112, src/sass/3-modules/_navigation.sass */
+  /* line 106, src/sass/3-modules/_navigation.sass */
   .navigation__burger--is-open .navigation__burger-el--middle {
     opacity: 0;
   }
-  /* line 115, src/sass/3-modules/_navigation.sass */
+  /* line 109, src/sass/3-modules/_navigation.sass */
   .navigation__burger-el {
     display: block;
     width: 100%;
@@ -1041,17 +1041,17 @@ input[type="button"]:focus {
     background-color: #c0c0c0;
     transition: transform .4s, opacity .2s .2s;
   }
-  /* line 122, src/sass/3-modules/_navigation.sass */
+  /* line 116, src/sass/3-modules/_navigation.sass */
   .navigation__burger-el--top {
     transform-origin: left top;
   }
-  /* line 125, src/sass/3-modules/_navigation.sass */
+  /* line 119, src/sass/3-modules/_navigation.sass */
   .navigation__burger-el--bottom {
     transform-origin: left bottom;
   }
 }
 
-/* line 128, src/sass/3-modules/_navigation.sass */
+/* line 122, src/sass/3-modules/_navigation.sass */
 .scroll-lock {
   position: fixed;
   width: 100%;
