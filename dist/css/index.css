@@ -275,7 +275,7 @@ body {
 
 /* line 13, src/sass/1-base/_base-elements.sass */
 section {
-  padding: 2rem 0;
+  padding: 0 0 5rem 0;
 }
 
 /* line 3, src/sass/1-base/_typography.sass */
@@ -1883,7 +1883,7 @@ input[type="button"]:focus {
   /* line 65, src/sass/4-sections/_about.sass */
   .about__wrapper {
     grid-template-areas: "header pic" "content pic";
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   /* line 69, src/sass/4-sections/_about.sass */
   .about__content {
@@ -1935,22 +1935,22 @@ input[type="button"]:focus {
 .services__article {
   position: relative;
   display: grid;
+  padding: 4rem 1rem 0 1rem;
   grid-template-areas: 'content' 'tags' ' pic';
   grid-gap: 2rem;
   justify-content: center;
   justify-items: center;
   align-content: center;
   align-items: center;
-  padding: 3rem 1rem 0 1rem;
 }
 
 @media (min-width: 481px) {
-  /* line 23, src/sass/4-sections/_services.sass */
+  /* line 21, src/sass/4-sections/_services.sass */
   .services__article:nth-child(even) {
     grid-template-areas: 'content content' 'pic tags';
     grid-template-columns: 6fr 4fr;
   }
-  /* line 27, src/sass/4-sections/_services.sass */
+  /* line 25, src/sass/4-sections/_services.sass */
   .services__article:nth-child(odd) {
     grid-template-areas: 'content content' 'tags pic';
     grid-template-columns: 4fr 6fr;
@@ -1962,12 +1962,12 @@ input[type="button"]:focus {
   .services__article {
     grid-template-rows: 1fr auto;
   }
-  /* line 34, src/sass/4-sections/_services.sass */
+  /* line 32, src/sass/4-sections/_services.sass */
   .services__article:nth-child(even) {
     grid-template-areas: 'content pic' 'content tags';
     grid-template-columns: 6fr 4fr;
   }
-  /* line 38, src/sass/4-sections/_services.sass */
+  /* line 36, src/sass/4-sections/_services.sass */
   .services__article:nth-child(odd) {
     grid-template-areas: 'pic content' 'tags content';
     grid-template-columns: 4fr 6fr;
@@ -1981,24 +1981,24 @@ input[type="button"]:focus {
   }
 }
 
-/* line 45, src/sass/4-sections/_services.sass */
+/* line 43, src/sass/4-sections/_services.sass */
 .services__content {
   grid-area: content;
   text-align: center;
 }
 
-/* line 49, src/sass/4-sections/_services.sass */
+/* line 47, src/sass/4-sections/_services.sass */
 .services__content p {
   margin: 0 auto 20px auto;
 }
 
-/* line 52, src/sass/4-sections/_services.sass */
+/* line 50, src/sass/4-sections/_services.sass */
 .services__tags {
   grid-area: tags;
   text-align: center;
 }
 
-/* line 56, src/sass/4-sections/_services.sass */
+/* line 54, src/sass/4-sections/_services.sass */
 .services__visual {
   grid-area: pic;
   position: relative;
@@ -2009,7 +2009,7 @@ input[type="button"]:focus {
   z-index: -1;
 }
 
-/* line 65, src/sass/4-sections/_services.sass */
+/* line 63, src/sass/4-sections/_services.sass */
 .services__img {
   position: absolute;
   height: 100%;
@@ -2019,7 +2019,7 @@ input[type="button"]:focus {
 }
 
 @media (max-width: 480px) {
-  /* line 72, src/sass/4-sections/_services.sass */
+  /* line 70, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: 0;
     width: 100%;
@@ -2027,29 +2027,29 @@ input[type="button"]:focus {
 }
 
 @media (max-width: 767px) {
-  /* line 77, src/sass/4-sections/_services.sass */
+  /* line 75, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: unset;
     width: unset;
     right: 0;
   }
-  /* line 82, src/sass/4-sections/_services.sass */
+  /* line 80, src/sass/4-sections/_services.sass */
   .services__img--B {
     left: 0;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 65, src/sass/4-sections/_services.sass */
+  /* line 63, src/sass/4-sections/_services.sass */
   .services__img {
-    top: 5rem;
-    height: calc(100% - 5rem);
+    top: 1rem;
+    height: calc(100% - 1rem);
   }
-  /* line 89, src/sass/4-sections/_services.sass */
+  /* line 87, src/sass/4-sections/_services.sass */
   .services__img--A {
     left: 0;
   }
-  /* line 92, src/sass/4-sections/_services.sass */
+  /* line 90, src/sass/4-sections/_services.sass */
   .services__img--B {
     right: 0;
   }

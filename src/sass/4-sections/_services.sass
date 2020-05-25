@@ -9,15 +9,13 @@
 	&__article
 		position: relative
 		display: grid
+		padding: 4rem 1rem 0 1rem
 		grid-template-areas: 'content' 'tags' ' pic'
 		grid-gap: 2rem
 		justify-content: center
 		justify-items: center
 		align-content: center
 		align-items: center
-		// overflow: hidden
-
-		padding: 3rem 1rem 0 1rem
 
 		@media (min-width: $s-min)
 			&:nth-child(even)
@@ -83,8 +81,8 @@
 				left: 0
 
 		@media (min-width: $m-min)
-			top: 5rem
-			height: calc(100% - 5rem)
+			top: 1rem
+			height: calc(100% - 1rem)
 
 			&--A
 				left: 0
