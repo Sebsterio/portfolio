@@ -130,6 +130,20 @@ const projects = [
 		],
 		image: "img/projects/portfolio_v1.jpg",
 	},
+	// --------------------- Brickbreak ---------------------
+	// {
+	// 	name: "Brick-break",
+	// 	type: "game",
+	// 	displayedTags: ["JavaScript", "Canvas", "OOP"],
+	// 	hiddenTags: ["coursework"],
+	// 	blurb: "Browser game (currently desktop only; mobile support on the way)",
+	// 	links: [
+	// 		{ type: "preview", url: "" },
+	// 		{ type: "site", url: "https://brickbreak-game.netlify.app/" },
+	// 		{ type: "github", url: "https://github.com/Sebsterio/brickbreak-game" },
+	// 	],
+	// 	image: "img/projects/brickbreak.jpg",
+	// },
 ];
 
 const icons = {
