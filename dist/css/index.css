@@ -493,8 +493,15 @@ textarea {
   font-style: italic;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 480px) {
   /* line 29, src/sass/1-base/_globals.sass */
+  .no-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 33, src/sass/1-base/_globals.sass */
   .mobile-only {
     display: none;
   }
@@ -1668,6 +1675,18 @@ input[type="button"]:focus {
 /* line 30, src/sass/3-modules/_social-links.sass */
 .social-links .social-link:hover svg {
   fill: white;
+}
+
+@media (max-width: 480px) {
+  /* line 35, src/sass/3-modules/_social-links.sass */
+  .social-links__social-links {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+  /* line 40, src/sass/3-modules/_social-links.sass */
+  .social-links .break-on-mobile {
+    flex: 1 1 100%;
+  }
 }
 
 /************************* Introduction *************************/

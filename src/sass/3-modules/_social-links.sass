@@ -30,3 +30,13 @@
 		&:hover svg
 			fill: $c-white
 
+	@media (max-width: $xs-max)
+
+		&__social-links
+			// transform prop reserved by animation styles
+			margin-top: 1rem
+			margin-bottom: -1rem
+			
+		.break-on-mobile
+			flex: 1 1 100%
+				
