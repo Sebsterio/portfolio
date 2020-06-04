@@ -1594,35 +1594,40 @@ input[type="button"]:focus {
 }
 
 /* line 195, src/sass/3-modules/_project.sass */
-.project__button svg {
+.project__button a svg {
   width: 1.8em;
   height: 1.8em;
   fill: white;
 }
 
 /* line 200, src/sass/3-modules/_project.sass */
-.project__button svg:hover {
+.project__button a:hover svg {
   -webkit-filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
           filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
-/* line 205, src/sass/3-modules/_project.sass */
+/* line 203, src/sass/3-modules/_project.sass */
+.project__button--disabled {
+  pointer-events: none;
+}
+
+/* line 206, src/sass/3-modules/_project.sass */
 .project__button--disabled a {
   cursor: default;
 }
 
-/* line 208, src/sass/3-modules/_project.sass */
-.project__button--disabled svg {
+/* line 209, src/sass/3-modules/_project.sass */
+.project__button--disabled a svg {
   fill: #6b8597;
 }
 
-/* line 211, src/sass/3-modules/_project.sass */
-.project__button--disabled svg:hover {
+/* line 212, src/sass/3-modules/_project.sass */
+.project__button--disabled a:hover svg {
   -webkit-filter: unset;
           filter: unset;
 }
 
-/* line 214, src/sass/3-modules/_project.sass */
+/* line 215, src/sass/3-modules/_project.sass */
 .project:not(.active) .project__button {
   pointer-events: none;
 }

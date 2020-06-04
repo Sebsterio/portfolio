@@ -12,7 +12,7 @@ const projects = [
 	{
 		name: "Narbon Fashion Store",
 		type: "e-commerce",
-		displayedTags: ["React", "Node", "Database"],
+		displayedTags: ["React", "Node", "APIs", "PWA"],
 		hiddenTags: ["commercial"],
 		blurb:
 			"Progressive web app with user authentication and animated transitions between lazy-loaded routes",
@@ -56,7 +56,7 @@ const projects = [
 	{
 		name: "WarmUp 3D Album",
 		type: "web_app",
-		displayedTags: ["JavaScript", "SCSS", "Database"],
+		displayedTags: ["JavaScript", "SCSS", "APIs"],
 		hiddenTags: ["hobby"],
 		blurb:
 			"Animated and interactive 3D media album supporting photos, video, and Youtube",
@@ -122,7 +122,7 @@ const projects = [
 		type: "website",
 		displayedTags: ["jQuery", "CSS", "APIs"],
 		hiddenTags: ["coursework"],
-		blurb: "My old portfolio made at my first code bootcamp some years ago",
+		blurb: "My old portfolio made at the first code bootcamp I attended",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },

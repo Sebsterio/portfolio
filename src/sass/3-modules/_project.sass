@@ -192,23 +192,24 @@
 			display: flex
 			align-content: center
 
-		svg
-			width: 1.8em
-			height: 1.8em
-			fill: $c-white
+			svg
+				width: 1.8em
+				height: 1.8em
+				fill: $c-white
 
-			&:hover
+			&:hover svg
 				filter: drop-shadow(0 0 2px rgba(white, .6))
 
-		&--disabled 
+		&--disabled
+			pointer-events: none
 
 			a
 				cursor: default
 
-			svg
-				fill: $c-disabled
+				svg
+					fill: $c-disabled
 
-				&:hover
+				&:hover svg
 					filter: unset
 
 	&:not(.active) &__button

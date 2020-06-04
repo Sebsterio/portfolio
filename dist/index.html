@@ -190,17 +190,16 @@
 				<div class="services__tags text">
 					<h4 class="text__sub-heading">Technologies I use</h4>
 					<ul class="text__tag-list small">
-						<li>React + Redux</li>
 						<li>JavaScript</li>
+						<li>React + Redux</li>
 						<li>jQuery</li>
 						<li>(S)CSS</li>
-						<li>Boostrap</li>
-						<li>Node</li>
-						<li>Firestore</li>
+						<li>Node + Express</li>
+						<li>MongoDB</li>
+						<li>Firebase</li>
 						<li>Webpack</li>
 						<li>Gulp</li>
 						<li>Jest + Enzyme</li>
-						<li>ESLint</li>
 					</ul>
 				</div>
 				<figure class="services__visual animated fadeInLeft active-in-view">
@@ -266,31 +265,48 @@
 					<input checked class="filters__toggle" type="checkbox" name="toggle" value="toggle" id="filters__toggle">
 					<label class="filters__toggle-label" for="filters__toggle">Filter by: <span>All</span></label>
 
-					<!-- Filter Tags -->
+					<!-- Filter Tags
+						-- input-label order used in CSS -->
 					<fieldset class="filters__fieldset">
-						<input checked class="filters__filter" type="radio" name="filter" value="all" id="all">
-						<label class="filters__filter-label" for="all" style="--index: 0"><span>All</span></label>
+						<input checked class="filters__filter" type="radio" name="filter" value="all" id="filter-all">
+						<label class="filters__filter-label" for="filter-all" style="--index: 0">
+							<span>All</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="commercial" id="commercial">
-						<label class="filters__filter-label" for="commercial" style="--index: 1"><span>Commercial</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="commercial" id="filter-commercial">
+						<label class="filters__filter-label" for="filter-commercial" style="--index: 1">
+							<span>Commercial</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="hobby" id="hobby">
-						<label class="filters__filter-label" for="hobby" style="--index: 2"><span>Hobby</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="hobby" id="filter-hobby">
+						<label class="filters__filter-label" for="filter-hobby" style="--index: 2">
+							<span>Hobby</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="coursework" id="coursework">
-						<label class="filters__filter-label" for="coursework" style="--index: 3"><span>Coursework</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="coursework" id="filter-coursework">
+						<label class="filters__filter-label" for="filter-coursework" style="--index: 3">
+							<span>Coursework</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="react" id="react">
-						<label class="filters__filter-label" for="react" style="--index: 4"><span>React</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="react" id="filter-react">
+						<label class="filters__filter-label" for="filter-react" style="--index: 4">
+							<span>React</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="javascript" id="javascript">
-						<label class="filters__filter-label" for="javascript" style="--index: 5"><span>JavaScript</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="javascript" id="filter-javascript">
+						<label class="filters__filter-label" for="filter-javascript" style="--index: 5">
+							<span>JavaScript</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="node" id="node">
-						<label class="filters__filter-label" for="node" style="--index: 7"><span>Node</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="apis" id="filter-node">
+						<label class="filters__filter-label" for="filter-node" style="--index: 7">
+							<span>APIs</span>
+						</label>
 
-						<input class="filters__filter" type="radio" name="filter" value="wordpress" id="wordpress">
-						<label class="filters__filter-label" for="wordpress" style="--index: 6"><span>WordPress</span></label>
+						<input class="filters__filter" type="radio" name="filter" value="wordpress" id="filter-wordpress">
+						<label class="filters__filter-label" for="filter-wordpress" style="--index: 6">
+							<span>WordPress</span>
+						</label>
 					</fieldset>
 				</form>
 			</nav>

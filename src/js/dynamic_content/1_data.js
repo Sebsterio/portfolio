@@ -121,7 +121,7 @@ const projects = [
 		type: "website",
 		displayedTags: ["jQuery", "CSS", "APIs"],
 		hiddenTags: ["coursework"],
-		blurb: "My old portfolio made at my first code bootcamp some years ago",
+		blurb: "My old portfolio made at the first code bootcamp I attended",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "" },
