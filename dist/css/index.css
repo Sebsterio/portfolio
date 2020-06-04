@@ -1683,10 +1683,6 @@ input[type="button"]:focus {
     margin-top: 1rem;
     margin-bottom: -1rem;
   }
-  /* line 40, src/sass/3-modules/_social-links.sass */
-  .social-links .break-on-mobile {
-    flex: 1 1 100%;
-  }
 }
 
 /************************* Introduction *************************/
