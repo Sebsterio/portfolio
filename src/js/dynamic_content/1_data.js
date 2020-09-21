@@ -7,6 +7,20 @@
 // image:         500x500
 
 const projects = [
+	// --------------------- Animalysis ---------------------
+	{
+		name: "Animalysis",
+		type: "web_app",
+		displayedTags: ["React", "Node", "Mongo", "PWA"],
+		hiddenTags: ["commercial"],
+		blurb: "PWA for communiation between pet owners and vet clinics",
+		links: [
+			{ type: "preview", url: "" },
+			{ type: "site", url: "https://animalysis.com/demo" },
+			{ type: "github", url: "https://github.com/Sebsterio/animalysis" },
+		],
+		image: "img/projects/animalysis.jpg",
+	},
 	// --------------------- Narbon ---------------------
 	{
 		name: "Narbon Fashion Store",
