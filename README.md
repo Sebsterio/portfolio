@@ -2,6 +2,22 @@
 
 [www.sebster.dev](https://sebster.dev/)
 
+## Usage
+
+Development
+
+```
+npm i
+npm run gulp watch // starts dev server
+```
+
+Deployment
+
+```
+npm run gulp    // build
+git push origin // CD to Netlify
+```
+
 ## TODO
 
 ### Now

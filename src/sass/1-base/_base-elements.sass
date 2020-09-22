@@ -1,5 +1,8 @@
+
 html, body
   overflow-x: hidden
+  margin: 0
+  padding: 0
   
 body
   background-color: $bg-main
@@ -9,6 +12,9 @@ body
   font-family: $font-primary
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
+  // fix bug causing 2 vertical scrollbars
+  overflow-y: hidden
+  padding-bottom: 2em
 
 section
   padding: 0 0 5rem 0

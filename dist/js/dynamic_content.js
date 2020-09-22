@@ -14,7 +14,8 @@ const projects = [
 		type: "web_app",
 		displayedTags: ["React", "Node", "Mongo", "PWA"],
 		hiddenTags: ["commercial"],
-		blurb: "PWA for communiation between pet owners and vet clinics",
+		blurb:
+			"App for streamlining the reporting of pet health problems to vet clinics",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://animalysis.com/demo" },
