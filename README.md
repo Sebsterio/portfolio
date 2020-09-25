@@ -8,7 +8,7 @@ Development
 
 ```
 npm i
-npm run gulp watch // starts dev server
+npm run dev
 ```
 
 Deployment
@@ -19,10 +19,6 @@ git push origin // CD to Netlify
 ```
 
 ## TODO
-
-### Now
-
-### Next Version
 
 - preload hq bg
 - intro: animate every el
