@@ -14,7 +14,7 @@ const projects = [
 		displayedTags: ["React", "Node", "Mongo", "PWA"],
 		hiddenTags: ["commercial"],
 		blurb:
-			"App for streamlining the reporting of pet health problems to vet clinics",
+			"App for streamlining the process of reporting pet health problems to vet clinics",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://animalysis.com/demo" },
@@ -58,7 +58,7 @@ const projects = [
 		displayedTags: ["JavaScript", "SCSS", "Bootstrap"],
 		hiddenTags: ["commercial"],
 		blurb:
-			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimzed for given screen size and browser support",
+			"Dynamically translated website with lazy-laoding and pre-loading of image formats optimized for given screen size and browser support",
 		links: [
 			{ type: "preview", url: "" },
 			{ type: "site", url: "https://rolewicz-tsl.com/" },
@@ -68,7 +68,7 @@ const projects = [
 	},
 	// --------------------- Warm Up ---------------------
 	{
-		name: "WarmUp 3D Album",
+		name: "3D Gallery",
 		type: "web_app",
 		displayedTags: ["JavaScript", "SCSS", "APIs"],
 		hiddenTags: ["hobby"],
