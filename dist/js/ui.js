@@ -1,4 +1,4 @@
-/*! portfolio v1.0.0 | (c) 2020  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
+/*! portfolio v1.0.0 | (c) 2026  | ISC License | git+https://github.com/Sebsterio/portfolio.git */
 //---------------------- Animations ----------------------
 
 (function () {
