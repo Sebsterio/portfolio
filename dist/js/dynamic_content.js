@@ -47,7 +47,7 @@ const projects = [
 		blurb: "Responsive brochure website with Instagarm feed integration",
 		links: [
 			{ type: "preview", url: "" },
-			{ type: "site", url: "https://nicoleross.fitness/" },
+			{ type: "site", url: "https://nicole-pt.netlify.app/" },
 			{ type: "github", url: "https://github.com/Sebsterio/nicole-pt" },
 		],
 		image: "img/projects/nicole.jpg",
