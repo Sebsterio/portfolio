@@ -9,7 +9,7 @@
 const projects = [
 	// --------------------- Animalysis ---------------------
 	{
-		name: "Animalysis",
+		name: "Animalysis (currently offline)",
 		type: "web_app",
 		displayedTags: ["React", "Node", "Mongo", "PWA"],
 		hiddenTags: ["commercial"],
@@ -17,7 +17,7 @@ const projects = [
 			"App for streamlining the process of reporting pet health problems to vet clinics",
 		links: [
 			{ type: "preview", url: "" },
-			{ type: "site", url: "https://animalysis.com/demo" },
+			{ type: "site", url: "" },
 			{ type: "github", url: "https://github.com/Sebsterio/animalysis" },
 		],
 		image: "img/projects/animalysis.jpg",
