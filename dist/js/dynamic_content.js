@@ -33,7 +33,7 @@ const projects = [
 			"Progressive web app with user authentication and animated transitions between lazy-loaded routes",
 		links: [
 			{ type: "preview", url: "" },
-			{ type: "site", url: "https://www.shop.narbonpatricia.com/" },
+			{ type: "site", url: "https://narbon.netlify.app/" },
 			{ type: "github", url: "https://github.com/Sebsterio/narbon" },
 		],
 		image: "img/projects/narbon.jpg",
