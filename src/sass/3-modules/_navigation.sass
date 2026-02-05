@@ -1,8 +1,12 @@
 .navigation
 	position: absolute
+	top: 26px // banner height
 	width: 100%
 	height: 100px
 	z-index: 100
+
+	@media (max-width: 620px)
+		top: 54px // banner height
 	
 	&__wrapper
 		display: flex
